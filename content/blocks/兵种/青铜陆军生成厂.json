@@ -1,0 +1,28 @@
+{
+	"type": "UnitFactory",
+	"name": "青铜陆军工厂",
+	"description": "生产陆军基础单位\n需要消耗青铜矿石",
+    "health":1180,
+	"size":3,
+	"plans":[
+	{ "unit": "先驱者", 
+	"time": 600, 
+	"requirements": [ 
+{ "item": "青铜矿石", "amount": 30},
+	]	},	
+	{ "unit": "盾刀", 
+	"time": 1800, 
+	"requirements": [ 
+{ "item": "青铜矿石", "amount": 50},
+{ "item": "劣质硅", "amount": 50},
+	]	},	
+	],
+	"requirements": [
+    { "item": "青铜矿石", "amount": 50},],
+	"category":"units",
+    "researchCostMultiplier": 0,
+        "canOverdrive": false,
+        "research": "先驱者核心"
+	    "researchCostMultiplier": 0.4,
+	        "canOverdrive": false,
+}

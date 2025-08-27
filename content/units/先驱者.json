@@ -1,0 +1,115 @@
+{
+	"type": "mech",
+	"name": "先驱者",
+	   "buildSpeed": 1.8,
+	"description": "向对面发射星型火焰\n由爬爬重构",
+    "speed":  0.9,
+      "mineSpeed": 3,
+    // 采矿等级为 1，可能影响可采集的矿物种类或效率
+    "mineTier": 1,
+    // 建筑建造速度为 0.2
+    "hitSize": 12,
+  "canBoost": true,                   // 是否允许冲刺
+    "boostMultiplier": 1.5,   
+              // 冲刺速度倍率
+    "engineOffset": 6,                  // 推进器位置偏移量（相对中心）
+    "engineSize": 4,                    // 推进器视觉效果大小
+		"ammoType":{
+	"type":"PowerAmmoType",
+	"totalPower":2200
+	},
+	"ammoCapacity": 700
+    "ammoResupplyAmount":1,/*弹药补给倍率 */
+    "health": 560,
+    "armor": 0,
+    "drag": 0.2,
+    "rotateSpeed": 2.5,
+    "itemCapacity": 30,
+        "targetAir":true,  
+    "targetGround":true,
+    "abilities": [
+    {
+        "type": "RepairFieldAbility"
+        "amount":100
+        "reload": 300
+        "range": 58
+    }
+    ]
+	"weapons":[
+	{
+            "name": "先驱者1",
+            "reload": 12,               // 装弹时间（帧）
+            /*"rotationLimit": 20,最大旋转角度*/
+            "shootY": 6,               // 子弹发射高度偏移（像素）
+            "x": 7,
+            "y": 0,            // 武器相对车身位置
+            "recoil": 0.4,  // 后坐力
+            "rotate": false,            // 武器是否独立旋转（炮塔）
+            "alternate": true,         // 是否交替射击（双管）
+            "top": false,// 是否位于单位顶部
+            "shootSound": "flame",     // 射击音效
+            "shoot": {
+                "shots": 4           // 每次射击发射的子弹数
+            },
+            // 子弹属性
+            "bullet": {
+                "type": "BulletType",
+                "healPercent": 3,          // 对友方治疗百分比
+                "lifetime": 8,       // 子弹存在时间（秒）
+                "speed": 8,           // 子弹飞行速度
+                "damage": 25,         // 单发伤害
+                "incendAmount": 8,    // 点燃敌方单位的燃烧层数
+                "incendSpread": 1,    // 火焰扩散范围
+                "incendChance": 0.45,  // 点燃概率（45%）
+                "pierce": true,       // 是否穿透敌人
+                "makeFire": false,     // 是否在地面生成火焰
+                "status": "burning",  // 附加状态（燃烧）>
+                "statusDuration": 420, // 状态持续时间（帧）
+                "collidesTeam": true,
+                
+                "despawnEffect": "none" // 子弹消失特效
+	"shootEffect": { // 射击特效 - 粒子发射效果
+		"type": "ParticleEffect", // 特效类型：粒子效果
+		"particles": 13, // 粒子数量：10个
+		"lifetime": 12, // 粒子生命周期：10帧/单位
+		"sizeFrom": 4, // 起始尺寸：2
+		"sizeTo": 0, // 结束尺寸：0（逐渐消失）
+		"region": "强化战役-再临-菱形", // 使用菱形纹理
+		"interp": "pow5Out", // 位移插值：5次方缓出
+		"sizeInterp": "pow10In", // 尺寸插值：10次方缓入（快速缩小）
+		"length": 60, // 特效长度：70
+		"baseLength": 0, // 基础长度：0
+		"colorFrom": "FFFFFF", // 起始颜色：白色（RGB）
+		"colorTo": "98FFA9AA", // 结束颜色：淡绿色带透明度（RGBA）
+		"cone": 12 // 发射锥角：10度（小范围散射）
+	},
+	"smokeEffect": { // 烟雾轨迹特效 - 线型粒子
+		"type": "ParticleEffect", // 特效类型：粒子效果
+		"particles": 8, // 粒子数量：5个
+		"line": true, // 线型模式（沿路径发射）
+		"strokeFrom": 7, // 起始线宽：1
+		"strokeTo": 0, // 结束线宽：0（逐渐变细）
+		"lenFrom": 17, // 起始长度：16
+		"lenTo": 8, // 结束长度：8（略微收缩）
+		"length": 60, // 特效长度：70
+		"baseLength": 0, // 基础长度：0
+		"lifetime": 12, // 粒子生命周期：12帧/单位
+		"colorFrom": "98FFA9", // 起始颜色：淡绿色（RGB）
+		"colorTo": "98FFA9", // 结束颜色：保持淡绿色（无渐变）
+		"cone": 10 // 发射锥角：10度
+	},
+	"hitEffect": { // 命中特效 - 击中时爆发
+		"type": "ParticleEffect", // 特效类型：粒子效果
+		"particles": 5, // 粒子数量：3个（小型爆发）
+		"region": "强化战役-再临-菱形", // 使用菱形纹理
+		"lifetime": 15, // 粒子生命周期：10帧/单位
+		"sizeFrom": 8, // 起始尺寸：3（比射击特效稍大）
+		"sizeTo": 0, // 结束尺寸：0（逐渐消失）
+		"colorFrom": "98FFA9", // 起始颜色：淡绿色（RGB）
+		"colorTo": "98FFA9" // 结束颜色：保持淡绿色（无渐变）
+	}
+            }
+        }
+		]
+"research": "先驱者核心",
+}

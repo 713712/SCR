@@ -1,0 +1,10 @@
+{
+"localizedName": "寒风哨站",
+	"description": "空间折越后的初始地点，击溃敌人，学习他们的技术",
+    "planet":"赛普罗"//母星名字。
+    "sector":227//区块坐标
+    "captureWave":15//胜利波次
+    "difficulty":1//难度1一5
+    "alwaysUnlocked": true,
+    "research": "先驱者核心"
+		}

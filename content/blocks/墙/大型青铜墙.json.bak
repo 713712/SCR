@@ -1,0 +1,14 @@
+{    
+    "type": "Wall",
+    "name": "大型青铜墙",
+    "description": "似乎并不比铜强多少",
+    "buildCostMultiplier": 1.8,
+    "health": 1540,
+    "size": 2,
+    "requirements": [
+        "青铜矿石/24",
+    ],
+    "category": "defense",
+    "research": "先驱者核心"
+        "researchCostMultiplier": 0.5,  // 研究成本乘数：0.45（研究该设施的成本为正常成本的45%）
+}

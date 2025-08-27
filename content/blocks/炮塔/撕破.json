@@ -1,0 +1,113 @@
+
+{
+    "type": "ItemTurret",
+    "name": "撕破",
+    "description": "向敌军发射标准小口径青铜子弹\n需要消耗子弹\nBYD比双管好",
+"health": 450,  // 生命值
+    "size": 2,  // 占用2x2格
+    "range": 120,  // 射程
+    "reload": 50,  // 装填时间
+    "maxAmmo": 40,  // 最大弹药容
+    // 射击参数
+    "shoot": {  
+        "shots": 10,  // 每次射击2发
+        "shotDelay": 1  // 每发间隔2.7帧
+    },
+    // 弹药系统
+    "targetGround": true,  // 可攻击地面目标
+    "targetAir": true,  // 可攻击空中目标
+    "inaccuracy": 20,  // 散布3.5度
+    "shootSound": "撕破",  // 音效
+    
+    // 弹药类型配置
+ "ammoTypes": {  // 弹药类型定义容器
+    	"青铜矿石": {
+		"speed": 5,
+            "damage": 20,
+            "lifetime": 30,
+            "width": 3,
+            "height": 3,
+            "ammoMultiplier": 1,
+            "shootEffect": "lancerLaserCharge",
+            "trailColor": "78E8FFFF",
+            "trailWidth": 4,
+            "trailLength": 12,
+            "hitColor": "78E8FFFF",
+            "buildingDamageMultiplier": 4
+		    "pierceArmor" : true,
+		    // 能够穿透建筑物
+            "pierceBuilding": true,
+            // 穿透次数为 6
+            "pierce": 6,
+            "pierce": true,
+			"pierceBuilding": true,
+			"pierceCap": 4,
+		},
+		   "烟煤": {  // 使用石墨作为弹药
+                "type": "ArtilleryBulletType",  // 炮弹类型（可越过障碍）
+                "damage": 12,      // 直接命中伤害
+                "speed": 4,        // 飞行速度
+                "lifetime": 270,    // 存在时间（帧）
+                "width": 12,       // 碰撞宽度
+                "height": 12,      // 碰撞高度
+                "frontColor": "8CAAE8FF",  // 蓝色弹头
+            "backColor": "8CAAE8FF",  // 蓝色弹尾
+            "trailColor": "8CAAE8FF",  // 蓝色轨迹
+                "splashDamageRadius": 32,  // 爆炸半径
+                "splashDamage": 45,        // 爆炸伤害
+    },
+    "劣质硅": {
+                "type": "ArtilleryBulletType",  // 炮弹类型（可越过障碍）
+                "damage": 34,      // 直接命中伤害
+                "speed": 4,        // 飞行速度
+                "lifetime": 270,    // 存在时间（帧）
+                "width": 11,       // 碰撞宽度
+                "height": 11,      // 碰撞高度
+                "splashDamageRadius": 32,  // 爆炸半径
+                "splashDamage": 35,        // 爆炸伤害
+    },//子弹复制粘贴就行了  记得改名字   
+		},
+    // 其他属性
+    "rotateSpeed": 1.8,  // 炮塔旋转速度2.5
+    "requirements": [  // 建造所需材料
+        {"item": "青铜矿石", "amount": 25},
+    ],
+    "category": "turret",  // 分类为炮塔
+    "researchCostMultiplier": 0.3,  // 研究成本只需30%
+    "research": "先驱者核心",  // 前置研究项
+    // 绘制配置
+    "drawer": {
+        "type": "DrawMulti",  // 复合绘制器
+        "drawers": [
+            {
+                "type": "DrawTurret",
+                "parts": [
+                    {
+                        "type": "RegionPart",  // 主炮部分
+                        "mirror": false,
+                        "x": 0,
+                        "y": 0,
+                        "suffix": "-1",  // 使用-1后缀的纹理
+                        "heatProgress": "recoil",  // 后坐力热效果
+                        "heatColor": "#8080FF",  // 淡蓝色热效
+                        "progress": "reload",  // 装填动画
+                        "moveX": 0,
+                        "moveY": 0.2,
+                        "moveRot": 0
+                    },
+                    {
+                        "type": "RegionPart",  // 副炮部分
+                        "mirror": false,  // 镜像渲染
+                        "x": 0,
+                        "y": 0.2,
+                        "suffix": "-2",  // 使用-2后缀的纹理
+                        "moveX": 0,  // X轴偏移
+                        "moveY": -0.3,  // Y轴偏移（向上）
+                        "moveRot": 0, // 转偏移
+                    },
+                ],
+            },
+        ],
+    },
+}
+//ai整的  或者其他模组😅

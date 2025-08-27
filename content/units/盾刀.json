@@ -1,0 +1,92 @@
+{
+    // ========== 【核心属性】 ========== //
+    "type": "legs",                // 单位类型：多足步行单位
+    "name": "盾刀",                 // 单位显示名称
+    "description": "装备有喷火器\n赛普拉仿制科技\n",          // 单位描述（此处标记为忽略）
+    "targetAir": true,             // 能攻击空中目标
+    "targetGround": true,          // 能攻击地面目标
+
+    // ===== 【特殊能力】 ===== //
+    "abilities": [
+		{
+    "type": "ForceFieldAbility",  // 能力类型：力场护盾能力
+    "sides": 8,                   // 力场的几何边数
+    "radius": 10,                 // 力场的保护半径
+    "max": 80,                   // 力场的最大能量值
+    "regen": 0.2,                // 能量恢复速率
+    "cooldown": 180               // 力场被击破后的冷却时间
+}
+    ],
+
+    // ========== 【移动系统】 ========== //
+    "speed": 0.6,                 // 移动速度（单位：格/秒）
+    "drag": 0.2,                   // 移动阻力系数
+    "rotateSpeed": 0.95,            // 身体旋转速度
+    "hovering": true,              // 悬停模式（无视地形高度差）
+    "faceTarget": true,            // 单位本体始终面向攻击目标
+
+    // ========== 【多足动画】 ========== //
+    "legCount": 4,                 // 腿部数量：6足
+    "legLength": 16,               // 腿部长度（像素）
+    "legForwardScl": 0.2,          // 腿部前伸比例
+    "legExtension": -3,            // 腿部伸展偏移量
+    "legGroupSize": 2,             // 腿部运动分组大小
+    "legMoveSpace": 0.6,           // 腿部移动间隔系数
+    "legContinuousMove": true,     // 是否持续移动腿部动画
+    "lockLegBase": true,           // 锁定腿部基部位置
+
+    // ========== 【战斗属性】 ========== //
+    "health": 500,               // 生命值
+    "armor": 8,                   // 护甲减伤8%
+    "hitSize": 17.5,               // 碰撞判定半径（像素）
+    "canDrown": false,             // 免疫溺水伤害
+
+    // ========== 【弹药系统】 ========== //
+    "ammoType": "烟煤",            // 使用晶体类弹药
+    "ammoCapacity": 15,            // 弹药容量
+
+    // ========== 【武器系统】 ========== //
+    "weapons": [
+    {
+    "x": 0,             // X轴安装位置偏移量(向左4单位)
+    "y": 7.2,              // Y轴安装位置偏移量
+    "shootY": 0,         // 子弹发射点的Y轴偏移
+    "mirror": false,      // 是否左右镜像翻转
+    "rotate": false,     // 炮管是否随目标旋转
+    "alternate": false,  // 是否在多枪管间交替射击
+    "top": false,        // 是否在单位顶层渲染
+    "under": true,       // 是否在单位底层渲染
+    "shootSound": "喷火",           // 射击音效资源ID
+    "recoil": 0,         // 后坐力强度(0表示无后坐)
+    "shootWarmupSpeed": 0.5, // 武器预热速度(较慢的启动)
+    "continuous": false,  // 是否为持续型武器
+    "alwaysContinuous": true, // 是否始终保持持续
+    "shake": 0.1,        // 射击时屏幕震动强度
+    
+    "bullet": {          // 子弹参数配置
+      "type": "ContinuousFlameBulletType", // 持续型火焰光束
+      "drawFlare": false, // 绘制闪光效果
+      "lifetime": 60,   // 光束存在时间(100帧)
+      "pierceCap": 1,    // 穿透18个敌人
+      "length": 150,     // 光束长度(180单位)
+      "width": 2,        // 光束宽度(6单位)
+      "damage": 20,       // 每Tick伤害值
+      "statusDuration": 6, // 子弹状态效果持续时间
+      
+      "colors": [        // 光束颜色渐变(从内到外)
+        "78E8FFFF",
+        "66FFE374",
+        "292929FF"
+      ],
+      "incendChance": 0.99,             // 点燃概率（10%）
+        "incendSpread": 3,                  // 火焰传播范围
+        "incendAmount": 2                   // 点燃持续时间（秒）
+        }
+    }
+    	        ]
+    // ========== 【科技需求】 ========== //
+    "alwaysUnlocked": false,       // 非初始解锁单位
+    "research": {
+        "parent": "先驱者"         // 前置研究需要在"组装厂"中解锁
+    }
+}

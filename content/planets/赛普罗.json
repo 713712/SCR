@@ -1,0 +1,102 @@
+{
+    "localizedName": "赛普罗",  // 星球的本地化名称
+    "defaultCore": "先驱者核心",   // 星球的核心类型
+    "parent": "sun",         // 星球所属的恒星或天体
+    "solarSystem": "sun",    // 星球所属的恒星系统
+
+    "hiddenItems": [],       // 星球上隐藏的物品或特殊区域（目前为空）
+
+    "mesh": [                // 星球表面的网格和纹理设置
+        {
+            "type": "NoiseMesh",  // 使用噪声网格生成器
+            "divisions": 5,       // 网格的细分程度
+            "radius": 0.9,        // 星球的基础半径
+            "color1": "78E8FFFF", // 表面颜色范围的起始颜色
+            "color2": "78E8FFFF", // 表面颜色范围的结束颜色
+            "octaves": 4,         // 噪声的频率层数
+            "persistence": 0.5,   // 每层噪声的衰减系数
+            "scale": 1,         // 噪声的缩放比例
+            "mag": 1.5,           // 噪声的幅度
+            "coct": 3,            // 云层噪声的频率层数
+            "cper": 1,            // 云层噪声的衰减系数
+            "cscl": 1.5,          // 云层噪声的缩放比例
+            "cthresh": 5          // 云层噪声的阈值
+        }
+                     // 星球表面的网格和纹理设置
+        {
+            "type": "NoiseMesh",  // 使用噪声网格生成器
+            "divisions": 8,       // 网格的细分程度
+            "radius": 1,        // 星球的基础半径
+            "color1": "78E8FFFF", // 表面颜色范围的起始颜色
+            "color2": "78E8FFFF", // 表面颜色范围的结束颜色
+            "octaves": 5,         // 噪声的频率层数
+            "persistence": 0.5,   // 每层噪声的衰减系数
+            "scale": 0.8,         // 噪声的缩放比例
+            "mag": 1.2,           // 噪声的幅度
+            "coct": 1,            // 云层噪声的频率层数
+            "cper": 1,            // 云层噪声的衰减系数
+            "cscl": 1.5,          // 云层噪声的缩放比例
+            "cthresh": 1          // 云层噪声的阈值
+        }
+    ],
+
+    "cloudMesh": [            // 星球大气层的云层网格设置
+        {
+            "type": "HexSkyMesh", // 使用六边形天空网格生成器
+            "speed": 3,         // 云层的移动速度
+            "divisions": 9,       // 网格的细分程度
+            "radius": 0.1,        // 云层的半径
+            "color": "78E8FFFF",    // 云层的颜色
+            "octaves": 3,         // 噪声的频率层数
+            "persistence": 0.3,   // 每层噪声的衰减系数
+            "scl": 1,             // 噪声的缩放比例
+            "thresh": 0.43        // 噪声的阈值
+        }
+    ],
+
+    "generator": {            // 星球资源生成器的设置
+        "type": "SerpuloGenerator", // 使用Serpulo生成器
+        "berylChance": 1,         // 绿柱石生成的概率
+        "iceChance": 5,           // 冰生成的概率
+        "ferricChance": 2,        // 铁矿生成的概率
+        "stoneChance": 3,           // 石头生成的概率
+        "radMin": 50,               // 资源生成的最小半径
+        "radMax": 40,               // 资源生成的最大半径
+        "berylliumScale": 2,        // 绿柱石的生成规模
+        "copperScale": 0.5,         // 铜矿的生成规模
+        "scale": 15,                // 资源生成的整体规模
+        "mag": 0.5,                 // 资源生成的幅度
+        "thresh": 0.8,              // 资源生成的阈值
+        "fscl": 20,                 // 资源生成的频率缩放
+        "fper": 0.5                 // 资源生成的频率衰减
+    },
+
+    "orbitRadius": 36,        // 星球的轨道半径（距离恒星的距离）
+    "orbitTime": 1050,        // 星球绕恒星公转一周的时间
+    "rotateTime": 750,        // 星球自转一周的时间
+    "atmosphereRadIn": 0.05,  // 大气层内部半径
+    "atmosphereRadOut": 0.5,  // 大气层外部半径
+    "radius": 1,            // 星球的实际半径
+    "sectorSize": 1,          // 星球上的区域大小
+    "minZoom": 0.1,             // 星球的最小缩放级别
+    "drawOrbit": true,        // 是否绘制轨道
+    "accessible": true,       // 是否允许玩家访问这颗星球
+    "tidalLock": false,       // 是否潮汐锁定（始终一面朝向恒星）
+    "allowLaunchSchematics": true, // 是否允许玩家在该星球上发射飞船
+    "alwaysUnlocked": true,   // 是否始终解锁，无需解锁即可访问
+    "allowSectorInvasion": false, // 是否允许区域被入侵
+    "updateLighting": true,   // 是否更新光照效果
+    "sectorSeed": 1,          // 区域生成的随机种子
+    "bloom": true,            // 是否启用光晕效果
+    "visible": true,          // 是否在地图上可见
+    "hasAtmosphere": true,             // 是否有大气层
+    "atmosphereColor": "78E8FFFF",     // 大气层颜色
+    "iconColor": "66FFE37478E8FFFF",  // 星球图标的颜色
+    "startSector": 227,         // 玩家初始进入的区域编号
+    "allowWaveSimulation": true, // 是否允许模拟敌对波次
+    "allowLaunchLoadout": true, // 是否允许玩家自定义发射配置
+    "clearSectorOnLose": true,   // 玩家失败时是否清除已占领区域
+    "allowWaves": true,        // 是否允许生成敌对波次
+    "allowLaunchToNumbered": false // 是否允许发射到编号区域
+}
+//来自爬爬

@@ -1,0 +1,13 @@
+{
+	  "name": "大型铅墙",//名字
+	"description": "加厚了点，所以血量比大型铜墙高",//介绍
+	"type": "Wall",//类型
+	"health":1310,//血量
+	"size":2,//边长
+	"requirements": [
+	{ "item": "lead", "amount":28}
+	],
+	"category": "defense",//不能改
+	"research": "铅墙"//科技树位置
+ "absorbLasers":true,//吸收激光
+}

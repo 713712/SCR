@@ -1,0 +1,14 @@
+{
+	"type": "items",
+	"name": "劣质硅",
+	"description": "一种赛普罗随处可见的资源\n用作建筑材料",
+	"details": "BYD小硅厂烧的也太差了",
+	"color": "292929FF",
+	"cost": 1,
+	"hardness": 0,
+	"explosiveness": 0,
+	"radioactivity": 0,
+	"charge": 0.5,
+	"flammability": 0,
+		"research":"青铜矿石"
+	}

@@ -1,0 +1,15 @@
+{
+	"type": "items",
+	"name": "物品",
+	"description": "一种赛普罗随处可见的资源\n用作建筑材料",
+	"details": "赛普罗的铜矿，不过由于年代久远，早已氧化",
+	"color": "66FFE374",
+	"cost": 1,
+	"hardness": 0,
+	"explosiveness": 0,
+	"radioactivity": 0,
+	"charge": 0.5,
+	"flammability": 0,
+		"research": 
+	},
+	}

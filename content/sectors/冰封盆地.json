@@ -1,0 +1,9 @@
+{
+"localizedName": "冰封盆地",
+	"description": "我们降落到了一个盆地,敌人很快就会发现你，尽你所能守到21波吧",
+    "planet":"赛普罗"//母星名字。
+    "sector":210//区块坐标
+    "captureWave":21//胜利波次
+    "difficulty":2//难度1一5
+    "research": "零号地区"
+		}
