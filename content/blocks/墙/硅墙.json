@@ -1,0 +1,13 @@
+{
+	  "name": "铅墙",//名字
+	"description": "没啥可说的",//介绍
+	"type": "Wall",//类型
+	"health":630,//血量
+	"size":1,//边长
+	"requirements": [
+	{ "item": "lead", "amount":12}
+	],
+	"category": "defense",//不能改
+	"research": "青铜墙"//科技树位置
+ "absorbLasers":true,//吸收激光（塑钢墙同款）
+}

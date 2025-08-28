@@ -1,0 +1,123 @@
+{
+    // 类型为炮塔（ItemTurret）
+    "type": "ItemTurret",
+    // 名称
+    "name": "弹雨",
+    // 描述为快速向敌人发射子弹
+    "description": "快速地向敌人发射3次子弹，需要供弹",
+    // 简介
+    "details": "重型机枪",
+    // 生命值为1100
+    "health": 1100,
+    // 大小为2
+    "size": 2,
+    // 类别为炮塔（turret）
+    "category": "turret",
+    // 研究名称
+    "research": "撕破",
+    // 射击声音
+      //始终解锁
+    "shootSound": "shoot",
+    // 射程
+    "range": 130,
+    // 旋转速度为3
+    "rotateSpeed": 2,
+    // 重新装填时间为8
+    "reload": 15,
+    // 目标间隔为5
+    "targetInterval": 5,
+    "shoot": {
+        // 射击模式类型
+        "type": "ShootPattern",
+        // 每次射击发射1颗子弹
+        "shots": 3,
+        // 子弹发射延迟为1
+        "shotDelay": 0
+        "type": "ShootAlternate",
+		"barrels": 3,
+    },
+    // 可以瞄准空中目标
+    "targetAir": true,
+    // 可以瞄准地面目标
+    "targetGround": true,
+    // 最大弹药量为50
+    "maxAmmo": 50,
+    // 每次射击不消耗所有弹药
+    "consumeAmmoOnce": true,
+    "consumes": {
+        "coolant": {
+            // 消耗冷却剂的量为0.2
+            "amount": 0.1,
+            // 可选择是否消耗（非必须消耗）
+            "optional": false
+        }
+    },
+    "parts":{
+"type": "Shapepart",//不用改
+"progress": "reload",//不用改
+"color":"AB99D3FF",
+"stroke":3//扩大停止时粗细 填数字
+"strokeTo":1//开始时粗细
+},
+  "requirements": [
+        {
+            // 需要的物品为铜（copper）
+            "item": "青铜矿石",
+            // 铜的数量为25
+            "amount": 25
+        },
+        {
+            // 需要的物品为铅（lead）
+            "item": "劣质硅",
+            // 铅的数量为20
+            "amount": 20
+        }
+    ]
+"ammoTypes": {
+    // ammoTypes对象，用于定义各种弹药类型相关的属性
+	"青铜矿石": {
+		"speed": 4,
+            "damage": 20,
+            "lifetime": 30,
+            "width": 3,
+            "height": 3,
+            "ammoMultiplier": 1,
+            "shootEffect": "shootBig",
+            "trailColor": "8F665BFF",
+            "trailWidth": 4,
+            "trailLength": 12,
+            "hitColor": "8F665BFF",
+            "buildingDamageMultiplier": 4
+		    "pierceArmor" : true,
+		    // 能够穿透建筑物
+            "pierceBuilding": true,
+            // 穿透次数为 6
+            "pierce": 6,
+            "pierce": true,
+			"pierceBuilding": true,
+			"pierceCap": 4,
+		},
+			"劣质硅": {
+		"speed": 5,
+            "damage": 10,
+            "lifetime": 30,
+            "width": 3,
+            "height": 3,
+            "ammoMultiplier": 1,
+            "shootEffect": "shootBig",
+            "trailColor": "AB99D3FF",
+            "trailWidth": 4,
+            "trailLength": 12,
+            "hitColor": "AB99D3FF",
+            "buildingDamageMultiplier": 4
+		    "pierceArmor" : true,
+		    // 能够穿透建筑物
+            "pierceBuilding": true,
+            // 穿透次数为 6
+            "pierce": 6,
+            "pierce": true,
+			"pierceBuilding": true,
+			"pierceCap": 4,
+		},
+    },
+    }

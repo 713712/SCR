@@ -18,7 +18,7 @@ Events.on(EventType.ClientLoadEvent, cons(e => {
         table.row();
         table.add("特别感谢:[green]花瓶星和爬爬还有?");
         table.row();
-        table.add("更新:新增运输建筑").left().growX().wrap().width(200).maxWidth(300).pad(4).labelAlign(Align.left);
+        table.add("更新:劣质硅").left().growX().wrap().width(200).maxWidth(300).pad(4).labelAlign(Align.left);
         table.row();
         return table;
     })()).grow().center().maxWidth(300);
