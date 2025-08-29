@@ -1,0 +1,9 @@
+{
+"localizedName": "冰冻森林",
+	"description": "我们降落到了一个森林,敌人在此处建立了基地，研究制造盾刀，用盾刀摧毁敌人核心吧",
+    "planet":"赛普罗"//母星名字。
+    "sector":10//区块坐标
+    "captureWave":20//胜利波次
+    "difficulty":2//难度1一5
+    "research": "冰封盆地"
+		}

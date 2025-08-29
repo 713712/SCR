@@ -2,7 +2,7 @@
 {
     "type": "ItemTurret",
     "name": "撕破",
-    "description": "向敌军发射标准小口径青铜子弹\n需要消耗子弹\nBYD比双管好",
+    "description": "向敌军喷射标准子弹\n需要消耗子弹\nBYD比双管好",
 "health": 450,  // 生命值
     "size": 2,  // 占用2x2格
     "range": 120,  // 射程

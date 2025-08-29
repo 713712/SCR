@@ -1,0 +1,22 @@
+{
+	"type": "UnitFactory",
+	"name": "路由器进阶厂",
+	"description": "让路由器站起来！",//介绍
+	"health": 850,
+	"size": 3,
+	"plans": [
+		{
+			"unit": "路由器",
+			"time": 1280,
+			"requirements": [
+				"青铜矿石/20",
+			]
+		},
+	],
+	"requirements": [
+		"青铜矿石/80",
+	],
+	"category": "units",
+	"research": "青铜陆军生成厂"
+	"researchCostMultiplier": 0.25,
+}

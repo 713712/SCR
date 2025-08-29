@@ -1,0 +1,83 @@
+{
+    // 基础单位属性
+    "name": "路由器", // 单位名称
+    "description": "路由器邪教！", // 单位描述
+    "type": "mech", // 单位类型（机甲）
+    "health": 240, // 生命值
+    "armor": 8, // 护甲值（减伤用）
+    "speed": 0.85, // 移动速度
+    "accel": 0.4, // 加速度
+    "drag": 0.1, // 移动阻力
+    "hitSize": 10, // 碰撞体积
+    "rotateSpeed": 1.8, // 旋转速度
+    "targetAir": true, // 能否对空
+    "targetGround": true, // 能否对地
+    "canBoost": false, // 是否可冲刺
+    "researchCostMultiplier": 0.3,
+	"research": "路由器进阶厂"
+    "weapons": [  // 武器配置
+        {
+        "name":"路由器2",
+            "rotate": false,  // 是否可以旋转
+            "mirror": false,  // 是否镜像
+            "top": false,// 是否位于单位顶部
+            "shootY":6,
+            "x": 4.9,  // 武器在机甲上的X坐标
+            "y": 0,  // 武器在机甲上的Y坐标
+            "reload": 14,  // 重新装填时间
+            "recoil": 1,  // 后坐力
+            "inaccuracy": 0.8,  // 射击不精度
+            "bullet": {  // 子弹配置
+                "type": "BasicBulletType",
+                  // 子弹类型为普通子弹
+                  "width": 10, // 子弹宽度
+                "height": 8, // 子弹高度
+                "damage": 18,  // 子弹伤害
+                "speed": 3.5,  // 子弹速度
+                "lifetime": 40 // 子弹存活时间
+                "status": "burning",  // 附加状态（燃烧）
+                "statusDuration": 180, // 状态持续时间（帧）
+                "frontColor": "FFECC8FF",      // 弹头颜色（带透明度）
+                "backColor": "FFDA95FF",       // 弹尾颜色
+                
+                "despawnEffect": {
+                    "type": "multiEffect",     // 复合特效
+                    "effects": [
+                        {
+                            "type": "melting",  // 粒子
+                            "particles": 11,           // 粒子数量
+                            "length": 15              // 喷射距离
+                            "colorFrom": "FFDA95FF",
+                            "colorTo": "FFECC8FF",     // 最后颜色
+                     }
+                ],
+            },
+            
+                "hitEffect": {
+                    "type": "multiEffect",     // 复合特效
+                    "effects": [
+                        {
+                            "type": "melting",  // 粒子
+                            "particles": 16,           // 粒子数量
+                            "length": 15              // 喷射距离
+                            "colorFrom": "FFDA95FF",
+                            "colorTo": "FFECC8FF",     // 最后颜色
+                     }
+                ],
+            },
+                "shootEffect": {    // 射击特效
+                    "type": "multiEffect",     // 复合特效
+                    "effects": [
+                        {
+                            "type": "melting",  // 粒子
+                            "particles": 6,           // 粒子数量
+                            "length": 5              // 喷射距离
+                            "colorFrom": "FFDA95FF",
+                            "colorTo": "FFECC8FF",     // 最后颜色
+                     }
+                ],
+            },
+            }
+        }
+    ],
+}

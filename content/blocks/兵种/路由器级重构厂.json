@@ -1,0 +1,27 @@
+{
+"type": "Reconstructor",
+	"name": "路由器级重构厂",
+	"description": "把输入单位升级",
+	"details": "看来,爬爬越来越神金了",
+	"health": 850
+	"size": 3,
+	"constructTime": 1800,//生产单位时间
+	"consumes": {//消耗
+		"items": {
+			"items": [
+			"青铜矿石/30",
+			"铁锈/20",
+			]
+		}
+	},
+	"requirements": [
+	"劣质硅/70",
+	"青铜矿石/50",
+	],//建造所需
+	"upgrades": [
+        ["路由器", "分配器"],
+	],
+	"category": "units",
+	"research": "路由器进阶厂"
+	"researchCostMultiplier": 0.45,
+}
