@@ -30,7 +30,7 @@ Events.on(EventType.ClientLoadEvent, () => {
         buttonTable.button("[red]更新日志", () => {
             const dialog2 = new BaseDialog("[red]更新日志");
             const scrollContent = new Table(cons(st => {
-                st.add("[white]8月29:更改开屏、合并爬爬做的、平衡模组物品");
+                st.add("[white]8月29:更改开屏、合并爬爬做的、平衡模组物品、修复硅墙使用青铜的bug");
             }));
 
             dialog2.cont.add(new ScrollPane(scrollContent)).size(500, 600).row();
