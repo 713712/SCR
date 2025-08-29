@@ -3,7 +3,7 @@
     "name": "大型青铜墙",
     "description": "似乎并不比铜强多少",
     "buildCostMultiplier": 1.8,
-    "health": 1540,
+    "health": 1800,
     "size": 2,
     "requirements": [
         "青铜矿石/24",

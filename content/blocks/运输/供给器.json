@@ -19,9 +19,14 @@
         // 需要30个铜
         { "item": "青铜矿石", "amount": 10 },
         // 需要20个铅
-        ]
+    ],
     // 设备所属的类别，这里为分配类
     "category": "distribution",
     // 该设备关联的研究项目，这里为duo
-    "research": "铜轨道"
+    "research":{
+        "parent": "铜轨道",
+        "requirements":[
+             "青铜矿石/100"
+        ]
+    }
 }

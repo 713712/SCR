@@ -6,7 +6,7 @@
 	"itemCapacity":40,
 	  "outputItem": {
     "item": "劣质硅", // 输出物品名称（需与自定义物品一致）
-    "amount":6// 单次生产 3 个
+    "amount":4// 单次生产 3 个
   },
 	"size":1,
 	"hasItems": true,

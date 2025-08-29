@@ -1,0 +1,74 @@
+{
+    // ========== 【核心属性】 ========== //
+    "type": "legs",                // 单位类型
+    "name": "分配器",                // 显示名称
+    "description": "路由器邪教2.0！",
+    "research":"路由器",//技术位置
+    // ===== 【目标类型】 ===== //
+    "targetAir": true,             // 能攻击空中单位
+    "targetGround": true,          // 能攻击地面单位
+
+    // ========== 【移动系统】 ========== //
+    "speed": 0.48,                 // 移动速度
+    "drag": 0.4,                   // 移动惯性
+    "rotateSpeed": 2.8,            // 身体转向速度
+    "hovering": true,              // 悬停模式
+    "faceTarget": true,            // 单位本体始终面向攻击目标
+
+    // ========== 【战斗属性】 ========== //
+    "health": 1550,               // 生命
+    "armor": 8,                   // 护甲
+    "hitSize": 18.5,               // 碰撞判定半径
+    "canDrown": false,             // 免疫溺水伤害（可水中作战）
+
+    // ========== 【弹药系统】 ========== //
+    "ammoType": "graphite",            // 使用特殊弹药类型
+    "ammoCapacity": 25,            // 弹药容量（需配合武器消耗）
+
+    // ========== 【武器系统】 ========== //
+    "weapons": [
+    {
+        "name":"分配器2",
+            "rotate": false,  // 是否可以旋转
+            "mirror": true,  // 是否镜像
+            "top": false,// 是否位于单位顶部
+            "alternate": true,//是否交替射击
+            "x": -9,  /* 武器在机甲上的X坐标
+             这里贴图画反了  这里是负数*/
+            "y": 0.1,  // 武器在机甲上的Y坐标
+            "shootY": 8.6,// 子弹发射高度偏移
+            "reload": 30,  // 重新装填时间
+            "recoil": 1.5,  // 后坐力
+            "inaccuracy": 0,  // 射击不精度
+            "shootSound": "laser",//射击音效
+            "bullet": {  // 子弹配置
+                "type": "LaserBulletType",
+                  // 子弹类型为普通子弹
+                "status": "burning",  // 附加状态（燃烧）
+                "statusDuration": 360, // 状态持续时间
+				"recoil": 0.6,//后坐力
+				"damage": 55,//伤害
+				"laserAbsorb": true,//是否会被激光吸收
+				"sideAngle": -125,//突刺的角度
+				"sideWidth": 1.5,//突刺宽度
+				"sideLength": 18.5,//突刺长度
+				"colors": [//颜色
+					"E5A13BFF",
+			        "FFDE7DC1",
+		        	"FFFFFF"
+				],
+				"width": 18,//子弹宽度
+				"length": 105//子弹长度
+			}
+		}
+  ],
+    "hovering": false, //盘旋。身子转，腿不转。false就是一起转
+  "legCount": 6,  // 腿部数量
+  "legMoveSpace": 1,  // 腿部移动间距
+  "legPairOffset": 2.4,  // 腿部配对偏移
+  "legLength": 24,  // 腿部长度
+  "legExtension": -1.8,  // 腿部伸展度
+  "legBaseOffset": 5.5,  // 腿部基础偏移
+  "stepShake": 0.5,  // 步伐震动强度
+  "legLengthScl": 1,  // 腿部长度比例
+}

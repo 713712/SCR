@@ -1,27 +1,55 @@
-Events.on(EventType.ClientLoadEvent, cons(e => {
-    var dialog = new BaseDialog("强化战役-再临［SCR］"); //新建一个显示窗口
-        dialog.cont.image(Core.atlas.find("强化战役-再临-图片")).row();;
-    dialog.buttons.button("@close", run(() => {
-        dialog.hide(); //退出界面
-    })).size(128, 64); //@close
-    
-    dialog.cont.button("加入晶体工业群", run(() => {
-        Core.app.openURI("http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=mq_AXhT-_V9XjFJ14YFghhabuavwHK3o&authKey=F%2Bz%2BnZw%2FhN3eVxRb%2BARpKFVbkowFMn%2Fuims2GUWHK1wJASvXBopmE54BWlZgocbi&noverify=0&group_code=2158027406");
-    })).size(100, 70).pad(3);
-        dialog.cont.button("加入强化战役群", run(() => {
-        Core.app.openURI("https://qun.qq.com/universal-share/share?ac=1&authKey=s0fLKaIrYagHpxzEOmbifzDkTYr%2BS8%2BhbRqAo0F04Az845KvjEtS3yqEfK6dtEhd&busi_data=eyJncm91cENvZGUiOiI5MjczNjY0MDkiLCJ0b2tlbiI6ImFDczhPdGRRbTdEM0dtY24xUTFGRG9ZSlhNOVVkTng2VjM5QXJBSzVoNUY3eWpxdjF2ZzNXaEFhdFJ5bDVHUmYiLCJ1aW4iOiIzNjgzNjQ0MDEwIn0%3D&data=AaKc-YfxrzD6FwNBZ0yiXNWfa8_wAkGKARJx-2BG16A0KpcDRmlmjxBWgXgOCEv1SeMm5xaXoOTanLp5A44hrA&svctype=4&tempid=h5_group_info");
-    })).size(50, 70).pad(3);
-    
-    dialog.cont.pane((() => {
-        var table = new Table();
-        table.add("模组作者:[yellow]鼠标");
-        table.row();
-        table.add("特别感谢:[green]花瓶星和爬爬还有?");
-        table.row();
-        table.add("更新:与爬爬联动").left().growX().wrap().width(200).maxWidth(300).pad(4).labelAlign(Align.left);
-        table.row();
-        return table;
-    })()).grow().center().maxWidth(300);
-    
+Events.on(EventType.ClientLoadEvent, () => {
+    // 创建主对话框
+    const dialog = new BaseDialog("欢迎");
+
+    // 添加图标
+    //dialog.cont.image(Core.atlas.find("icon.png")).row();
+
+    // 主内容区域：仅保留说明文字
+    dialog.cont.pane(
+        new Table(cons(t => {
+            t.add("欢迎游玩强化战役\n模组作者:[yellow]鼠标\n特别感谢:[green]“花瓶星”、“爬爬”、“?”、癫狂的棕熊")
+              .left()
+              .growX()
+              .wrap()
+              .width(600)
+              .maxWidth(1000)
+              .pad(4)
+              .labelAlign(Align.left);
+            t.row();
+        }))
+    ).grow().center().maxWidth(600);
+
+    // === 底部按钮栏：三个按钮居中排列 ===
+    dialog.buttons.table(cons(buttonTable => {
+        // 设置按钮大小
+        const buttonWidth = 180;
+        const buttonHeight = 64;
+
+        // “测试页面”按钮
+        buttonTable.button("[red]更新日志", () => {
+            const dialog2 = new BaseDialog("[red]更新日志");
+            const scrollContent = new Table(cons(st => {
+                st.add("[white]8月29:更改开屏、合并爬爬做的、平衡模组物品");
+            }));
+
+            dialog2.cont.add(new ScrollPane(scrollContent)).size(500, 600).row();
+            dialog2.buttons.defaults().size(500, 64);
+            dialog2.buttons.button("@close", () => dialog2.hide());
+            dialog2.show();
+        }).size(buttonWidth, buttonHeight);
+
+        // “加入QQ群”按钮
+        buttonTable.button("加入QQ群", () => {
+            Core.app.openURI("http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=Z29-HwqOqCMqe_EHL7hHyoDT-qoW9lKY&authKey=BWXxrZo0cvCtGsgyNAXCFP9pPOp1mUBWA9PS4GbI9R4EKuwevQbkXo%2FCMJVHRCfE&noverify=0&group_code=927366409");
+        }).size(buttonWidth, buttonHeight);
+
+        // “关闭”按钮
+        buttonTable.button("@close", () => {
+            dialog.hide();
+        }).size(buttonWidth, buttonHeight);
+    })).center().grow(); // 整个按钮表格居中并拉伸
+
+    // 显示对话框
     dialog.show();
-}));
+});
