@@ -10,5 +10,6 @@
 	"radioactivity": 0,
 	"charge": 0.5,
 	"flammability": 0,
-		"research":"青铜矿石"
+		"research":"冰封盆地"
+		"alwaysUnlocked":false,
 	}

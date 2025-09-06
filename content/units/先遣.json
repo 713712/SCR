@@ -1,0 +1,127 @@
+{
+    // 基础单位属性
+    "name": "先遣", // 单位名称
+    "description": "拥有两架冰雹炮塔和两把重机枪", // 单位描述
+    "type": "mech", // 单位类型（机甲）
+    "health": 2850, // 生命值
+    "armor": 8, // 护甲值（减伤用）
+    "speed": 0.5, // 移动速度
+    "accel": 0.4, // 加速度
+    "drag": 0.1, // 移动阻力
+    "hitSize": 18, // 碰撞体积
+    "rotateSpeed": 1.8, // 旋转速度
+    "targetAir": true, // 能否对空
+    "targetGround": true, // 能否对地
+    "canBoost": false, // 是否可冲刺
+    "researchCostMultiplier": 4,
+    "alwaysUnlocked":false,
+"mechFrontSway": 1.5, //机械前摇
+"mechStepParticles": true, //机械步粒子
+"mechStepShake": 0.25, //机械步摇
+    "research":"初级单位重构厂",//技术位置
+    "weapons": [  // 武器配置
+        {
+        "name":"先遣2",
+            "rotate": false,  // 是否可以旋转
+            "mirror": true,  // 是否镜像
+            "top": true,// 是否位于单位顶部
+            "shootY":8,
+            "x": 10,  // 武器在机甲上的X坐标
+            "y": 0,  // 武器在机甲上的Y坐标
+            "reload": 40,  // 重新装填时间
+            "recoil": 1,  // 后坐力
+            "inaccuracy": 0,  // 射击不精度
+            "shake": 0.9,//射击震动强度
+            "shootSound": "artillery", // 射击音效
+            "hitSound":"titanExplosion"
+            "bullet": {  // 子弹配置
+                "type": "ArtilleryBulletType",
+                  // 子弹类型为普通子弹
+                  "width": 15, // 子弹宽度
+                "height": 15, // 子弹高度
+            "splashDamageRadius": 32,    // 爆炸范围
+            "splashDamage": 120,         // 范围伤害
+                "speed": 3.5,  // 子弹速度
+                "lifetime": 130 // 子弹存活时间
+                "status": "blasted",  // 附加状态
+                "frontColor": "FFECC8FF",      // 弹头颜色（带透明度）
+                "backColor": "FFDA95FF",       // 弹尾颜色
+                "despawnEffect": { // 子弹消失特效
+                    "type": "multiEffect", // 复合特效
+                    "effects": [
+                        {
+                            "type": "flakExplosionBig",
+                            "particles": 1, // 粒子数量
+                            "length": 0, // 喷射距离
+                            "colorFrom": "FFECC8FF", // 起始颜色
+                            "colorTo": "FFDA95FF" // 结束颜色
+                        }
+                    ]
+                },
+            }
+        },
+      	        {
+        "name":"路由器5",
+            "rotate": false,  // 是否可以旋转
+            "mirror": true,  // 是否镜像
+            "top": false,// 是否位于单位顶部
+            "shootY":6,
+            "x": 4.9,  // 武器在机甲上的X坐标
+            "y": 0,  // 武器在机甲上的Y坐标
+            "reload": 5,  // 重新装填时间
+            "recoil": 1,  // 后坐力
+            "inaccuracy": 0.8,  // 射击不精度
+            "bullet": {  // 子弹配置
+                "type": "BasicBulletType",
+                  // 子弹类型为普通子弹
+                  "width": 10, // 子弹宽度
+                "height": 8, // 子弹高度
+                "damage": 18,  // 子弹伤害
+                "speed": 3.5,  // 子弹速度
+                "lifetime": 40 // 子弹存活时间
+                "status": "burning",  // 附加状态（燃烧）
+                "statusDuration": 180, // 状态持续时间（帧）
+                "frontColor": "FFECC8FF",      // 弹头颜色（带透明度）
+                "backColor": "FFDA95FF",       // 弹尾颜色
+                
+                "despawnEffect": {
+                    "type": "multiEffect",     // 复合特效
+                    "effects": [
+                        {
+                            "type": "melting",  // 粒子
+                            "particles": 11,           // 粒子数量
+                            "length": 15              // 喷射距离
+                            "colorFrom": "FFDA95FF",
+                            "colorTo": "FFECC8FF",     // 最后颜色
+                     }
+                ],
+            },
+            
+                "hitEffect": {
+                    "type": "multiEffect",     // 复合特效
+                    "effects": [
+                        {
+                            "type": "melting",  // 粒子
+                            "particles": 16,           // 粒子数量
+                            "length": 15              // 喷射距离
+                            "colorFrom": "FFDA95FF",
+                            "colorTo": "FFECC8FF",     // 最后颜色
+                     }
+                ],
+            },
+                "shootEffect": {    // 射击特效
+                    "type": "multiEffect",     // 复合特效
+                    "effects": [
+                        {
+                            "type": "melting",  // 粒子
+                            "particles": 6,           // 粒子数量
+                            "length": 5              // 喷射距离
+                            "colorFrom": "FFDA95FF",
+                            "colorTo": "FFECC8FF",     // 最后颜色
+                     }
+                ],
+            },
+            }
+        },  
+    ],
+}

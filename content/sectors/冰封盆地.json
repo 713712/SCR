@@ -5,5 +5,12 @@
     "sector":210//区块坐标
     "captureWave":21//胜利波次
     "difficulty":2//难度1一5
-    "research": "零号地区"
-		}
+    "research": {
+		"parent": "零号地区",
+		"objectives": [
+            {
+				"type": "SectorComplete",
+				"preset": "零号地区"
+			}
+			]}
+}

@@ -6,7 +6,7 @@
   "size":2,//尺寸
   "health":2000,//血量
   "itemCapacity":2500,//物品容量
-  "unitCapModifier":10,//该核心所增加的单位上限
+  "unitCapModifier":14,//该核心所增加的单位上限
   "unitType":"先驱者",//核心单位
   "requirements": [],
   "category": "effect",//建造栏分类

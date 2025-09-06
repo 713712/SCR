@@ -5,7 +5,7 @@
     "description": "向敌军喷射标准子弹\n需要消耗子弹\nBYD比双管好",
 "health": 450,  // 生命值
     "size": 2,  // 占用2x2格
-    "range": 120,  // 射程
+    "range": 180,  // 射程
     "reload": 50,  // 装填时间
     "maxAmmo": 40,  // 最大弹药容
     // 射击参数
@@ -23,7 +23,7 @@
  "ammoTypes": {  // 弹药类型定义容器
     	"青铜矿石": {
 		"speed": 5,
-            "damage": 20,
+            "damage": 15,
             "lifetime": 30,
             "width": 3,
             "height": 3,
@@ -45,7 +45,7 @@
 		},
 		   "烟煤": {  // 使用石墨作为弹药
                 "type": "ArtilleryBulletType",  // 炮弹类型（可越过障碍）
-                "damage": 12,      // 直接命中伤害
+                "damage": 8,      // 直接命中伤害
                 "speed": 4,        // 飞行速度
                 "lifetime": 270,    // 存在时间（帧）
                 "width": 12,       // 碰撞宽度
@@ -53,28 +53,28 @@
                 "frontColor": "8CAAE8FF",  // 蓝色弹头
             "backColor": "8CAAE8FF",  // 蓝色弹尾
             "trailColor": "8CAAE8FF",  // 蓝色轨迹
-                "splashDamageRadius": 32,  // 爆炸半径
-                "splashDamage": 45,        // 爆炸伤害
+                "splashDamageRadius": 24,  // 爆炸半径
+                "splashDamage": 30,        // 爆炸伤害
     },
     "劣质硅": {
                 "type": "ArtilleryBulletType",  // 炮弹类型（可越过障碍）
-                "damage": 34,      // 直接命中伤害
+                "damage": 27,      // 直接命中伤害
                 "speed": 4,        // 飞行速度
                 "lifetime": 270,    // 存在时间（帧）
                 "width": 11,       // 碰撞宽度
                 "height": 11,      // 碰撞高度
-                "splashDamageRadius": 32,  // 爆炸半径
-                "splashDamage": 35,        // 爆炸伤害
+                "splashDamageRadius": 24,  // 爆炸半径
+                "splashDamage": 29,        // 爆炸伤害
     },//子弹复制粘贴就行了  记得改名字   
 		},
     // 其他属性
     "rotateSpeed": 1.8,  // 炮塔旋转速度2.5
     "requirements": [  // 建造所需材料
-        {"item": "青铜矿石", "amount": 25},
+        {"item": "青铜矿石", "amount":75},
     ],
     "category": "turret",  // 分类为炮塔
     "researchCostMultiplier": 0.3,  // 研究成本只需30%
-    "research": "先驱者核心",  // 前置研究项
+    "research": "寒风哨站",  // 前置研究项
     // 绘制配置
     "drawer": {
         "type": "DrawMulti",  // 复合绘制器

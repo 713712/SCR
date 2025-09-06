@@ -9,7 +9,7 @@
 			"unit": "氧化路由器",
 			"time": 1280,
 			"requirements": [
-				"青铜矿石/20",
+				"青铜矿石/80",
 			]
 		},
 	],
@@ -17,6 +17,6 @@
 		"青铜矿石/80",
 	],
 	"category": "units",
-	"research": "青铜陆军生成厂"
+	"research": "冰冻森林"
 	"researchCostMultiplier": 0.25,
 }

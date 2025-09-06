@@ -1,0 +1,16 @@
+{
+"localizedName": "陨石带",
+	"description": "我们降落到了一个战场，这里充满了铁锈，速战速决，击溃敌人的核心",
+    "planet":"赛普罗"//母星名字。
+    "sector":1//区块坐标
+    //"captureWave":20//胜利波次
+    "difficulty":3//难度1一5
+        "research": {
+		"parent": "冰冻森林",
+		"objectives": [
+            {
+				"type": "SectorComplete",
+				"preset": "冰冻森林"
+			}
+			]}
+}

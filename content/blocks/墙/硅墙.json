@@ -8,6 +8,6 @@
 	{ "item": "劣质硅", "amount":12}
 	],
 	"category": "defense",//不能改
-	"research": "青铜墙"//科技树位置
+	"research": "冰封盆地"//科技树位置
  "absorbLasers":true,//吸收激光（塑钢墙同款）
 }

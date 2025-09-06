@@ -23,10 +23,10 @@
     "itemCapacity": 40,//物品容量
     "liquidCapacity": 20,//液体容量
     "requirements": [	
-   { "item": "青铜矿石", "amount":50},
+   { "item": "青铜矿石", "amount":20},
    ],
     "category": "production",
-    "research": "先驱者核心"
+    "research": "寒风哨站"
             "researchCostMultiplier": 0.1,  // 研究成本乘数：0.45（研究该设施的成本为正常成本的45%）
             "canOverdrive": false,
 }

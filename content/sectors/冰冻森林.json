@@ -5,5 +5,12 @@
     "sector":10//区块坐标
     "captureWave":20//胜利波次
     "difficulty":2//难度1一5
-    "research": "冰封盆地"
-		}
+    "research": {
+		"parent": "冰封盆地",
+		"objectives": [
+            {
+				"type": "SectorComplete",
+				"preset": "冰封盆地"
+			}
+			]}
+}

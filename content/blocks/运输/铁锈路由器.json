@@ -1,0 +1,17 @@
+{
+"name":"铁锈路由器"
+	"type": "Router",
+	"health": 300,
+	"size": 1,
+	"speed": 0.1
+	"itemCapacity": 1,
+	"speedBoost": 0.0001
+	"details":"看什么看，没见过路由器吗",
+	"requirements": [
+		{ "item": "铁锈", "amount": 2 },
+	],
+	"category": "distribution",
+	"research": "陨石带"
+	"researchCostMultiplier": 0.2,
+	    "canOverdrive": false,
+}
