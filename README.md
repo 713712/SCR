@@ -1,7 +1,7 @@
 # 🚀 继强化战役的下一代模组  
-### **✍️作者：[是一个鼠标呀](https://b23.tv/pPIBkfp)**
+### **✍️作者：[是一个鼠标呀](https://space.bilibili.com/3546651243317325)**
 ### **📮 模组群：927366409**  
-### *✨ 特别感谢：[?](https://b23.tv/kFEjKZL)、[爬爬](https://b23.tv/3ewymUS)跟[鱼](https://b23.tv/kaRJxW0)*  
+### *✨ 特别感谢：[?](https://space.bilibili.com/1213894729)、[爬爬](https://space.bilibili.com/3546618439666548)跟[鱼](https://space.bilibili.com/3546762432219923)*  
 [Q群](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=-XUXw20nPYMbbfusDMY9oKYX_UnedIQ8&authKey=N5mrnzY%2FUnqnpt2gy39MXG1AASqQJXTSI1PqAOo2YlZX3TNcCwBGQJTcGZh3Ct64&noverify=0&group_code=927366409)
 ----
 <details markdown='1'><summary>📜 模组故事</summary>
