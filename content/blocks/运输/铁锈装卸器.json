@@ -1,0 +1,20 @@
+{
+    "health": 70,
+    "size": 1,
+    "speed": 30,
+    "update": "true",
+    "hasItems": "true",
+    "type": "Unloader",
+    "description": "装卸物品",
+    "name": "碳化钢卸载器",
+    "requirements": [
+        {
+            "item": "铁锈",
+            "amount": 30
+         },
+    ],
+    "category": "effect",
+    "research": "铁锈路由器"
+    "researchCostMultiplier": 0.2,
+        "canOverdrive": false,
+}

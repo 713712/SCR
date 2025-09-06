@@ -5,10 +5,11 @@
 	"details": "由赛普罗上爬重工业与原住民战斗留下的矿物",
 	"color": "66FFE374",
 	"cost": 1,
-	"hardness": 0,
+	"hardness": 3,
 	"explosiveness": 0,
 	"radioactivity": 0,
 	"charge": 0.5,
 	"flammability": 0,
-		"research":"青铜矿石"
+		"research":"陨石带"
+		"alwaysUnlocked":false,
 	}

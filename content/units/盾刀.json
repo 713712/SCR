@@ -86,7 +86,8 @@
     	        ]
     // ========== 【科技需求】 ========== //
     "alwaysUnlocked": false,       // 非初始解锁单位
+        "researchCostMultiplier": 0.5,  // 研究
     "research": {
-        "parent": "先驱者"         // 前置研究需要在"组装厂"中解锁
+        "parent": "冰封盆地"         // 前置研究需要在"组装厂"中解锁
     }
 }

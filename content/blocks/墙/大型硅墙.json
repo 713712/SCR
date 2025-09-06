@@ -2,10 +2,10 @@
 	  "name": "大型硅墙",//名字
 	"description": "防止敌人的激光穿透",//介绍
 	"type": "Wall",//类型
-	"health":1810,//血量
+	"health":2520,//血量
 	"size":2,//边长
 	"requirements": [
-	{ "item": "劣质硅", "amount":28}
+	{ "item": "劣质硅", "amount":48}
 	],
 	"category": "defense",//不能改
 	"research": "硅墙"//科技树位置

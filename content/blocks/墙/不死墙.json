@@ -1,0 +1,9 @@
+{
+	  "name": "不死墙",//名字
+	"description": "测试专用，不给玩家用，你能看到说明你要不解包了要不是X端",//介绍
+	"type": "Wall",//类型
+	"health":99999999,//血量
+	"size":2,//边长
+	"category": "defense",//不能改
+ "absorbLasers":true,//吸收激光（塑钢墙同款）
+}

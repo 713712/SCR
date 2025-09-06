@@ -1,0 +1,16 @@
+{
+	"type": "Battery",
+	"size": 2,
+	    "name": "劣质硅电池",  // 设备名称（游戏内显示的具体名称）
+    "description": "可储存2000点电力",  // 设备描述（说明核心作用：消耗可燃物/烟煤发电）
+	"consumes": {
+		"powerBuffered": 2000
+	},
+	"requirements": [
+		"青铜矿石/15",
+		"劣质硅/25",
+	],
+	"research": "节点",
+	"category": "power"
+	    "researchCostMultiplier": 0.5,  // 研究
+}

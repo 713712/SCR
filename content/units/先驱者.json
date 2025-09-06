@@ -36,6 +36,7 @@
     }
     ]
 	"weapons":[
+
 	{
             "name": "先驱者1",
             "reload": 12,               // 装弹时间（帧）
@@ -107,9 +108,10 @@
 		"sizeTo": 0, // 结束尺寸：0（逐渐消失）
 		"colorFrom": "98FFA9", // 起始颜色：淡绿色（RGB）
 		"colorTo": "98FFA9" // 结束颜色：保持淡绿色（无渐变）
-	}
-            }
-        }
+	},
+            },
+        },
 		]
 "research": "先驱者核心",
+"alwaysUnlocked":true,
 }

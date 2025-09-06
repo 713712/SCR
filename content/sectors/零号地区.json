@@ -3,7 +3,15 @@
 	"description": "我们降落到了一个峡谷，里面充满了敌军的建筑，尽你所能打爆他们",
     "planet":"赛普罗"//母星名字。
     "sector":15//区块坐标
-    "captureWave":15//胜利波次
+    "alwaysUnlocked":false,
+    //"captureWave":15//胜利波次
     "difficulty":2//难度1一5
-    "research": "寒风哨站"
-		}
+     "research": {
+		"parent": "寒风哨站",
+		"objectives": [
+            {
+				"type": "SectorComplete",
+				"preset": "寒风哨站"
+			}
+			]}
+}

@@ -14,9 +14,10 @@
     // 类别为炮塔（turret）
     "category": "turret",
     // 研究名称
-    "research": "撕破",
+    "research": "冰封盆地",
     // 射击声音
       //始终解锁
+      "alwaysUnlocked":false,
     "shootSound": "shoot",
     // 射程
     "range": 130,

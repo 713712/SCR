@@ -1,0 +1,88 @@
+{
+    // 单位类型：坦克（使用履带移动）
+    "type": "tank",
+    "template": "ErekirUnitType",
+    // 基础属性
+    "name": "氧化路由器",
+    "description": "什么？是重型火炮！",
+    "details": "强化战役联动产物",
+    "health": 850,          // 生命值
+    "armor": 5,            // 护甲值（减免%伤害）
+    "hitSize": 16,          // 碰撞箱大小（像素）
+    "speed": 0.5,           // 移动速度
+    "drag": 0.4,            // 移动阻力（值越大减速越快）
+    "rotateSpeed": 1,     // 车身旋转速度（弧度/秒）
+ "singleTarget": false, // 是否单目标攻击
+  "omniMovement": true, // 是否全向移动
+  "rotateMoveFirst": true, // 移动前先转向
+   "flying": false, // 是否为飞行单位
+	"faceTarget": false, // 是否始终面向目标
+    "immunities": [ // 免疫效果列表
+    "burning", // 免疫燃烧
+    "blasted" // 免疫爆炸
+  ],
+  "parts": [
+    {
+      "type": "HoverPart",
+      "mirror": true,
+      //是否镜像
+      "x": 5,
+      "y": 4,  //坐标位置1:4
+      "radius": 11, //半径
+      "phase": 90,
+      "stroke": 2,
+      "layerOffset": -1,
+      "color": "8ED783FF"
+    },
+    {
+      "type": "HoverPart",
+      "mirror": true,
+      //是否镜像
+      "x": 5,
+      "y": -4,  //坐标位置1:4
+      "radius": 13, //半径
+      "phase": 90,
+      "stroke": 2,
+      "layerOffset": -1,
+      "color": "8ED783FF"
+    },
+  ],
+    // 武器配置
+    "weapons": [
+        {
+            "name": "氧化路由器1",
+            "reload": 23,               // 装弹时间（帧）
+            "rotateSpeed": 1.6,
+            "rotationLimit": 360,
+            "shootY": 13,               // 子弹发射高度偏移（像素）
+            "x": 0,
+            "y": 0,            // 武器相对车身位置
+            "rotate": true,            // 武器是否独立旋转（炮塔）
+            "alternate": false,         // 是否交替射击（双管）
+            "shootSound": "artillery",     // 射击音效
+            // 子弹属性
+            "bullet": {
+                "type": "ArtilleryBulletType",
+                  // 子弹类型为普通子弹
+                  "width": 15, // 子弹宽度
+                "height": 8, // 子弹高度
+            "splashDamageRadius": 23,    // 爆炸范围
+            "splashDamage": 350,         // 范围伤害
+                "speed": 3.5,  // 子弹速度
+                "lifetime": 70 // 子弹存活时间
+                "status": "blasted",  // 附加状态
+                "frontColor": "8ED783FF",      // 弹头颜色
+                "backColor": "8ED783FF",       // 弹尾颜色
+                "trailLength": 8.5,            // 拖尾长度
+                "trailWidth": 2,               // 拖尾宽度
+                "trailColor": "8ED783FF",      // 拖尾颜色
+            }
+        }
+    ],
+    
+    // 弹药配置
+    "ammoType": "graphite", // 弹药类型（石墨）
+    "ammoCapacity": 10      // 弹药容量
+    "researchCostMultiplier": 0.3,
+	"research": "路由器进阶厂"
+	}
