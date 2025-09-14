@@ -8,7 +8,7 @@ Events.on(EventType.ClientLoadEvent, () => {
     // 主内容区域：仅保留说明文字
     dialog.cont.pane(
         new Table(cons(t => {
-            t.add("欢迎游玩强化战役\n模组作者:[yellow]鼠标\n特别感谢:[green]“花瓶星”、“爬爬”、“?”、癫狂的棕熊")
+            t.add("欢迎游玩强化战役\n模组作者:[yellow]鼠标\n特别感谢:[green]“花瓶星”、“爬爬”、“?”、癫狂的棕熊熊、［湫］\n\n\nWelcome to play Enhanced Campaign\nModule author:[yellow]鼠标\nSpecial thanks:[green]花瓶星、爬爬、?、癫狂的棕熊、［湫］")
               .left()
               .growX()
               .wrap()
