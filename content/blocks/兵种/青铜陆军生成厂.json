@@ -13,8 +13,15 @@
 	{ "unit": "盾刀", 
 	"time": 1800, 
 	"requirements": [ 
-{ "item": "青铜矿石", "amount": 50},
-{ "item": "劣质硅", "amount": 50},
+{ "item": "青铜矿石", "amount": 120},
+{ "item": "劣质硅", "amount": 80},
+	]	},	
+	{ "unit": "回响", 
+	"time": 1800, 
+	"requirements": [ 
+{ "item": "青铜矿石", "amount": 80},
+{ "item": "劣质硅", "amount": 60},
+{ "item": "初级芯片", "amount": 20},
 	]	},	
 	],
 	"requirements": [

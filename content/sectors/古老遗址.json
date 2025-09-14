@@ -1,7 +1,7 @@
 {
 "localizedName": "古老遗址",
 	"description": "一个时代非常久远的裂谷，敌人将会派重兵击溃你",
-    "planet":"赛普罗"//母星名字。
+    "planet":"赛普拉"//母星名字。
     "sector":125//区块坐标
     "captureWave":30//胜利波次
     "difficulty":1//难度1一5

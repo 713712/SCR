@@ -1,0 +1,15 @@
+{
+	"type": "items",
+	"name": "精致石墨",
+	"description": "压缩烟煤得到的产物\n可以用作子弹和单位T3建造",
+	"details": "压缩石墨，但是品质很高",
+	"color": "292929FF",
+	"cost": 1,
+	"hardness": 1,
+	"explosiveness": 0.1,
+	"radioactivity": 0,
+	"charge": 0.5,
+	"flammability": 0.2,
+		"research":"古老遗址"
+		"alwaysUnlocked":false,
+	}

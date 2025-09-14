@@ -1,0 +1,34 @@
+{
+  "type": "ConsumeGenerator",
+  "name": "混合发电站",
+  "health": 2000,
+  "description": "通过爆破推动涡轮发电",
+  "size": 3,
+  "hasPower": true,
+  "hasItems": true,
+  "itemCapacity": 10,
+  "powerProduction": 7,
+  "consumes": {
+    "items": [
+      "混合物/2"
+    ]
+  },
+  	"drawer":{
+        "type":"crafting",
+        "drawers":[
+            "DrawDefault",
+            "DrawFlame"
+            ]
+    },
+	"updateEffect": "smeltsmoke",
+  "requirements": [
+    "铁锈/30",
+    "青铜矿石/50",
+    "劣质硅/20",
+    "精致石墨/20"
+  ],
+  "craftTime": 100,
+  "category": "power",
+  "research": "古老遗址",
+  "consumeEffect": "titanExplosion"
+}

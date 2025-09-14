@@ -1,0 +1,35 @@
+{
+	"type": "GenericCrafter",
+	"name": "石头合成器",
+	"description": "青铜矿粒在压成后，除颜色略有不像石头，但其性质与赛普罗的石头相差无异。",
+	"health":240,
+	"itemCapacity":40,
+	  "outputItem": {
+    "item": "石头", // 输出物品名称（需与自定义物品一致）
+    "amount":6// 单次生产 3 个
+  },
+	"size":2,
+	"hasItems": true,
+	 "craftTime": 90, // 制造时间（单位为刻，1秒=60刻）
+	"drawer":{
+        "type":"crafting",
+        "drawers":[
+            "DrawDefault",
+            "DrawFlame"
+            ]
+    },
+	"updateEffect": "smeltsmoke",
+	"consumes": {
+    "items": [
+      { "item": "青铜矿石", "amount": 4 },
+    ]
+  },
+   "requirements": [
+    { "item": "青铜矿石", "amount": 10 },
+    { "item": "劣质硅", "amount": 10 },
+        { "item": "回忆碎片", "amount": 5 },
+    ],
+	"category": "crafting",
+	"research": "古老遗址",
+	"idleSound": "respawning",
+}

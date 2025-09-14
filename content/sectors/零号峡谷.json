@@ -1,0 +1,17 @@
+{
+"localizedName": "零号峡谷",
+	"description": "我们降落到了一个峡谷，这里没有敌军但敌军很快就会过来，用撕破防守住吧",
+    "planet":"赛普拉"//母星名字。
+    "sector":228//区块坐标
+    "alwaysUnlocked":false,
+    "captureWave":15//胜利波次
+    "difficulty":2//难度1一5
+     "research": {
+		"parent": "寒风哨站",
+		"objectives": [
+            {
+				"type": "SectorComplete",
+				"preset": "寒风哨站"
+			}
+			]}
+}

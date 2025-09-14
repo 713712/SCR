@@ -1,0 +1,23 @@
+{
+    "type":"ForceProjector",
+    "name":"劣质护盾投影",
+    "health":250,
+    "description":"用前赛普罗技术复刻的护盾投影，由于技术及材料限制，该护盾投影盾容较低，不适合用于高强度作战，谨适用于临时防护。"
+    "requirements": [
+        "劣质硅/35",
+        ],
+    "size":2,
+    "radius":75,//半径(4:1格)
+    "shieldHealth":300,//盾容
+    "cooldownNormal":0.4,//正常冷却（1:60）
+    "cooldownLiquid":0.6,//液体加速冷却（1:60）
+    "cooldownBrokenBase":0.3,//过载后冷却（1:60）
+	"consumes":{//加强
+	    "power":2.5,//电力
+	},
+	"category": "effect",
+	"researchCostMultiplier": 0.5,
+	"sides": 8, // 护盾边数
+	"shieldRotation": 45 // 护盾旋转角度
+	"research": "冰封盆地"//前提
+}

@@ -30,7 +30,7 @@ Events.on(EventType.ClientLoadEvent, () => {
         buttonTable.button("[red]更新日志", () => {
             const dialog2 = new BaseDialog("[red]更新日志");
             const scrollContent = new Table(cons(st => {
-                st.add("[white]9日6日-更新新单位尘埃\n-更新新单位T2尘土\n-更新新建筑修复炮塔\n-更新新地图古老遗址\n-更新新物资记忆碎片，用来解锁B40版本的东西\n\n-Update new unit dust\n-Update new unit T2 dust\n-Update new building, repair turret\n-Update new map of ancient ruins\n-Update new material memory fragments to unlock B40 version items");
+                st.add("[white]0.3.1:地图全部更改完成\n0.2.0:新增灰尘和修复炮-更新新单位尘埃\n-更新新单位T2尘土\n-更新新建筑修复炮塔\n-更新新地图古老遗址\n-更新新物资记忆碎片，用来解锁B40版本的东西\n\n-Update new unit dust\n-Update new unit T2 dust\n-Update new building, repair turret\n-Update new map of ancient ruins\n-Update new material memory fragments to unlock B40 version items");
             }));
 //byd这谁写的更新日志，以后就让我（?）来写            
 

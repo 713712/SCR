@@ -1,0 +1,71 @@
+
+{
+    "type": "PowerTurret",  // 建筑类型：能量炮塔（表明该单位为需消耗能量的防御炮塔）
+    "size": 2,  // 建筑尺寸：2x2格（占据游戏地图中2格×2格的空间）
+    "name": "闪电",  // 炮塔名称：AA-Lancer（"AA"通常指"Anti-Air"，即防空类型）
+    "description": "我们虽然成功复刻蓝瑟，但基于材料质量限制，内部的转换器转换性能较低，导致激光的强度下降，但是其强度仍然能穿透多名单位，适合用于敌方排列紧密的部队",  // 功能描述：充能后向空中目标发射强力能量束
+    "targetAir": true,  // 对空目标：是（可攻击空中单位）
+    "targetGround": true,  // 对地目标：否（不可攻击地面单位）
+    "shoot": {
+        "firstShotDelay": 40  // 首次射击延迟：40帧（单位首次攻击前的等待时间，游戏中通常以帧为时间单位）
+    },
+    "shootType": {  // 射击类型配置（定义攻击的具体属性）
+        "type": "LaserBulletType",  // 攻击类型：激光子弹（攻击形态为激光）
+        "reload": 100,  // 装填时间：100帧（每次攻击后到下次可攻击的间隔）
+        "damage": 80,  // 单次攻击力：140点（对目标造成的基础伤害）
+        "chargeEffect": {  // 充能特效配置
+            "type": "multiEffect",  // 特效类型：复合特效（包含多个子特效）
+            "effects": [
+                "lancerLaserCharge",  // 充能特效1：lancerLaserCharge（对应游戏内预定义的充能动画/粒子效果）
+                "lancerLaserChargeBegin"  // 充能特效2：lancerLaserChargeBegin（充能开始时的动画/粒子效果）
+            ]
+        },
+        "buildingDamageMultiplier": 0.25,  // 对建筑伤害倍率：0.25倍（攻击敌方建筑时，伤害仅为基础伤害的25%）
+        "hitEffect": "hitLancer",  // 命中特效：hitLancer（攻击命中目标时触发的动画/粒子效果）
+        "hitSize": 4,  // 命中判定范围：4格（攻击命中目标时的判定区域大小）
+        "lifetime": 16,  // 攻击实体存续时间：16帧（激光效果在地图上显示的持续时间）
+        "drawSize": 400,  // 绘制尺寸：400（激光效果在屏幕上的渲染大小）
+        "collidesAir": true,  // 空中碰撞：是（攻击可与空中目标发生碰撞）
+        "length": 173,  // 攻击长度：173格（激光效果的视觉长度/实际攻击距离补充）
+        "ammoMultiplier": 1,  // 弹药倍率：1倍（若消耗弹药，弹药消耗量的倍率，此处为1即无倍率）
+        "pierceCap": 8,  // 穿透上限：4个（激光可同时穿透4个敌方空中单位）
+        "shootEffect": "lancerLaserShoot",  // 射击特效：lancerLaserShoot（发射时触发的动画/粒子效果）
+        "smokeEffect": "lancerLaserShootSmoke",  // 烟雾特效：lancerLaserShootSmoke（发射时伴随的烟雾动画/粒子效果）
+        "firstShotDelay": 40,  // 首次射击延迟：40帧（同外层shoot的firstShotDelay，补充攻击类型的首次射击等待）
+        "shotDelay": 40  // 射击间隔：40帧（多次射击间的等待时间，若为单发射击则无明显作用）
+    },
+
+    "health": 1120,  // 生命值：1120点（炮塔被摧毁前可承受的总伤害）
+    "inaccuracy": 1,  // 攻击误差：0（攻击完全精准，无偏移）
+    "chargeTime": 1000,  // 充能时间：80帧（每次攻击前需要充能的时间）
+    "chargeMaxDelay": 140,  // 充能最大延迟：140帧（充能过程中允许的最大等待延迟，超过则重新充能）
+    "chargeEffects": 9,  // 充能特效数量：9个（充能过程中同时显示的特效数量）
+    "recoil": 2,  // 后坐力：2（发射时炮塔的后坐力数值，影响视觉抖动幅度）
+
+    "powerUse": 3,  // 基础能量消耗：6单位/帧（炮塔运行时每秒消耗的基础能量）
+    "shake": 2,  // 震动幅度：2（发射时屏幕/炮塔的震动强度）
+    "reload": 80,  // 全局装填时间：80帧（覆盖shootType的reload，整体攻击间隔以该值为准）
+    "shootCone": 80,  // 射击角度范围：80度（炮塔可攻击的角度扇区大小，80度内的空中目标可被锁定）
+    "rotateSpeed": 4,  // 旋转速度：50度/帧（炮塔转向目标的速度）
+    "shots": 2,  // 每次射击次数：1发（每次攻击发射1道激光）
+    "range": 180,  // 攻击范围：165格（炮塔可锁定并攻击的最大距离）
+    "burstSpacing": 6,  // 连射间隔：6帧（若为连射模式，每发之间的间隔，此处单发射击无作用）
+    "damage": 190,  // 全局攻击力：140点（与shootType的damage一致，确保伤害数值统一）
+    "moveWhileCharging": false,  // 充能时移动：否（炮塔在充能过程中无法移动，若为可移动单位则生效）
+    "accurateDelay": false,  // 精准延迟：否（攻击延迟不根据目标距离调整，固定为设定值）
+    "requirements": [  // 建造所需材料（建造该炮塔需消耗的资源及数量）
+        { "item": "劣质硅", "amount": 40 },  // 铁：60单位
+        { "item": "铁锈", "amount": 10 },  // 铅：70单位
+        { "item": "青铜矿石", "amount": 30 },  // 硅：60单位
+    ],
+    "category": "turret",  // 建筑分类：炮塔（归类为防御炮塔类建筑）
+    "shootSound": "laser",  // 射击音效：laser（发射时播放的"激光"音效）
+    "research": "古老遗址",  // 解锁需求：需完成"lancer"（AA-Lancer）相关研究（科技树解锁条件）
+    "liquidBoostIntesity": 1,  // 液体增益强度：1倍（若使用冷却液等液体，液体对炮塔的增益倍率）
+    "consumes": {  // 持续消耗资源（炮塔运行时除能量外的额外消耗）
+        "power": 3,  // 能量消耗：6单位/帧（与powerUse一致，明确持续能量需求）
+        "coolant": {  // 冷却液消耗
+            "amount": 0.2  // 冷却液消耗量：0.2单位/帧（运行时每秒消耗的冷却剂量）
+        }
+    }
+}

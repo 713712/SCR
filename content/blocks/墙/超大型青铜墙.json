@@ -1,0 +1,14 @@
+{    
+    "type": "Wall",
+    "name": "超大型青铜墙",
+    "description": "似乎并不比铜强多少",
+    "buildCostMultiplier": 0.45,
+    "health": 3000,
+    "size": 3,
+    "requirements": [
+        "青铜矿石/72",
+    ],
+    "category": "defense",
+    "research": "寒风哨站"
+        "researchCostMultiplier": 0.1,  // 研究成本乘数：0.45（研究该设施的成本为正常成本的45%）
+}

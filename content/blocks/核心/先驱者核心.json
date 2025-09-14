@@ -1,19 +1,21 @@
 {
   "type":"CoreBlock",//方块类别
   "name":"先驱者核心",//名字
-  "description":"这是赛普拉最后的一个核心\n降落以后就与赛普拉失联了\n可怜的先遣队拼命修通讯.....\n\n可赛普拉再也不会回应了",//简介 解锁后显示
-  "details":"[red]反物质核心，不用资源也可以发射",//永久显示版的简介
+  "description":"这是赛普罗的一个先遣队好核心\n降落以后就与赛普罗失联了",//简介 解锁后显示
+  "details":"[red]新版已修改，发射要资源",//永久显示版的简介
   "size":2,//尺寸
   "health":2000,//血量
   "itemCapacity":2500,//物品容量
   "unitCapModifier":14,//该核心所增加的单位上限
   "unitType":"先驱者",//核心单位
-  "requirements": [],
+    "requirements": [
+		"青铜矿石/500",
+	    ],
   "category": "effect",//建造栏分类
   "alwaysUnlocked":true,
   "research": {
 		"root": true
-	    "name": "赛普罗",  // 研究的名称，用于在研究界面显示
-        "planet": "赛普罗"  // 研究所属的星球名称，可能用于特定星球的解锁或关联
+	    "name": "赛普拉",  // 研究的名称，用于在研究界面显示
+        "planet": "赛普拉"  // 研究所属的星球名称，可能用于特定星球的解锁或关联
 		},
 		}

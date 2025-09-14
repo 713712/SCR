@@ -1,16 +1,16 @@
 {
 "localizedName": "冰冻森林",
-	"description": "我们降落到了一个森林,敌人在此处建立了基地，研究制造盾刀，用盾刀摧毁敌人核心吧",
-    "planet":"赛普罗"//母星名字。
+	"description": "我们降落到了一个森林,敌人发现了你，赶快建立防线反击吧",
+    "planet":"赛普拉"//母星名字。
     "sector":10//区块坐标
     "captureWave":20//胜利波次
     "difficulty":2//难度1一5
     "research": {
-		"parent": "冰封盆地",
+		"parent": "零号峡谷",
 		"objectives": [
             {
 				"type": "SectorComplete",
-				"preset": "冰封盆地"
+				"preset": "零号峡谷"
 			}
 			]}
 }

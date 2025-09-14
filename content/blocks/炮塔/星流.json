@@ -1,0 +1,123 @@
+{
+  "type": "itemTurret", // 对象类型：物品炮塔（itemTurret）
+  "name": "星流", // 炮塔名称：超级齐射炮塔（hyper-salvo）
+  "description": "向敌人发射子弹，需要电力", // 描述：一款高伤害、支持多种弹药类型的先进炮塔，专为重型防御设计
+  "category": "turret", // 所属类别：炮塔（turret）
+  "health": 410, // 耐久度：300
+  "size": 2, // 体型大小：2格（游戏内格子单位）
+  "reload": 28, // 装填时间：28（数值对应游戏内时间单位）
+  "range": 210, // 攻击射程：210（游戏内距离单位）
+  "rotateSpeed": 12, // 旋转速度：12（数值对应游戏内速度单位）
+  "ammoPerShot": 1, // 每发消耗弹药量：1
+  "shoot": { // 射击模式配置
+    "type": "ShootContinuous", // 射击类型：连续射击（ShootContinuous）
+    "shots": 3, // 每组射击次数：4发
+    "shotDelay": 5, // 单发射击间隔：3（游戏内时间单位）
+    "burstSpacing": 7 // 组间射击间隔：5（游戏内时间单位）
+  },
+  "maxAmmo": 30, // 最大备弹量：30
+  "targetAir": true, // 是否对空：是（true）
+  "targetGround": true, // 是否对地：是（true）
+  "shootSound": "shootBig", // 射击音效：大型射击音效（shootBig）
+  "shake": 1, // 射击震动幅度：1
+  "ammoEjectback": 3, // 弹药弹出后坐力：3
+  "recoil": 0, // 射击后坐力：0
+  "drawer": { // 外观绘制配置
+    "type": "drawTurret", // 绘制类型：炮塔绘制（drawTurret）
+    "parts": [ // 外观部件列表
+      {
+        "type": "RegionPart", // 部件类型：区域部件（RegionPart）
+        "suffix": "-barrel", // 部件后缀：-barrel（对应炮管模型）
+        "under": false, // 是否在底层：否（false，即显示在上方）
+        "moveY": -2.5, // Y轴位移：-2.5（向上移动2.5单位）
+        "progress": "recoil" // 动画关联属性：后坐力（recoil，随后坐力变化动画）
+      },
+      {
+        "type": "RegionPart", // 部件类型：区域部件（RegionPart）
+        "suffix": "-side", // 部件后缀：-side（对应侧面模型）
+        "moveX": 0.6, // X轴位移：0.6（向右移动0.6单位）
+        "moveRot": -15, // 旋转角度：-15度（逆时针旋转15度）
+        "mirror": true, // 是否镜像：是（true，左右对称显示）
+        "layerOffset": 0.001, // 图层偏移：0.001（避免图层重叠）
+        "progress": "warmup" // 动画关联属性：预热（warmup，随预热进度变化动画）
+      }
+    ]
+  },
+  "requirements": [ // 建造所需材料列表
+    {
+      "item": "青铜矿石", // 材料：铜（copper）
+      "amount": 80 // 数量：100
+    },
+    {
+      "item": "初级芯片", // 材料：石墨（graphite）
+      "amount": 40 // 数量：80
+    },
+    {
+      "item": "劣质硅", // 材料：钛（titanium）
+      "amount": 20 // 数量：50
+    },
+  ],
+  "ammoTypes": { // 支持的弹药类型配置（不同弹药对应不同属性）
+    "劣质硅": { // 铜制弹药
+      "type": "BasicBulletType", // 弹药类型：基础子弹（BasicBulletType）
+      "damage": 18, // 伤害：18
+      "speed": 6, // 飞行速度：6
+      "width": 7, // 子弹宽度：7
+      "height": 9, // 子弹高度：9
+      "lifetime": 35, // 子弹存活时间：35（游戏内时间单位）
+      "ammoMultiplier": 2, // 弹药倍率：2（1份材料可制作2发弹药）
+      "hitEffect": "hitBulletColor", // 命中特效：子弹颜色命中特效（hitBulletColor）
+      "hitColor": "#d99d73", // 命中颜色：棕橙色（#d99d73）
+      "frontColor": "#f4ba8e", // 子弹正面颜色：浅橙色（#f4ba8e）
+      "backColor": "#d99d73", // 子弹背面颜色：棕橙色（#d99d73）
+      "trailColor": "#f4ba8e", // 子弹轨迹颜色：浅橙色（#f4ba8e）
+      "trailLength": 6 // 轨迹长度：6
+    },
+    "精致石墨": { // 石墨弹药
+      "type": "BasicBulletType", // 弹药类型：基础子弹（BasicBulletType）
+      "damage": 30, // 伤害：30
+      "speed": 6, // 飞行速度：6
+      "width": 9, // 子弹宽度：9
+      "height": 12, // 子弹高度：12
+      "lifetime": 35, // 子弹存活时间：35
+      "ammoMultiplier": 4, // 弹药倍率：4
+      "rangeChange": 32, // 射程变化：+32（在炮塔基础射程上增加32）
+      "hitEffect": "hitBulletColor", // 命中特效：子弹颜色命中特效
+      "despawnEffect": "hitBulletColor", // 消失特效：子弹颜色命中特效
+      "hitColor": "#6b6b6b", // 命中颜色：深灰色（#6b6b6b）
+      "frontColor": "#b2c6d2", // 子弹正面颜色：浅蓝色（#b2c6d2）
+      "backColor": "#6b6b6b", // 子弹背面颜色：深灰色（#6b6b6b）
+      "trailColor": "#b2c6d2", // 子弹轨迹颜色：浅蓝色（#b2c6d2）
+      "trailLength": 6 // 轨迹长度：6
+    },
+    "混合物": { // 燃石弹药（pyratite，游戏内易燃材料）
+      "type": "BasicBulletType", // 弹药类型：基础子弹（BasicBulletType）
+      "damage": 28, // 伤害：28
+      "speed": 6, // 飞行速度：6
+      "width": 10, // 子弹宽度：10
+      "height": 12, // 子弹高度：12
+      "lifetime": 35, // 子弹存活时间：35
+      "ammoMultiplier": 5, // 弹药倍率：5
+      "status": "burning", // 附加状态：燃烧（burning，命中后使目标燃烧）
+      "splashDamage": 16, // 溅射伤害：16
+      "splashDamageRadius": 25, // 溅射伤害范围：25
+      "hitEffect": "fireHit", // 命中特效：火焰命中特效（fireHit）
+      "hitColor": "#ffa464", // 命中颜色：橙红色（#ffa464）
+      "frontColor": "#ffd1a8", // 子弹正面颜色：浅橙红色（#ffd1a8）
+      "backColor": "#ffa464", // 子弹背面颜色：橙红色（#ffa464）
+      "trailColor": "#ffd1a8", // 子弹轨迹颜色：浅橙红色（#ffd1a8）
+      "trailLength": 6 // 轨迹长度：6
+    },
+  },
+  "hasPower": true, // 是否需要电力：是（true）
+  "consumes": { // 资源消耗配置
+    "power": 3 // 电力消耗：3.5（游戏内电力单位/时间）
+  },
+  "buildCostMultiplier": 1, // 建造成本倍率：1.9（实际建造材料消耗为基础需求的1.9倍）
+  "research": { // 研发配置
+    "parent": "古老遗址", // 前置研发：齐射炮塔（salvo，需先研发该炮塔才能解锁当前炮塔）
+    "objectives": [ // 研发目标：
+      "初级芯片" // 解锁钛（titanium，需先解锁钛资源才能研发）
+    ]
+  }
+}

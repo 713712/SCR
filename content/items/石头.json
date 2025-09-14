@@ -1,0 +1,15 @@
+{
+	"type": "items",
+	"name": "石头",
+	"description": "一种远古时期赛普拉随处可见的资源\n用作建筑材料",
+	"details": "铜是怎么做出石头的",
+	"color": "292929FF",
+	"cost": 1,
+	"hardness": 0,
+	"explosiveness": 0,
+	"radioactivity": 0,
+	"charge": 0.5,
+	"flammability": 0,
+		"research":"古老遗址"
+		"alwaysUnlocked":false,
+	}

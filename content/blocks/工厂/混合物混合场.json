@@ -1,0 +1,36 @@
+{
+	"type": "GenericCrafter",
+	"name": "混合物混合场",
+	"description": "将孢子和烟煤混合成混合物，可用来供子弹或者发电",
+	"health":240,
+	"itemCapacity":40,
+	  "outputItem": {
+    "item": "混合物", // 输出物品名称（需与自定义物品一致）
+    "amount":3// 单次生产 3 个
+  },
+	"size":2,
+	"hasItems": true,
+	 "craftTime": 120, // 制造时间（单位为刻，1秒=60刻）
+	"drawer":{
+        "type":"crafting",
+        "drawers":[
+            "DrawDefault",
+            "DrawFlame"
+            ]
+    },
+	"updateEffect": "smeltsmoke",
+	"consumes": {
+    "items": [
+      { "item": "spore-pod", "amount": 4 },    // 每次消耗 4 铅
+      { "item": "烟煤", "amount": 8 }, // 每次消耗 6 硅
+    ]
+  },
+   "requirements": [
+    { "item": "青铜矿石", "amount": 50 },
+     { "item": "劣质硅", "amount": 30 },
+     { "item": "铁锈", "amount": 20 },
+    ],
+	"category": "crafting",
+	"research": "古老遗址",
+	"idleSound": "respawning",
+}

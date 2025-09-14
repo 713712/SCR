@@ -1,0 +1,9 @@
+{
+	  "name": "破1m专属庆祝墙",//名字
+	"description": "庆祝大小突破1MB",//介绍
+	"type": "Wall",//类型
+	"health":99999999,//血量
+	"size":3,//边长
+	"category": "defense",//不能改
+ "absorbLasers":true,//吸收激光（塑钢墙同款）
+}

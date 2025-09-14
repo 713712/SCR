@@ -1,9 +1,9 @@
 {
     // 基础单位属性
     "name": "先遣", // 单位名称
-    "description": "拥有两架冰雹炮塔和两把重机枪", // 单位描述
+    "description": "中型单位，配备两门中口径远距离特化火炮，为适配远距离要求，其炮弹装药较少，适合攻击敌方电力系统，而且为保障自身，加装了两门小口径轻机枪以应对近身突袭的敌人", // 单位描述
     "type": "mech", // 单位类型（机甲）
-    "health": 2850, // 生命值
+    "health": 950, // 生命值
     "armor": 8, // 护甲值（减伤用）
     "speed": 0.5, // 移动速度
     "accel": 0.4, // 加速度
@@ -15,7 +15,7 @@
     "canBoost": false, // 是否可冲刺
     "researchCostMultiplier": 4,
     "alwaysUnlocked":false,
-"mechFrontSway": 1.5, //机械前摇
+"mechFrontSway": 1, //机械前摇
 "mechStepParticles": true, //机械步粒子
 "mechStepShake": 0.25, //机械步摇
     "research":"初级单位重构厂",//技术位置
@@ -40,7 +40,7 @@
                   "width": 15, // 子弹宽度
                 "height": 15, // 子弹高度
             "splashDamageRadius": 32,    // 爆炸范围
-            "splashDamage": 120,         // 范围伤害
+            "splashDamage": 80,         // 范围伤害
                 "speed": 3.5,  // 子弹速度
                 "lifetime": 130 // 子弹存活时间
                 "status": "blasted",  // 附加状态
@@ -76,7 +76,7 @@
                   // 子弹类型为普通子弹
                   "width": 10, // 子弹宽度
                 "height": 8, // 子弹高度
-                "damage": 18,  // 子弹伤害
+                "damage": 10,  // 子弹伤害
                 "speed": 3.5,  // 子弹速度
                 "lifetime": 40 // 子弹存活时间
                 "status": "burning",  // 附加状态（燃烧）

@@ -1,0 +1,15 @@
+{
+	"type": "items",
+	"name": "初级芯片",
+	"description": "由劣质硅和石墨压缩而成，但由于硅纯度不足，令其信号传送缓慢，不能自主运作，需配合核心机操作",
+	"details": "只能进行低速运算,速度堪忧",
+	"color": "292929FF",
+	"cost": 1,
+	"hardness": 4,
+	"explosiveness": 0,
+	"radioactivity": 0,
+	"charge": 0,
+	"flammability": 0,
+		"research":"生物质合成区"
+		"alwaysUnlocked":false,
+	}

@@ -1,0 +1,20 @@
+{
+  "type":"CoreBlock",//方块类别
+  "name":"准卫核心",//名字
+  "description":"沿用赛普罗核心技术，但在机身上搭配维护脉冲器和试验型单向小型护盾投影，并加强了建筑光线使其建筑速度提升",//简介
+  "details":"升级版核心",
+  "alwaysUnlocked":true,//科技树默认解锁 
+  "squareSprite": false,  // 不使用方形精灵
+  "size":3,//尺寸
+  "health":3050,//血量
+  "itemCapacity":6500,//物品容量
+  "unitCapModifier":12,//该核心所增加的单位上限
+  "requirements": [
+		"青铜矿石/850",
+		"劣质硅/450",
+		"铁锈/100",
+	    ],
+  "unitType":"准卫",//单位
+  "category":"effect",//建造栏分类
+  "research":"古老遗址"
+}

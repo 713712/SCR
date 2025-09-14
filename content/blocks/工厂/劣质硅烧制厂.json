@@ -1,7 +1,7 @@
 {
 	"type": "GenericCrafter",
 	"name": "劣质硅合成器",
-	"description": "将铜矿粉碎成沙子，然后把沙子和烟煤合成劣质硅",
+	"description": "我们发现青铜矿粒与沙有相似的结构，结合烟煤能合成出劣质硅，但由于原料限制导致硅纯度不高，无法应用在高精度工厂及高级单位",
 	"health":240,
 	"itemCapacity":40,
 	  "outputItem": {

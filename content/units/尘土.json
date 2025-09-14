@@ -2,7 +2,7 @@
     // === 单位基础属性 ===
     "type": "flying",
     "name": "尘土",
-    "description": "大幅度增强\n赛普拉仿制科技的产物",
+    "description": "基于尘埃，尘土的机体大幅增强载重上限提升，因此苍穹火炮提升至两门，而且额外加配两门中长程中型火炮以提升火力，确保在前中期为我方提供有力的空中支持。",
     "outlineColor": "2E2F34FF",
     "template": "ErekirUnitType",
     "ammoCapacity": 30,

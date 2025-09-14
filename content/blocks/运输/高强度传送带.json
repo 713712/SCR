@@ -1,0 +1,20 @@
+{
+	"type": "Conveyor",//"种类": "?",(Conveyor=传输带,junction=连接器,StackConveyor=打包运输带,ItemBridge=传送带桥,Router=路由器)
+	"name":"高强度传送带",//名字
+	"health":50,//"血量": ？,
+	"description":"比钛传送带快一点",//简介 解锁后显示
+  "details":"[red]不是，传送带有什么可介绍的？介绍它有什么优点吗？",//永久显示版的简介
+	"idleSound":"none",//"空闲时的声音": "
+	"requirements": [
+		{"item": "精致石墨", "amount":2 },
+			{"item": "劣质硅", "amount":2 },////{"种类": "", "数量": ？},(copper=铜,lead=铅,metaglass=钢化玻璃,graphite=石墨,sand=沙子,coal=煤,titanium=钛,thorium=钍,scrap=废料,silicon=硅,plastanium=孢子,phase-fabric=相织位物,surge-alloy=合金,spore-pod=塑钢,blast-compound=爆炸混合物,pyratite=硫)
+		],//"建造所需物品": "？",
+	"category": "distribution",//"类别": "？",(distribution=分配)
+	"speed": 0.13,//"运送速度": ？,
+	"displayedSpeed":17,//"游戏中显示速度": ？,
+	"research": "生物质合成区",//"研究前置": "？",
+	"insulated":false,//"是否阻挡电力节点自动连接"：
+    "placeableLiquid":false,//"是否能放在液体上"：
+    "displayFlow":true,//点他是否会显示传输速度
+    "absorbLasers":false//是否能阻挡激光
+}

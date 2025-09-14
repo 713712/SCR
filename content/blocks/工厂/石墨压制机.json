@@ -1,0 +1,35 @@
+{
+	"type": "GenericCrafter",
+	"name": "石墨压制机",
+	"description": "赛普拉的煤因为太久远而变成烟煤，但由于其化学结构并没有太大变化，因此由煤压成石墨不存在问题，而且烟煤在长时间变得松散有极高的可塑性，因此能直接加工成精致石墨。",
+	"health":300,
+	"itemCapacity":20,
+	  "outputItem": {
+    "item": "精致石墨", // 输出物品名称（需与自定义物品一致）
+    "amount":5// 单次生产 5 个
+  },
+	"size":2,
+	"hasItems": true,
+	 "craftTime": 120, // 制造时间（单位为刻，1秒=60刻）
+	"drawer":{
+        "type":"crafting",
+        "drawers":[
+            "DrawDefault",
+            "DrawFlame"
+            ]
+    },
+	"updateEffect": "smeltsmoke",
+	"consumes": {
+    "items": [
+      { "item": "烟煤", "amount": 8 },
+    ]
+  },
+   "requirements": [
+    { "item": "青铜矿石", "amount": 30 },
+    { "item": "劣质硅", "amount": 20 },
+        { "item": "铁锈", "amount": 10 },
+    ],
+	"category": "crafting",
+	"research": "古老遗址",
+	"idleSound": "respawning",
+}

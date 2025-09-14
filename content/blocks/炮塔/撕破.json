@@ -2,7 +2,7 @@
 {
     "type": "ItemTurret",
     "name": "撕破",
-    "description": "向敌军喷射标准子弹\n需要消耗子弹\nBYD比双管好",
+    "description": "为应对敌方大量先头部队，撕破采用全新技术，内部炸药发射时令子弹破裂成大量弹片，以大范围攻击敌方单位，以减缓敌方对我方的数量压制",
 "health": 450,  // 生命值
     "size": 2,  // 占用2x2格
     "range": 180,  // 射程
@@ -29,10 +29,10 @@
             "height": 3,
             "ammoMultiplier": 1,
             "shootEffect": "lancerLaserCharge",
-            "trailColor": "78E8FFFF",
+            "trailColor": "8ED783FF",
             "trailWidth": 4,
             "trailLength": 12,
-            "hitColor": "78E8FFFF",
+            "hitColor": "8ED783FF",
             "buildingDamageMultiplier": 4
 		    "pierceArmor" : true,
 		    // 能够穿透建筑物
@@ -43,19 +43,6 @@
 			"pierceBuilding": true,
 			"pierceCap": 4,
 		},
-		   "烟煤": {  // 使用石墨作为弹药
-                "type": "ArtilleryBulletType",  // 炮弹类型（可越过障碍）
-                "damage": 8,      // 直接命中伤害
-                "speed": 4,        // 飞行速度
-                "lifetime": 270,    // 存在时间（帧）
-                "width": 12,       // 碰撞宽度
-                "height": 12,      // 碰撞高度
-                "frontColor": "8CAAE8FF",  // 蓝色弹头
-            "backColor": "8CAAE8FF",  // 蓝色弹尾
-            "trailColor": "8CAAE8FF",  // 蓝色轨迹
-                "splashDamageRadius": 24,  // 爆炸半径
-                "splashDamage": 30,        // 爆炸伤害
-    },
     "劣质硅": {
                 "type": "ArtilleryBulletType",  // 炮弹类型（可越过障碍）
                 "damage": 27,      // 直接命中伤害
@@ -70,7 +57,7 @@
     // 其他属性
     "rotateSpeed": 1.8,  // 炮塔旋转速度2.5
     "requirements": [  // 建造所需材料
-        {"item": "青铜矿石", "amount":75},
+        {"item": "青铜矿石", "amount":65},
     ],
     "category": "turret",  // 分类为炮塔
     "researchCostMultiplier": 0.3,  // 研究成本只需30%

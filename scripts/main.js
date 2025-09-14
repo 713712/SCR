@@ -6,4 +6,5 @@ for (let i = 0; i < 8; i++) {
 MapResizeDialog.minSize = 0
 MapResizeDialog.maxSize = 40000
 require('开屏菜单');
+require('tank');
 //来自爬爬的模组

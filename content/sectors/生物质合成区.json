@@ -1,0 +1,16 @@
+{
+"localizedName": "生物质合成区",
+	"description": "显然，这里充满了敌人基地，用你所研究的赛普拉科技制造T2打爆它们，但这里依旧存在这孢子，和敌人的基地",
+    "planet":"赛普拉"//母星名字。
+    "sector":16//区块坐标
+    //"captureWave":20//胜利波次
+    "difficulty":2//难度1一5
+    "research": {
+		"parent": "陨石带",
+		"objectives": [
+            {
+				"type": "SectorComplete",
+				"preset": "陨石带"
+			}
+			]}
+}
