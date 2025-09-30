@@ -1,0 +1,20 @@
+{
+    "type":"Junction",
+    "name":"青铜连接器",
+    "description": "一个普通的交叉器"
+    "health":50,
+    "size":1,
+    	"itemCapacity": 1,//物品容量
+	"speed": 9,//运输速度
+	"displayedSpeed":8,//显示速度
+    "requirements": [
+        "青铜矿石/5",
+    ],
+    "category":"distribution"
+    	"research": {
+		"parent": "寒风哨站",
+    "requirements":[
+        "青铜矿石/100",
+        ]
+	},
+}

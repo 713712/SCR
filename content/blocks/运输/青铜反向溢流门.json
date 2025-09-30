@@ -1,0 +1,21 @@
+{
+	"type": "OverflowGate",//类型,溢流门
+	"size":1,//平方大小
+	"invert":true,//反向
+	"category": "distribution",//菜单栏
+	"name": "青铜反向溢流门",//名字
+	"description": "当两侧已经填满则向前方运输物品",//介绍
+	"details":"暂无"
+	"alwaysUnlocked":false,//科技树默认解锁
+	"health":100//血量
+	//"regionRotated":1,//区域旋转
+	"requirements": [//建造消耗
+	    "青铜矿石/5"
+	]
+	"research": {
+	"parent":"青铜溢流门",
+	"requirements":[
+        "青铜矿石/150",
+        ]//前置科技树
+        }
+}

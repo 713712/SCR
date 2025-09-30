@@ -12,5 +12,5 @@
 	],
 	"research": "节点",
 	"category": "power"
-	    "researchCostMultiplier": 0.5,  // 研究
+	    "researchCostMultiplier": 0.4,  // 研究
 }

@@ -1,0 +1,16 @@
+{
+	"type": "LiquidJunction",
+	"name": "铁锈液体交叉器",
+	"description": "可以穿过另一条导管，跟交叉器一样",
+	"health":80
+	"idleSound":"none"
+	"requirements": [
+		{"item": "青铜矿石", 
+	    "amount": 4},
+		{"item": "劣质硅", "amount": 3},
+			{"item": "铁锈", "amount": 6},
+		],
+	"category": "liquid",
+	"displayedSpeed":30
+	"research": "铁锈液体路由器"
+}

@@ -5,7 +5,7 @@
 	"details": "看来,爬爬越来越神金了",
 	"health": 850
 	"size": 3,
-	"constructTime": 1800,//生产单位时间
+	"constructTime": 1900,//生产单位时间
 	"consumes": {//消耗
 		"items": {
 			"items": [
@@ -21,9 +21,11 @@
 	"upgrades": [
         ["氧化路由器", "分配器"],
         ["尘埃", "尘土"],
+        ["锉刀", "锐刀"],
+        ["回响", "幻奏"],
         ["先驱者", "先遣"],
 	],
 	"category": "units",
 	"research": "陨石带"
-	"researchCostMultiplier": 0.45,
+	"researchCostMultiplier": 0.55,
 }

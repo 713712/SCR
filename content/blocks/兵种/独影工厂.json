@@ -18,7 +18,7 @@
             ]
     },
     "category": "units",  // 分类：单位（表示该设施用于制造单位）
-    "researchCostMultiplier": 0.45,  // 研究成本乘数：0.45（研究该设施的成本为正常成本的45%）
+    "researchCostMultiplier": 0.55,  // 研究成本乘数：0.45（研究该设施的成本为正常成本的45%）
     "plans": [  // 制造计划
         {
             "unit": "mono",  // 单位名称：mono（可能是某种单位）

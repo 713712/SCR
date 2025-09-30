@@ -1,0 +1,13 @@
+{
+	  "name": "超大型硅墙",//名字
+	"description": "防止敌人的激光穿透",//介绍
+	"type": "Wall",//类型
+	"health":3600,//血量
+	"size":3,//边长
+	"requirements": [
+	{ "item": "劣质硅", "amount":80}
+	],
+	"category": "defense",//不能改
+	"research": "大型硅墙"//科技树位置
+ "absorbLasers":true,//吸收激光
+}

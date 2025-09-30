@@ -1,0 +1,102 @@
+{
+	"type": "mech",
+	"name": "散射",
+	"description": "阿塞斯重工的杰作\n-向敌人喷射金色穿甲弹",
+    "speed":  0.8,
+
+    "hitSize": 12,
+		"ammoType":{
+	"type":"PowerAmmoType",
+	"totalPower":2200
+	},
+	"ammoCapacity": 700
+    "ammoResupplyAmount":1,/*弹药补给倍率 */
+    "health": 400,
+    "armor": 10,
+    "drag": 0.2,
+    "rotateSpeed": 2,
+    "itemCapacity": 30,
+        "targetAir":true,  
+    "targetGround":true,
+    "abilities": [
+    {
+        "type": "RepairFieldAbility"
+        "amount":100
+        "reload": 300
+        "range": 58
+    }
+    ]
+	"weapons":[
+
+	{
+            "name": "散射炮塔1",
+            "reload": 30,               // 装弹时间（帧）
+            /*"rotationLimit": 20,最大旋转角度*/
+            "shootY": 6,               // 子弹发射高度偏移（像素）
+            "x": 5,
+            "y": 0,            // 武器相对车身位置
+            "recoil": 1,  // 后坐力
+            "rotate": false,            // 武器是否独立旋转（炮塔）
+            "alternate": true,         // 是否交替射击（双管）
+            "top": false,// 是否位于单位顶部
+            "shootSound": "散射",     // 射击音效
+            "shoot": {
+                "shots": 20         // 每次射击发射的子弹数
+            },
+            // 子弹属性
+            "bullet": {
+                "type": "BulletType",
+                    // 对友方治疗百分比
+                "lifetime": 13,       // 子弹存在时间（秒）
+                "speed": 8,           // 子弹飞行速度
+                "damage": 8,         // 单发伤害
+                "pierce": true,       // 是否穿透敌人
+               "collidesTeam": true,
+                
+                "despawnEffect": "none" // 子弹消失特效
+	"shootEffect": { // 射击特效 - 粒子发射效果
+		"type": "ParticleEffect", // 特效类型：粒子效果
+		"particles": 10, // 粒子数量：10个
+		"lifetime": 8, // 粒子生命周期：10帧/单位
+		"sizeFrom": 2, // 起始尺寸：2
+		"sizeTo": 0, // 结束尺寸：0（逐渐消失）
+		"region": "强化战役-再临-菱形", // 使用菱形纹理
+		"interp": "pow5Out", // 位移插值：5次方缓出
+		"sizeInterp": "pow10In", // 尺寸插值：10次方缓入（快速缩小）
+		"length": 90, // 特效长度：70
+		"baseLength": 0, // 基础长度：0
+		"colorFrom": "F2E878E0", // 起始颜色：白色（RGB）
+		"colorTo": "F2E87877", // 结束颜色：淡绿色带透明度（RGBA）
+		"cone": 30 // 发射锥角：10度（小范围散射）
+	},
+	"smokeEffect": { // 烟雾轨迹特效 - 线型粒子
+		"type": "ParticleEffect", // 特效类型：粒子效果
+		"particles": 10, // 粒子数量：5个
+		"line": true, // 线型模式（沿路径发射）
+		"strokeFrom": 7, // 起始线宽：1
+		"strokeTo": 0, // 结束线宽：0（逐渐变细）
+		"lenFrom": 17, // 起始长度：16
+		"lenTo": 8, // 结束长度：8（略微收缩）
+		"length": 90, // 特效长度：70
+		"baseLength": 0, // 基础长度：0
+		"lifetime": 12, // 粒子生命周期：12帧/单位
+		"colorFrom": "F2E878E0", // 起始颜色：淡绿色（RGB）
+		"colorTo": "F2E87877", // 结束颜色：保持淡绿色（无渐变）
+		"cone": 10 // 发射锥角：10度
+	},
+	"hitEffect": { // 命中特效 - 击中时爆发
+		"type": "ParticleEffect", // 特效类型：粒子效果
+		"particles": 10, // 粒子数量：3个（小型爆发）
+		"region": "强化战役-再临-菱形", // 使用菱形纹理
+		"lifetime": 15, // 粒子生命周期：10帧/单位
+		"sizeFrom": 8, // 起始尺寸：3（比射击特效稍大）
+		"sizeTo": 0, // 结束尺寸：0（逐渐消失）
+		"colorFrom": "F2E878E0", // 起始颜色：淡绿色（RGB）
+		"colorTo": "F2E87877" // 结束颜色：保持淡绿色（无渐变）
+	},
+            },
+        },
+		]
+"research": "天意所归",
+"alwaysUnlocked":true,
+}

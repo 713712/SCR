@@ -1,0 +1,243 @@
+{
+// === 单位基础属性 ===
+"type": "flying", // 单位类型为飞行单位
+"name": "尘土", // 单位名称
+"description": "基于尘土，浮尘的机体大幅增强载重上限提升,火力强大", // 单位描述
+"outlineColor": "2E2F34FF", // 轮廓颜色（RGBA格式）
+"template": "ErekirUnitType", // 模板类型
+"ammoCapacity": 80, // 弹药容量
+"ammoResupplyAmount": 15, // 弹药补给量
+"speed": 1, // 移动速度
+"flying": true, // 是飞行单位
+"lowAltitude": true, // 低空飞行
+"turnCursor": false, // 不随光标转向
+"engineOffset": 0, // 推进器位置偏移量（初始值，后续被覆盖）
+"engineSize": 0, // 推进器视觉效果大小（初始值，后续被覆盖）
+"hitSize": 20, // 碰撞体积大小
+"engineOffset": 15, // 推进器位置偏移量（相对中心）
+"engineSize": 6, // 推进器视觉效果大小
+"targetAir": true, // 可攻击空中目标
+"targetGround": true, // 可攻击地面目标
+"health": 980, // 生命值
+"armor": 20, // 护甲值
+"itemCapacity": 80, // 物品容量
+"commandLimit": 8, // 指挥上限
+"rotateShooting": true, // 射击时旋转
+"hitBuildings": true, // 可攻击建筑
+"hitUnits": true, // 可攻击单位
+"researchCostMultiplier": 0.4, // 研究成本倍率
+"research": "生物质合成区", // 所需研究设施
+"weapons": [ // 武器数组：存储所有武器配置，可包含多个武器对象
+{
+"name": "浮尘-蜂群炮", // 武器名称
+"reload": 80, // 装填时间
+"x": 6, "y": 0, // 武器位置（相对于单位中心的坐标）
+"rotate": true, // 武器可旋转
+"mirror": true, // 武器可镜像翻转
+"rotateSpeed": 28, // 旋转速度（初始值）
+"inaccuracy": 15, // 射击偏差角度
+"shoot": { // 射击参数
+"shots": 6, // 单次发射子弹数
+"shotDelay": 9, // 子弹发射间隔
+"barrels": 2, // 炮管数量
+"spread": 2 // 弹幕扩散角度
+},
+"shootSound": "missile", // 射击音效
+"rotateSpeed": 1.5, // 炮台实际转头速度
+"alternate": true, // 炮管交替发射
+"ejectEffect": "casing1", // 弹壳特效
+"bullet": { // 子弹参数
+"sprite": "missile", // 子弹外观资源
+"splashDamageRadius": 15, // 溅射伤害范围
+"splashDamage": 100, // 溅射伤害值
+"damage": 50, // 基础伤害
+"speed": 2.8, // 子弹速度
+"weaveMag": 4, // 弹道摆动幅度
+"weaveScale": 2, // 弹道摆动频率
+"homingRange": 250, // 追踪范围
+"homingDelay": 5, // 追踪延迟
+"homingPower": 0.1, // 追踪力度
+"lifetime": 80, // 子弹生命周期
+"width": 10, "height": 15, // 子弹碰撞体积
+"status": "melting", // 子弹附加状态（融化）
+"statusDuration": 240, // 状态持续时间
+"makeFire": true, // 命中后生成火焰
+"fragBullets": 8, // 碎片弹数量
+"fragRandomSpread": 12, // 碎片弹扩散角度
+"fragBullet": { // 碎片弹参数
+"type": "LiquidBulletType", // 碎片弹类型（液体子弹）
+"liquid": "slag", // 液体类型（矿渣）
+"speed": 2.34, // 碎片弹速度
+"lifetime": 6, // 碎片弹生命周期
+"knockback": 0.3, // 碎片弹击退
+"statusDuration": 120, // 碎片弹状态持续时间
+"status": "melting", // 碎片弹附加状态（融化）
+"damage": 7.5, // 碎片弹伤害
+"makeFire": true // 碎片弹命中后生成火焰
+}
+}
+},
+{ // 点防御武器
+"name":"浮尘-拦截炮", // 武器名称
+"x":4,"y":4, // 武器位置
+"mirror":true, // 武器镜像
+"reload":1, // 装填时间
+"rotate":true, // 武器可旋转
+"rotateSpeed":100, // 旋转速度
+"shootSound": "拦截", // 射击音效
+"shootEffect":"shootBig", // 射击效果
+"trailLength": 10, // 拖尾长度
+"trailWidth": 7, // 拖尾宽度
+"trailColor": "F09130FF", // 拖尾颜色
+"inaccuracy":0, // 射击精度
+"shootCone":1, // 射击角度
+"type":"PointDefenseWeapon", // 武器类型（点防御）
+"hasPower":false, // 不需要电力
+"range": 350, // 射程范围
+"retargetTime":1, // 重新瞄准时间
+"shootLength":10, // 弹药长度
+"bulletDamage":10000, // 伤害
+"color": "E1E8FFFF", // 颜色
+"speed":100000, // 速度
+"shoot":{ // 射击参数
+"shots":1,
+"shotDelay":1
+}
+},
+{
+"name": "浮尘-主炮", // 武器名称
+"x": 0, "y": 3, // 武器位置
+"mirror": false, // 武器不镜像
+"reload": 300, // 装填时间
+"rotate": false, // 武器不可旋转
+"alternate": true, // 交替射击
+"top": true, // 位于单位顶部
+"frontColor": "8CAAE8FF", // 弹头颜色
+"shootEffect": "shootSmall", // 射击效果
+"shootSound": "浮尘主炮", // 射击音效
+"beryllium": { // 额外子弹配置（可根据需求调整或删除）
+"type":"BasicBulletType", // 子弹类型
+"pierceCap": 8, // 穿透上限
+"height": 22, // 碰撞高度
+"width": 15, // 碰撞宽度
+"damage": 60, // 基础伤害
+"speed": 3, // 子弹速度
+"lifetime": 125, // 生命周期
+"ammoMultiplier": 2, // 弹药倍率
+"frontColor": "92DD7EFF", // 弹头颜色
+"backColor": "FFFFFFFFF", // 弹尾颜色
+"hitColor": "92DD7EFF", // 命中颜色
+"trailColor": "92DD7EFF", // 尾迹颜色
+"trailWidth": 4, // 尾迹宽度
+"trailLength": 10, // 尾迹长度
+"smokeEffect":"steam", // 烟雾特效
+"hitEffect": "plasticburn", // 命中特效
+"despawnEffect":{ // 消失特效
+"type": "hitBulletBig",
+"sizeFrom": 8.5,
+"sizeTo": 0,
+"length": 12.2,
+"colorFrom": "92DD7EFF"
+},
+"intervalBullets": 4, // 散射子弹数量
+"intervalAngle": 270, // 散射角度
+"intervalSpread": 300, // 散布范围
+"intervalRandomSpread": 10, // 随机散布
+"bulletInterval": 6, // 发射间隔
+"intervalBullet": { // 散射子弹配置
+"type":"BasicBulletType",
+"pierceCap": 12,
+"height": 16,
+"width": 12,
+"damage": 22,
+"speed": 3,
+"lifetime": 15,
+"ammoMultiplier": 2,
+"frontColor": "92DD7EFF",
+"backColor": "FFFFFFFFF",
+"hitColor": "92DD7EFF",
+"trailColor": "92DD7EFF",
+"trailWidth": 3.5,
+"trailLength": 14,
+"hitEffect": "plasticburn",
+"despawnEffect":[ // 多层消失特效
+{
+"type": "plasticburn",
+"particles": 5,
+"sizeFrom": 3.5,
+"sizeTo": 0,
+"length": 8.2,
+"colorFrom": "92DD7EFF"
+}
+]
+}
+},
+"bullet": { // 主炮子弹参数
+"type":"BasicBulletType", // 子弹类型
+"rangeChange": 138,
+"pierceCap": 18, // 穿透上限
+"height": 20, // 碰撞高度
+"width": 10, // 碰撞宽度
+"damage": 42, // 基础伤害
+"speed": 5.5, // 子弹速度
+"lifetime": 105, // 生命周期
+"ammoMultiplier": 2, // 弹药倍率
+"frontColor": "A0B0C8FF", // 弹头颜色
+"backColor": "FFFFFFFFF", // 弹尾颜色
+"hitColor": "A0B0C8FF", // 命中颜色
+"trailColor": "A0B0C8FF", // 尾迹颜色
+"trailWidth": 6.5, // 尾迹宽度
+"trailLength": 18, // 尾迹长度
+"smokeEffect":"steam", // 烟雾特效
+"hitEffect": "plasticburn", // 命中特效
+"despawnEffect":{ // 消失特效
+"type": "hitBulletBig",
+"sizeFrom": 8.5,
+"sizeTo": 0,
+"length": 12.2,
+"colorFrom": "A0B0C8FF"
+},
+"bulletInterval": 15,
+"intervalBullets": 3,
+"intervalBullet": {
+"instantDisappear": true, // 命中后立即消失
+"fragBullets": 3, // 分裂子弹数量
+"intervalRandomSpread": 60, // 散布角度
+"despawnEffect":{ // 消失特效
+"type": "overdriven",
+"sizeFrom": 3.5,
+"sizeTo": 0,
+"length": 22.2,
+"colorFrom": "A0B0C8FF"
+},
+"fragBullet": { // 碎片弹配置
+"type":"BasicBulletType",
+"pierceCap": 18,
+"height": 18,
+"width": 12,
+"damage": 22,
+"speed": 3.8,
+"lifetime": 17.8,
+"frontColor": "A0B0C8FF",
+"backColor": "FFFFFFFFF",
+"hitColor": "A0B0C8FF",
+"trailColor": "A0B0C8FF",
+"trailWidth": 3.5,
+"trailLength": 24,
+"hitEffect": "plasticburn",
+"despawnEffect":[ // 多层消失特效
+{
+"type": "plasticburn",
+"particles": 4,
+"sizeFrom": 5.5,
+"sizeTo": 0,
+"length": 18.2,
+"colorFrom": "A0B0C8FF"
+}
+]
+}
+}
+}
+}
+]
+}

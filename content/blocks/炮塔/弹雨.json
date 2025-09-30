@@ -8,7 +8,7 @@
     // 简介
     "details": "重型机枪",
     // 生命值为1100
-    "health": 1100,
+    "health": 800,
     // 大小为2
     "size": 2,
     // 类别为炮塔（turret）
@@ -78,7 +78,7 @@
     // ammoTypes对象，用于定义各种弹药类型相关的属性
 	"青铜矿石": {
 		"speed": 4,
-            "damage": 20,
+            "damage": 10,
             "lifetime": 30,
             "width": 3,
             "height": 3,
@@ -100,7 +100,7 @@
 		},
 			"劣质硅": {
 		"speed": 5,
-            "damage": 10,
+            "damage": 20,
             "lifetime": 30,
             "width": 3,
             "height": 3,
@@ -116,6 +116,28 @@
             "pierceBuilding": true,
             // 穿透次数为 6
             "pierce": 6,
+            "pierce": true,
+			"pierceBuilding": true,
+			"pierceCap": 4,
+		},
+			"精致石墨": {
+		"speed": 3,
+            "damage": 40,
+            "lifetime": 40,
+            "width": 4,
+            "height": 4,
+            "ammoMultiplier": 2,
+            "shootEffect": "shootBig",
+            "trailColor": "F2E87877",
+            "trailWidth": 4,
+            "trailLength": 12,
+            "hitColor": "F2E878E0",
+            "buildingDamageMultiplier": 16
+		    "pierceArmor" : true,
+		    // 能够穿透建筑物
+            "pierceBuilding": true,
+            // 穿透次数为 6
+            "pierce": 12,
             "pierce": true,
 			"pierceBuilding": true,
 			"pierceCap": 4,

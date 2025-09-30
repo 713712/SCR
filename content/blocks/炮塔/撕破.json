@@ -53,6 +53,16 @@
                 "splashDamageRadius": 24,  // 爆炸半径
                 "splashDamage": 29,        // 爆炸伤害
     },//子弹复制粘贴就行了  记得改名字   
+      "精致石墨": {
+                "type": "ArtilleryBulletType",  // 炮弹类型（可越过障碍）
+                "damage": 38,      // 直接命中伤害
+                "speed": 5,        // 飞行速度
+                "lifetime": 250,    // 存在时间（帧）
+                "width": 11,       // 碰撞宽度
+                "height": 11,      // 碰撞高度
+                "splashDamageRadius": 34,  // 爆炸半径
+                "splashDamage": 30,        // 爆炸伤害
+    },//子弹复制粘贴就行了  记得改名字   
 		},
     // 其他属性
     "rotateSpeed": 1.8,  // 炮塔旋转速度2.5

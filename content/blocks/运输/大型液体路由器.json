@@ -1,0 +1,16 @@
+{
+    "type":"LiquidRouter",
+    "name":"液体大型路由器",
+    "description": "路由神教",
+    "size":3,
+    "health": 300,
+    "liquidCapacity": 100,
+    // "insulated":true,
+    "requirements": [
+	{"item": "青铜矿石", "amount": 30},
+	{"item": "劣质硅", "amount": 18}
+	{"item": "铁锈", "amount": 12}
+	],
+	"category": "liquid",
+    "research":"天意所归"
+    }

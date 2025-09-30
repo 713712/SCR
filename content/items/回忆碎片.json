@@ -1,9 +1,9 @@
 {
 	"type": "items",
 	"name": "回忆碎片",
-	"description": "来着赛普拉更加古老的文明留下来的线索",
-	"details": "《时光碎镜录》以碎镜”象征古老的赛普罗文明",
-	"color": "292929FF",
+	"description": "来自赛普拉更加古老的文明留下来的线索",
+	"details": "《时光碎镜录》以碎镜”象征古老的赛普拉文明",
+	"color": "FFFFFFFF",
 	"cost": 1,
 	"hardness": 4,
 	"explosiveness": 0,

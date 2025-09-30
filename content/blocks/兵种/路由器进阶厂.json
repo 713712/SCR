@@ -7,7 +7,7 @@
 	"plans": [
 		{
 			"unit": "氧化路由器",
-			"time": 1280,
+			"time": 1300,
 			"requirements": [
 				"青铜矿石/100",
 			]
@@ -18,5 +18,5 @@
 	],
 	"category": "units",
 	"research": "冰冻森林"
-	"researchCostMultiplier": 0.25,
+	"researchCostMultiplier": 0.35,
 }

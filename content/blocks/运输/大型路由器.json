@@ -1,0 +1,18 @@
+{
+"name":"大型路由器"
+	"type": "Router",
+	"health": 500,
+	"size": 3,
+	"speed": 0.1
+	"itemCapacity": 1,
+	"speedBoost": 0.0001
+	"details":"赛普拉大部份资源在敌人手上，其他资源散落各地，而且常规运输管道无法到达，因此小型铁锈路由器因此而生，其能把中小等量的资源投射另一个路由器中，以达到中距离运输",
+	"requirements": [
+		{ "item": "铁锈", "amount": 10 },
+			{ "item": "青铜矿石", "amount": 30 },
+	],
+	"category": "distribution",
+	"research": "天意所归"
+	"researchCostMultiplier": 0.2,
+	    "canOverdrive": false,
+}

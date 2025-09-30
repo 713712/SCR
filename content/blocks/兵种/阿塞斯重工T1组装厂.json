@@ -1,0 +1,47 @@
+{
+    "type": "UnitAssembler",
+    "name": "*阿塞斯重工T1组装厂",
+    "description": "使用单位将方块放入\n需要大量电力",
+    "health": 820,
+    "size": 3,
+    "droneType":"assembly-drone",
+    "liquidCapacity": 200,
+    "consumes": {
+        "power": 8,
+        "liquid": {
+            "liquid": "water",
+            "amount": 2
+        }
+    },
+    "areaSize": 5,
+    "plans": [
+        {
+            "unit": "散射",
+            "time": 1500,
+            "tier":0
+            "requirements": [
+                "强化战役-再临-撕破/1",
+                "强化战役-再临-大型硅墙/2",
+            ]
+        },
+                {
+            "unit": "急射",
+            "time": 2000,
+            "tier":1
+            "requirements": [
+                "强化战役-再临-弹雨/2",
+                "强化战役-再临-大型硅墙/4"               "强化战役-再临-超大型青铜墙/2",
+            ],
+        },
+    ],
+    "requirements": [
+        "劣质硅/100",
+        "初级芯片/70",
+        "青铜矿石/80",
+        "回忆碎片/40",
+    ],
+    "category": "units",
+    "canOverdrive": false,
+    "research": "小型实验基地",
+    "details": "*阿塞斯重工的杰作"
+}

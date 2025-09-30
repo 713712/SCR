@@ -1,0 +1,16 @@
+{
+"localizedName": "天意所归",
+	"description": "这里是一个废弃基地，但这里竟然有赛普罗的敌军，奇怪，每个敌军身上都刻着阿尔法，这是一张支线地图，打过可以解锁水泵",
+    "planet":"赛普拉"//母星名字。
+    "sector":81//区块坐标
+    "captureWave":25//胜利波次
+    "difficulty":3//难度1一5
+    "research": {
+		"parent": "生物质合成区",
+		"objectives": [
+            {
+				"type": "SectorComplete",
+				"preset": "生物质合成区"
+			}
+			]}
+}

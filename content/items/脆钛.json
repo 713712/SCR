@@ -1,0 +1,15 @@
+{
+	"type": "items",
+	"name": "脆钛",
+	"description": "五级硬度，需要更高级的采集器挖掘\nBYD终于看到钛了",
+	"details": "随原本为钛，可早已变脆",
+	"color": "6BA0F5CD",
+	"cost": 1,
+	"hardness": 5,
+	"explosiveness": 0,
+	"radioactivity": 0,
+	"charge": 0,
+	"flammability": 0,
+		"research":"生物质合成区"
+		"alwaysUnlocked":false,
+	}

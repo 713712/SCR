@@ -20,6 +20,7 @@
     },
 	"updateEffect": "smeltsmoke",
 	"consumes": {
+		"power": 1.2,
     "items": [
       { "item": "spore-pod", "amount": 4 },    // 每次消耗 4 铅
       { "item": "烟煤", "amount": 8 }, // 每次消耗 6 硅

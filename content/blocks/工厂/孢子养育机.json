@@ -48,6 +48,8 @@
 	],
 	"category": "production",
 	"research": "古老遗址"
+	"canOverdrive": true  // 是否支持超频：否（无法通过额外资源提升发电效率或速度
+	"researchCostMultiplier": 0.4,  // 研究成本倍率：0.2（降低该设备的研究资源消耗，仅需基础成本的20%）
     "idleSound": "machine",
 	"idleSoundVolume": 0.2,
 } 

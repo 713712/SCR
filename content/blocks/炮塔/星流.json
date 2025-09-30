@@ -1,7 +1,7 @@
 {
   "type": "itemTurret", // 对象类型：物品炮塔（itemTurret）
   "name": "星流", // 炮塔名称：超级齐射炮塔（hyper-salvo）
-  "description": "向敌人发射子弹，需要电力", // 描述：一款高伤害、支持多种弹药类型的先进炮塔，专为重型防御设计
+  "description": "把齐射的基础口径略微提升，令子弹造成的伤害提升，但由于使用略大的子弹口径，装填速度略微下降，导致射速也略微下降。", // 描述：一款高伤害、支持多种弹药类型的先进炮塔，专为重型防御设计
   "category": "turret", // 所属类别：炮塔（turret）
   "health": 410, // 耐久度：300
   "size": 2, // 体型大小：2格（游戏内格子单位）
@@ -90,6 +90,23 @@
       "trailColor": "#b2c6d2", // 子弹轨迹颜色：浅蓝色（#b2c6d2）
       "trailLength": 6 // 轨迹长度：6
     },
+    	"青铜矿石": {
+	     "type": "BasicBulletType", // 弹药类型：基础子弹（BasicBulletType）
+      "damage": 15, // 伤害：30
+      "speed": 6, // 飞行速度：6
+      "width": 9, // 子弹宽度：9
+      "height": 12, // 子弹高度：12
+      "lifetime": 35, // 子弹存活时间：35
+      "ammoMultiplier": 2, // 弹药倍率：4
+      "rangeChange": 10, // 射程变化：+32（在炮塔基础射程上增加32）
+      "hitEffect": "hitBulletColor", // 命中特效：子弹颜色命中特效
+      "despawnEffect": "hitBulletColor", // 消失特效：子弹颜色命中特效
+      "hitColor": "#6b6b6b", // 命中颜色：深灰色（#6b6b6b）
+      "frontColor": "#b2c6d2", // 子弹正面颜色：浅蓝色（#b2c6d2）
+      "backColor": "#6b6b6b", // 子弹背面颜色：深灰色（#6b6b6b）
+      "trailColor": "#b2c6d2", // 子弹轨迹颜色：浅蓝色（#b2c6d2）
+      "trailLength": 3 // 轨迹长度：6
+		},
     "混合物": { // 燃石弹药（pyratite，游戏内易燃材料）
       "type": "BasicBulletType", // 弹药类型：基础子弹（BasicBulletType）
       "damage": 28, // 伤害：28

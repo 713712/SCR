@@ -1,0 +1,15 @@
+{
+"localizedName": "连绵群岛",
+	"description": "检测到脆钛",
+    "planet":"赛普拉"//母星名字。
+    "sector":54//区块坐标
+    //"captureWave":20//胜利波次
+    "difficulty":3//难度1一5
+    "research": {
+		"parent": "天意所归",
+		"objectives": [
+            {
+				"type": "SectorComplete",
+				"preset": "天意所归"
+			}]}
+}

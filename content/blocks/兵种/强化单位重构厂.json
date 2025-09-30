@@ -1,0 +1,32 @@
+{
+"type": "Reconstructor",
+	"name": "强化单位重构厂",
+	"description": "把输入单位升级到T3",
+	"details": "看来,单位越来越强了",
+	"health": 1400
+	"size": 5,
+	"constructTime": 3500,//生产单位时间
+	"consumes": {//消耗
+		"items": {
+			"items": [
+			"劣质硅/100",
+			"精致石墨/80",
+			"初级芯片/70",
+			"铁锈/50",
+			]
+		}
+	},
+	"requirements": [
+	"劣质硅/150",
+	"初级芯片/100",
+	],//建造所需
+	"upgrades": [
+        ["分配器", "溢流门"],
+        ["尘土", "浮尘"],
+        ["锐刀", "刺刀"],
+        ["幻奏", "狂乐"],
+	],
+	"category": "units",
+	"research": "生物质合成区"
+	"researchCostMultiplier": 0.55,
+}

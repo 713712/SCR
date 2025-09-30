@@ -1,0 +1,15 @@
+{
+"localizedName": "小型实验基地",
+	"description": "显然，这里充满了敌人的秘密，敌人几乎疯狂的对你发动进攻，你能否撑住",
+    "planet":"赛普拉"//母星名字。
+    "sector":91//区块坐标
+    //"captureWave":20//胜利波次
+    "difficulty":2//难度1一5
+    "research": {
+		"parent": "天意所归",
+		"objectives": [
+            {
+				"type": "SectorComplete",
+				"preset": "天意所归"
+			}]}
+}

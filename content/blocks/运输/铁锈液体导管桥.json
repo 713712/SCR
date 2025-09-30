@@ -1,0 +1,16 @@
+{
+	"type": "LiquidBridge",
+	"name": "铁锈液体导管桥",
+	"description": "跨越地形运送液体",
+	"health":100,
+	"range": 5,
+	"liquidCapacity": 10,
+	"hasPower":false,
+	"requirements": [
+			{"item": "青铜矿石", "amount": 12}
+		{"item": "劣质硅", "amount": 8}
+		{ "item": "铁锈", "amount": 9 },
+	],
+	"category": "liquid",	
+	"research":"铁锈液体路由器"
+}

@@ -60,6 +60,9 @@
 		            "lightningDamage":4,
     "lightning":3,
     "lightningLength":4
+            "healPercent": 5,  // 修复比例：2.5%（每次命中修复目标最大生命值的2.5%）
+            "collidesGround": true,  // 是否与地面单位碰撞：是（仅与地面友方建筑碰撞以触发修复）
+        "collidesTeam": true  // 是否与友方单位碰撞：是（核心参数，确保仅修复友方建筑，不攻击友方）
 		"speed":7.6, "lifetime":24,
 		"width":2,	 "height":8	}	}
 			{

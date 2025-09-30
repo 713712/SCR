@@ -1,0 +1,36 @@
+{
+    "name":"动力钻头组",
+    "type": "Drill",
+    "description":"挖掘更硬的矿物",
+    "size": 4,
+    "health": 760,
+    "tier": 5,//挖掘等级
+    "drillTime": 150,//挖掘间隔
+    "liquidBoostIntensity":2,//加速倍率
+    "warmupSpeed": 0.02,
+	"drillEffect": "blastExplosion",
+    "updateEffect": "blastExplosion",
+    "rotateSpeed": 1,
+    "drawMineItem": true,
+    "consumes": {
+    	"power": 3,
+        "liquid": {
+            "liquid": "water",
+            "amount": 0.3,
+            "booster": true,
+            "optional": true
+        }
+    },
+    "itemCapacity": 40,//物品容量
+    "liquidCapacity": 40,//液体容量
+    "requirements": [	
+   { "item": "铁锈", "amount":45},
+    { "item": "劣质硅", "amount":55},
+       { "item": "初级芯片", "amount":20},
+    { "item": "青铜矿石", "amount":40},
+   ],
+    "category": "production",
+    "research": "天意所归"
+            "researchCostMultiplier": 0.4,  // 研究成本乘数：0.45（研究该设施的成本为正常成本的45%）
+            "canOverdrive": false,
+}

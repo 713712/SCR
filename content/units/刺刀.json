@@ -1,0 +1,82 @@
+{
+    // 基础单位属性
+    "name": "刺刀", // 单位名称
+    "description": "中型单位，配备两门中口径远距离特效双发炮", // 单位描述
+    "type": "mech", // 单位类型（机甲）
+    "health": 1300, // 生命值
+    "armor": 12, // 护甲值（减伤用）
+    "speed": 0.4, // 移动速度
+    "accel": 0.2, // 加速度
+    "drag": 0.3, // 移动阻力
+    "hitSize": 22, // 碰撞体积
+    "rotateSpeed": 1, // 旋转速度
+    "targetAir": false, // 能否对空
+    "targetGround": true, // 能否对地
+    "canBoost": false, // 是否可冲刺
+    "researchCostMultiplier": 4,
+    "alwaysUnlocked":false,
+"mechFrontSway": 1, //机械前摇
+"mechStepParticles": true, //机械步粒子
+"mechStepShake": 1, //机械步摇
+    "research":"初级单位重构厂",//技术位置
+    "weapons": [  // 武器配置
+        {
+        "name":"刺刀主炮",
+            "rotate": false,  // 是否可以旋转
+            "mirror": true,  // 是否镜像
+            "top": true,// 是否位于单位顶部
+            "shootY":8,
+            "x": 9,  // 武器在机甲上的X坐标
+            "y": 0,  // 武器在机甲上的Y坐标
+            "reload": 60,  // 重新装填时间
+            "recoil": 1,  // 后坐力
+            "inaccuracy": 0,  // 射击不精度
+            "shake": 0.9,//射击震动强度
+            "shootSound": "artillery", // 射击音效
+                    "shoot": {            // 射击参数：控制单次发射的子弹数量、间隔等
+            "shots": 3,      // 单次发射总子弹数：每次触发射击会发射24发子弹
+            "shotDelay": 35,  // 子弹间隔：每发子弹之间的时间间隔（15帧）
+            "barrels": 2,     // 炮管数量：2个炮管（可能配合alternate实现交替发射）
+            "spread": 2       // 弹幕扩散：多发子弹之间的角度差（2度），值越大弹幕越宽
+        },
+            "hitSound":"titanExplosion"
+            "bullet": {  // 子弹配置
+            "type": "BasicBulletType",  // 基础弹道类型
+            "hitEffect":"hitMeltdown",//击中特效
+      "despawnEffect":"overdriven",//子弹消失特效
+      "shootEffect":"overdriven",//射击特效
+      "smokeEffect":"steam",//冒烟特效
+            "speed": 3,  // 弹速较慢
+            "damage": 68,  // 单发伤害
+            "knockback": 2,  // 击退效果
+            "lifetime": 83.76,  // 子弹存在时间(约0.53秒)
+            "width": 13,  // 碰撞宽度
+            "height": 16,  // 碰撞高
+            "trailLength": 13//拖尾长
+         	"trailWidth": 3//拖尾宽
+         	"spin": 10, // 旋转速度
+	        "trailColor": "CFFF70B7",//颜色
+            "hitColor": "CFFF70B7",  // 命中效
+            "homingDelay":70,//（追踪延迟，60为一秒）
+      "homingRange":240,//（追踪距离，8为1格）
+      "homingPower":2.5,//（追踪强度）
+      "buildingDamageMultiplier":0.85
+            "fragOnHit": true,           // 命中后分裂
+"fragBullets": 1,            // 分裂2发子弹
+"fragRandomSpread": 13, // 分裂角度范围
+"fragBullet": {
+"type": "LaserBulletType", // 激光型弹体
+                "damage": 40,            // 单发伤害
+                "length": 130,             // 激光长度（像素）
+                "width": 25,              // 激光宽度（像素）
+                "buildingDamageMultiplier":0.85
+                "colors": [
+                "CFFF70B7",
+                "CFFF70B7",
+                "CFFF70B7"
+                ], // 激光渐变色
+            }// 分裂子弹的配置
+            },
+                        }
+    ],
+}

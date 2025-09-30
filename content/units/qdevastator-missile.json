@@ -1,0 +1,88 @@
+{
+"type": "missile", // 单位类型：导弹（missile），定义该单位的核心类别
+"name": "qdevastator-missile", // 导弹唯一标识名：qdevastator-missile，用于代码中定位和调用该导弹
+"flying": true, // 飞行能力：开启（true），表示该导弹为飞行单位
+"envDisabled": 0, // 环境禁用标识：0，无特殊环境下的禁用规则
+"controller": "MissileAI", // 控制AI：导弹AI（MissileAI），定义该导弹的行为逻辑
+"playerControllable": false, // 玩家可控制开关：关闭（false），玩家无法手动操控该导弹
+"health": 80, // 导弹生命值：550点，数值归零则导弹被摧毁
+"armor": 5, // 导弹护甲：44点，可抵消部分 incoming 伤害
+"maxRange": 110, // 最大飞行范围：760单位距离，超出范围导弹会自毁或失效
+"lifetime": 110, // 生命周期：850单位时间，时间耗尽导弹会自毁
+"speed": 3, // 飞行速度：2.2单位速度，数值越大飞行越快
+"rotateSpeed": 0.8, // 旋转速度：1.2单位速度，数值越大转向锁定目标越快
+"hitSize": 8, // 碰撞体积：4单位，数值越大越容易与其他单位/建筑发生碰撞
+"hidden": true, // 隐藏开关：开启（true），导弹在特定情况下（如未被探测）不可见
+"outlineColor": "00000000", // 轮廓颜色：完全透明（00000000），不显示导弹轮廓
+"engineSize": 1, // 引擎尺寸：1单位，影响导弹视觉上的引擎大小和推力表现
+"missileAccelTime": 3, // 导弹加速时间：1单位时间，导弹从发射到达到最大速度的时间
+"lowAltitude": true, // 低空飞行：开启（true），导弹在低空飞行
+"fogRadius": 8, // 视野范围（迷雾驱散半径）：16单位，导弹可驱散该范围内的战争迷雾
+"allowedInPayloads": false, // 载荷允许开关：关闭（false），该导弹不能作为其他单位的载荷
+"useUnitCap": false, // 单位上限占用：关闭（false），该导弹不占用玩家的单位数量上限
+"physics": false, // 物理模拟开关：关闭（false），导弹不遵循物理引擎的重力、摩擦力等规则
+"createWreck": true, // 残骸生成：开启（true），导弹被摧毁后会生成残骸
+"createScorch": false, // 灼烧痕迹生成：关闭（false），导弹爆炸后不在地面生成灼烧痕迹
+"weapons": [ // 武器列表：定义导弹的攻击手段
+{
+"mirror": false, // 镜像发射：关闭（false），武器不进行镜像对称发射
+"shootCone": 360, // 射击角度：360度，武器可向全角度发射
+"x": 0, // 武器X轴偏移：0单位，相对于导弹本体的水平位置
+"y": 0, // 武器Y轴偏移：0单位，相对于导弹本体的垂直位置
+"reload": 46, // 装填时间：46单位时间，数值越小攻击频率越高
+"shootOnDeath": true, // 死亡时射击：开启（true），导弹被摧毁时会触发武器射击
+"shootEffect": "none", // 射击特效：无（none），射击时不播放特效
+"bullet": { // 子弹配置：定义武器发射的弹药
+"type": "BombBulletType", // 子弹类型：炸弹子弹类型（BombBulletType）
+"splashDamage": 70, // 爆炸伤害：2160点，范围伤害的基础数值
+"splashDamageRadius": 90, // 爆炸范围：90单位距离，伤害覆盖的圆形区域半径
+"pierce": true, // 穿透能力：开启（true），子弹可穿透多个目标
+"pierceBuilding": true, // 建筑穿透：开启（true），子弹可穿透建筑
+"pierceArmor": true, // 护甲穿透：开启（true），子弹可穿透目标护甲
+"reflectable": false, // 反射能力：关闭（false），子弹不会被反射
+"absorbable": false, // 吸收能力：关闭（false），子弹不会被吸收
+"instantDisappear": true, // 瞬间消失：开启（true），子弹命中后立即消失
+"killShooter": true, // 击杀发射者：开启（true），子弹会摧毁发射它的导弹
+"hittable": false, // 可被攻击：关闭（false），子弹本身不可被其他单位攻击
+"collidesAir": true, // 对空碰撞：开启（true），子弹可与空中单位发生碰撞
+"despawnHit": true, // 命中消失：开启（true），子弹命中目标后立即消失
+"despawnEffect": { // 消失特效：定义子弹消失时的视觉效果
+"type": "MultiEffect", // 特效类型：复合特效（MultiEffect），可包含多个子特效
+"effects": [
+{
+"type": "WaveEffect", // 子特效类型：波浪特效（WaveEffect）
+"colorFrom": "f3e979", // 起始颜色：浅黄色（f3e979）
+"colorTo": "f3a579", // 结束颜色：浅橙色（f3a579）
+"lightColor": "f3e979", // 发光颜色：浅黄色（f3e979）
+"sizeFrom": 0, // 起始尺寸：0单位
+"sizeTo": 75, // 结束尺寸：75单位
+"sides": 0, // 边数：0（表示圆形或无规则形状）
+"lifetime": 40, // 生命周期：40单位时间
+"strokeFrom": 12, // 起始描边宽度：12单位
+"strokeTo": 0 // 结束描边宽度：0单位
+},
+{
+"type": "WaveEffect", // 子特效类型：波浪特效（WaveEffect）
+"colorFrom": "f3e979", // 起始颜色：浅黄色（f3e979）
+"colorTo": "f3a579", // 结束颜色：浅橙色（f3a579）
+"lightColor": "f3e979", // 发光颜色：浅黄色（f3e979）
+"sizeFrom": 10, // 起始尺寸：10单位
+"sizeTo": 85, // 结束尺寸：85单位
+"sides": 0, // 边数：0（表示圆形或无规则形状）
+"lifetime": 40, // 生命周期：40单位时间
+"strokeFrom": 4, // 起始描边宽度：4单位
+"strokeTo": 0 // 结束描边宽度：0单位
+}
+]
+}
+}
+}
+],
+"abilities": [ // 能力列表：定义导弹的特殊能力
+{
+"type": "MoveEffectAbility", // 能力类型：移动特效能力（MoveEffectAbility）
+"teamColor": true, // 队伍颜色适配：开启（true），特效颜色会随所属队伍颜色变化
+"y": -13 // Y轴偏移：-13单位，特效相对于导弹本体的垂直位置
+}
+]
+}

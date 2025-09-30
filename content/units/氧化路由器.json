@@ -19,6 +19,8 @@
   "rotateMoveFirst": true, // 移动前先转向
    "flying": false, // 是否为飞行单位
 	"faceTarget": false, // 是否始终面向目标
+	"lowAltitude": true, //可以趟深水
+"crushDamage":30,//碰撞伤害1：60
   "parts": [
     {
       "type": "HoverPart",
@@ -66,8 +68,8 @@
                 "height": 8, // 子弹高度
             "splashDamageRadius": 23,    // 爆炸范围
             "splashDamage": 100,         // 范围伤害
-                "speed": 3.5,  // 子弹速度
-                "lifetime": 70 // 子弹存活时间
+                "speed": 3,  // 子弹速度
+                "lifetime": 60 // 子弹存活时间
                 "status": "blasted",  // 附加状态
                 "frontColor": "8ED783FF",      // 弹头颜色
                 "backColor": "8ED783FF",       // 弹尾颜色

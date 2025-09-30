@@ -1,21 +1,21 @@
 {
-    "type": "SolidPump",
-    "name": "基础抽水机",
-	"description": "用用更高强度的钻头深入地下以抽取更多地下水.\n水边抽水是吧",
-	"size": 3,
-	"health": 350,
-	"liquidCapacity":500,
-	"result": "water",
-	"pumpAmount": 1,
-    "rotateSpeed": 0.8,
-	"consumes": {
-		"power": 1.2
-	},
-    "attribute": "water",
-	"requirements": [
-		{"item": "青铜矿石", "amount": 30},
-		{ "item": "劣质硅", "amount": 20 }
-	],
-	"category": "production",
-	"research": "古老遗址"
+    "type": "SolidPump", // 设备类型：固体抽水机（表明这是用于抽取液体的固体类抽水设备）
+    "name": "基础抽水机", // 设备名称：基础抽水机
+    "description": "用更高强度的钻头深入地下以抽取更多地下水.\n水边抽水是吧", // 设备描述：说明该抽水机通过高强度钻头深入地下抽取更多地下水，还带有调侃“水边抽水”的意味
+    "size": 3, // 设备所占格子大小：3（表示在场景中占据 3 个单位的空间大小）
+    "health": 650, // 设备耐久度：350（即设备能承受的损伤上限，数值越高越耐用）
+    "liquidCapacity": 100, // 液体容量：100（抽水机可存储的液体最大量为 100 单位）
+    "result": "water", // 产出物：water（即抽取后得到的液体是水）
+    "pumpAmount": 0.6, // 抽水数量：1（每次抽水的量为 1 单位）
+    "rotateSpeed": 0.8, // 旋转速度：0.8（抽水机相关部件的旋转速度参数，影响抽水效率等）
+    "consumes": { // 消耗项
+        "power": 1.4 // 电力消耗：1.2（每单位时间消耗 1.2 单位的电力）
+    },
+    "attribute": "water", // 属性：water（表明该抽水机针对的液体属性是水，可能用于限定抽取液体类型）
+    "requirements": [ // 制作需求（制造该抽水机需要的材料及数量）
+        {"item": "青铜矿石", "amount": 30}, // 需要 30 单位的青铜矿石
+        { "item": "劣质硅", "amount": 20 } // 需要 20 单位的劣质硅
+    ],
+    "category": "production", // 分类：production（生产类，说明该设备属于生产制造范畴的设施）
+    "research": "古老遗址" // 解锁所需研究：古老遗址（需要完成“古老遗址”相关研究才能解锁该抽水机的制作）
 }

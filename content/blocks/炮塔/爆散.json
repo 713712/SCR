@@ -19,10 +19,10 @@
         "speed": 6,  // 子弹飞行速度（数值越高，飞行越快）
         "damage": 5,  // 子弹直接命中目标时造成的基础伤害
         "ammoMultiplier": 4,  // 弹药数量倍率（可能影响单次发射的弹药总量或储备换算）
-        "splashDamageRadius": 10,  // 子弹爆炸/命中后的溅射伤害范围（半径单位，范围内目标会受溅射伤害）
+        "splashDamageRadius": 5,  // 子弹爆炸/命中后的溅射伤害范围（半径单位，范围内目标会受溅射伤害）
         "splashDamage": 40.0,  // 溅射范围内造成的伤害值（通常低于直接命中伤害）
         "collides":true,  // 子弹是否与其他实体（如敌方单位、友方单位）发生碰撞
-        "collidesGround":true,  // 子弹是否与地面发生碰撞（碰撞后可能触发爆炸/停止飞行）
+        "collidesGround":false,  // 子弹是否与地面发生碰撞（碰撞后可能触发爆炸/停止飞行）
         "hitSize":4,  // 子弹的碰撞判定尺寸（数值越大，越容易命中目标）
 
         "fragBullets": 16,  // 该高射炮子弹命中/爆炸后分裂出的碎片子弹数量
@@ -42,9 +42,9 @@
         "damage": 10,  // 子弹直接命中目标时造成的基础伤害
         "ammoMultiplier": 4,  // 弹药数量倍率（可能影响单次发射的弹药总量或储备换算）
         "splashDamageRadius": 15,  // 子弹爆炸/命中后的溅射伤害范围（半径单位，范围内目标会受溅射伤害）
-        "splashDamage": 30.0,  // 溅射范围内造成的伤害值（通常低于直接命中伤害）
+        "splashDamage": 10.0,  // 溅射范围内造成的伤害值（通常低于直接命中伤害）
         "collides":true,  // 子弹是否与其他实体（如敌方单位、友方单位）发生碰撞
-        "collidesGround":true,  // 子弹是否与地面发生碰撞（碰撞后可能触发爆炸/停止飞行）
+        "collidesGround":false,  // 子弹是否与地面发生碰撞（碰撞后可能触发爆炸/停止飞行）
         "hitSize":6,  // 子弹的碰撞判定尺寸（数值越大，越容易命中目标）
 
         "fragBullets": 16,  // 该高射炮子弹命中/爆炸后分裂出的碎片子弹数量
@@ -64,12 +64,12 @@
         "damage": 20,  // 子弹直接命中目标时造成的基础伤害
         "ammoMultiplier": 4,  // 弹药数量倍率（可能影响单次发射的弹药总量或储备换算）
         "splashDamageRadius": 20,  // 子弹爆炸/命中后的溅射伤害范围（半径单位，范围内目标会受溅射伤害）
-        "splashDamage": 50.0,  // 溅射范围内造成的伤害值（通常低于直接命中伤害）
+        "splashDamage": 20.0,  // 溅射范围内造成的伤害值（通常低于直接命中伤害）
         "collides":true,  // 子弹是否与其他实体（如敌方单位、友方单位）发生碰撞
-        "collidesGround":true,  // 子弹是否与地面发生碰撞（碰撞后可能触发爆炸/停止飞行）
+        "collidesGround":false,  // 子弹是否与地面发生碰撞（碰撞后可能触发爆炸/停止飞行）
         "hitSize":6,  // 子弹的碰撞判定尺寸（数值越大，越容易命中目标）
 
-        "fragBullets": 32,  // 该高射炮子弹命中/爆炸后分裂出的碎片子弹数量
+        "fragBullets": 22,  // 该高射炮子弹命中/爆炸后分裂出的碎片子弹数量
         "fragBullet": {  // 分裂出的“碎片子弹”具体属性配置
         "type": "BasicBulletType",  // 碎片子弹类型：基础子弹类型（无额外特殊效果，仅直线飞行）
         "speed": 4,  // 碎片子弹飞行速度（低于母弹，数值为3）
@@ -82,20 +82,21 @@
     },}
     "shoot": {  // 射击参数
         "shots": 2,  // 每次射击
-        "shotDelay": 5  // 每发间隔3帧
+        "shotDelay": 10 // 每发间隔3帧
     },
     "ammoUseEffect": "casing2",  // 弹壳抛射效果
-    "ammoPerShot": 4,  // 每次射击基础消耗1弹药
+    "ammoPerShot": 10,  // 每次射击基础消耗1弹药
     "targetGround": false,  // 可攻击地面目标
     "targetAir": true,  // 可攻击空中目标
     "inaccuracy": 1.5,  // 散布
     "shootSound": "爆散",  // 射击音效
     "rotateSpeed": 4.5,  // 炮塔旋转速度
     "requirements": [  // 建造所需材料
-        {"item": "青铜矿石", "amount": 55}  // 铜25
+        {"item": "青铜矿石", "amount": 55}, // 铜25
+                {"item": "劣质硅", "amount": 40}  // 铜25
     ],
     "category": "turret",  // 分类为炮塔
     "researchCostMultiplier": 0.3,  // 研究成本只需30%
-    "research": "零号峡谷",  // 前置研究项目
+    "research": "冰封盆地",  // 前置研究项目
 }
     

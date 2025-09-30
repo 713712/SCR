@@ -1,0 +1,50 @@
+{
+    "type": "mech",  // 单位类型为机械单位（Mech）
+    "name": "锉刀",  // 单位名称
+    "description": "装备两把20毫米机炮",  // 单位描述
+    "ammoCapacity": 20,  // 弹药容量，最大可携带60发弹药
+    "ammoResupplyAmount": 2,  // 每次补给的弹药数量为2发
+    "speed": 0.7,  // 单位的移动速度
+    "flying": false,  // 该单位不为飞行单位
+    "turnCursor": false,  // 是否显示转向光标
+    "hitSize": 11,  // 单位被击中时的尺寸范围
+    "targetAir": true,  // 可以攻击空中目标
+    "targetGround": true,  // 可以攻击地面目标
+    "health": 140,  // 单位的生命值
+    "armor": 2,  // 单位的护甲
+    //值填几百，你是想着它变成T5啊？爬重的吐槽
+    "rotateSpeed": 2,  // 单位的旋转速度
+    "itemCapacity": 30,  // 单位的物品容量
+    "commandLimit": 0,  // 命令限制（0表示无限制）
+    "weapons": [  // 武器配置
+        {
+            "name": "炮台2",  // 武器名称
+            "x": 5.2,  // 武器在单位上的X坐标横
+            "y": 0.7,  // 武器在单位上的Y坐标
+            "mirror": true,  
+            // 是否镜像（表示单位两侧各有一把武器）
+            "reload": 20,  // 重新装填时间为4.5帧
+            "rotate": false,  
+            "alternate": true, // 是否交替射击
+            // 武器是否可以旋转，此处为不可以
+            "top": false,// 是否位于单位顶部
+            "frontColor": "8CAAE8FF", // 弹头颜色（RGBA）
+            "shootEffect": "shootSmall",  // 射击效果
+            "shootSound": "射击",  // 射击音效
+            "bullet": {  // 子弹属性
+                "damage": 10,  // 子弹伤害
+                "width": 6,  // 子弹宽度
+                "height": 10,  // 子弹高度
+                "speed": 5,  // 子弹速度
+                "lifetime": 25,  // 子弹的存活时间
+                "reloadTime": 30, 
+                 // 子弹的重新装填时间
+                "status": "melting", 
+                 // 子弹附带的状态效果（如“融化”）
+                 "statusDuration": 180,  
+                 // 状态效果的持续时间6秒
+            }
+        }
+    ],
+    "research": "陨石带"  // 需要解锁“利刃工厂”才能使用该单位
+}

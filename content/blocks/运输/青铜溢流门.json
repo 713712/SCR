@@ -1,0 +1,16 @@
+{
+	"type": "OverflowGate",//类型,溢流门
+	"size":1,//平方大小
+	"invert":false,//反向
+	"category": "distribution",//菜单栏
+	"name": "青铜溢流门",//名字
+	"description": "当前方已经填满则向侧面运输物品",//介绍
+	"details":"疑似很好用"
+	"research": "寒风哨站"//前置科技树
+	"alwaysUnlocked":false,//科技树默认解锁
+	"health":80//血量
+	//"regionRotated":1,//区域旋转
+	"requirements": [//建造消耗
+		{ "item":"青铜矿石","amount":6},
+		 ]
+}

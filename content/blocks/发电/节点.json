@@ -18,4 +18,5 @@
 	],
 	"category": "power",
 	"research": "基础发电站"
+	"researchCostMultiplier": 0.2,  // 研究成本倍率：0.2（降低该设备的研究资源消耗，仅需基础成本的20%）
 }

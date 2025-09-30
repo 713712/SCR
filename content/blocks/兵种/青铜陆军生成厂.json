@@ -6,30 +6,37 @@
 	"size":3,
 	"plans":[
 	{ "unit": "先驱者", 
-	"time": 1200, 
+	"time": 1800, 
 	"requirements": [ 
 { "item": "青铜矿石", "amount": 100},
 	]	},	
 	{ "unit": "盾刀", 
-	"time": 1800, 
+	"time": 2000, 
 	"requirements": [ 
 { "item": "青铜矿石", "amount": 120},
 { "item": "劣质硅", "amount": 80},
 	]	},	
 	{ "unit": "回响", 
-	"time": 1800, 
+	"time": 2200, 
 	"requirements": [ 
 { "item": "青铜矿石", "amount": 80},
+{ "item": "精致石墨", "amount": 30},
 { "item": "劣质硅", "amount": 60},
 { "item": "初级芯片", "amount": 20},
 	]	},	
-	],
+		{ "unit": "锉刀", 
+	"time": 1300, 
+	"requirements": [ 
+{ "item": "青铜矿石", "amount": 50},
+{ "item": "铁锈", "amount": 20},
+{ "item": "劣质硅", "amount": 40},
+	]	},],
 	"requirements": [
     { "item": "青铜矿石", "amount": 50},],
 	"category":"units",
     "researchCostMultiplier": 0,
         "canOverdrive": false,
         "research": "寒风哨站"
-	    "researchCostMultiplier": 0.4,
+	    "researchCostMultiplier": 0.55,
 	        "canOverdrive": false,
 }

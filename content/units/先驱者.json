@@ -44,7 +44,7 @@
             "shootY": 6,               // 子弹发射高度偏移（像素）
             "x": 7,
             "y": 0,            // 武器相对车身位置
-            "recoil": 0.4,  // 后坐力
+            "recoil": 1,  // 后坐力
             "rotate": false,            // 武器是否独立旋转（炮塔）
             "alternate": true,         // 是否交替射击（双管）
             "top": false,// 是否位于单位顶部
@@ -58,15 +58,9 @@
                 "healPercent": 3,          // 对友方治疗百分比
                 "lifetime": 8,       // 子弹存在时间（秒）
                 "speed": 8,           // 子弹飞行速度
-                "damage": 25,         // 单发伤害
-                "incendAmount": 8,    // 点燃敌方单位的燃烧层数
-                "incendSpread": 1,    // 火焰扩散范围
-                "incendChance": 0.45,  // 点燃概率（45%）
+                "damage": 15,         // 单发伤害
                 "pierce": true,       // 是否穿透敌人
-                "makeFire": false,     // 是否在地面生成火焰
-                "status": "burning",  // 附加状态（燃烧）>
-                "statusDuration": 420, // 状态持续时间（帧）
-                "collidesTeam": true,
+               "collidesTeam": true,
                 
                 "despawnEffect": "none" // 子弹消失特效
 	"shootEffect": { // 射击特效 - 粒子发射效果
@@ -82,11 +76,11 @@
 		"baseLength": 0, // 基础长度：0
 		"colorFrom": "FFFFFF", // 起始颜色：白色（RGB）
 		"colorTo": "98FFA9AA", // 结束颜色：淡绿色带透明度（RGBA）
-		"cone": 12 // 发射锥角：10度（小范围散射）
+		"cone": 8 // 发射锥角：10度（小范围散射）
 	},
 	"smokeEffect": { // 烟雾轨迹特效 - 线型粒子
 		"type": "ParticleEffect", // 特效类型：粒子效果
-		"particles": 8, // 粒子数量：5个
+		"particles": 10, // 粒子数量：5个
 		"line": true, // 线型模式（沿路径发射）
 		"strokeFrom": 7, // 起始线宽：1
 		"strokeTo": 0, // 结束线宽：0（逐渐变细）
@@ -101,7 +95,7 @@
 	},
 	"hitEffect": { // 命中特效 - 击中时爆发
 		"type": "ParticleEffect", // 特效类型：粒子效果
-		"particles": 5, // 粒子数量：3个（小型爆发）
+		"particles": 10, // 粒子数量：3个（小型爆发）
 		"region": "强化战役-再临-菱形", // 使用菱形纹理
 		"lifetime": 15, // 粒子生命周期：10帧/单位
 		"sizeFrom": 8, // 起始尺寸：3（比射击特效稍大）
