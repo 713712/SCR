@@ -2,7 +2,6 @@
   "type": "Conduit", // 对象类型为导管（Conduit）
   "category": "liquid", // 所属类别为液体（liquid）
   "name": "铁锈液体管道", // 对象名称：快速导管
-  "alwaysUnlocked":true,
   "description": "液体移动速度快，可储存液体，非常适合液体运输", // 描述：说明该导管在液体运输方面速度快、储存量大，适用于大容量运输
   "leaks": true, // 是否泄漏：true 表示会泄漏
   "health": 85, // 耐久度：135
@@ -12,7 +11,8 @@
   "research": "基础水泵", // 所需研究：需要完成名为 “conduit” 的研究
   "requirements": [ // 建造所需材料列表
     {
-      "铁锈": 2 // 数量：8
+    "item": "铁锈", // 材料：钛（titanium）
+      "amount": 2 // 数量：2
     },
     {
       "item": "青铜矿石", // 材料：钛（titanium）

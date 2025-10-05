@@ -5,7 +5,7 @@
     "size": 3,
     "health": 460,
     "tier": 4,//挖掘等级
-    "drillTime": 100,//挖掘间隔
+    "drillTime": 110,//挖掘间隔
     "liquidBoostIntensity":2,//加速倍率
     "warmupSpeed": 0.02,
 	"drillEffect": "mineBig",
@@ -27,7 +27,7 @@
     { "item": "劣质硅", "amount":25},
    ],
     "category": "production",
-    "research": "古老遗址"
+    "research": "陨石带"
             "researchCostMultiplier": 0.1,  // 研究成本乘数：0.45（研究该设施的成本为正常成本的45%）
             "canOverdrive": false,
 }

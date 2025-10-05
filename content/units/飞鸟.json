@@ -1,0 +1,78 @@
+{
+  "type": "flying", // 实体类型：飞行单位（定义该单位核心类别为可飞行）
+  "flying": true, // 飞行状态：启用（确认该单位具备飞行能力）
+  "name":"飞鸟"
+  "description": "悬浮飞行器，仅有一挺机炮\n攻击可以让敌人减速", // 单位描述
+  "research":"小型实验基地",//技术位置
+  "lowAltitude": true, // 低空飞行：启用
+  "health": 120, // 生命值：1421点（单位承受伤害的上限）
+  "armor": 6, // 护甲值：4点（减免受到的伤害，数值越高减免越多）
+  "accel": 0.1, // 加速度：0.1（单位从静止到最大速度的提速快慢，数值越小提速越慢）
+  "speed": 2, // 最大速度：4.2（单位飞行时的最高移动速率）
+  "drag": 0.03, // 空气阻力：0.03（单位停止加速后，速度衰减的快慢，数值越小滑行越远）
+  "strafePenalty": 0.2, // 侧向移动惩罚：20%（单位左右横向移动时，速度会降低20%）
+  "rotateSpeed": 3, // 转向速度：6（单位调整朝向的快慢，数值越高转向越灵活）
+  "crashDamageMultiplier": 2, // 碰撞伤害倍率：24倍（单位撞击物体时，自身受到的伤害会乘以2）
+  "hitSize": 18 // 碰撞体积：16（判定单位是否被击中的物理范围大小）
+  "engineSize": 0, // 引擎尺寸：0（无实际引擎模型或效果）
+  "engineOffset": 0, // 引擎偏移量：0（引擎位置与单位中心无偏移）
+  "loopSound": "roHelico", // 循环音效：直升机音效（单位飞行时持续播放名为“roHelico”的音效）
+  "loopSoundVolume": 0.04, // 循环音效音量：0.04（音效播放的音量大小，数值范围0-1）
+  "itemCapacity": 10, // 物品容量：60（单位可携带物品的最大数量）
+  "parts": [
+    {
+      "type": "HoverPart",
+      "mirror": true,
+      //是否镜像
+      "x": 4,
+      "y": 3,  //坐标位置1:4
+      "radius": 11, //半径
+      "phase": 90,
+      "stroke": 2,
+      "layerOffset": -1,
+      "color": "66FFE3C4"
+    },
+    {
+      "type": "HoverPart",
+      "mirror": true,
+      //是否镜像
+      "x": 4,
+      "y": -3,  //坐标位置1:4
+      "radius": 13, //半径
+      "phase": 90,
+      "stroke": 2,
+      "layerOffset": -1,
+      "color": "66FFE3C4"
+    },
+  ],
+  "weapons": [ // 武器列表（定义单位搭载的武器系统）
+            {
+            "name": "none",  // 武器名称
+            "x": 0,  // 武器在单位上的X坐标横
+            "y": 6,  // 武器在单位上的Y坐标
+            "mirror": true,  
+            // 是否镜像（表示单位两侧各有一把武器）
+            "reload": 5,  // 重新装填时间为4.5帧
+            "rotate": false,  
+            "alternate": true, // 是否交替射击
+            // 武器是否可以旋转，此处为不可以
+            "top": false,// 是否位于单位顶部
+            "frontColor": "8CAAE8FF", // 弹头颜色（RGBA）
+            "shootEffect": "shootSmall",  // 射击效果
+            "shootSound": "射击",  // 射击音效
+            "bullet": {  // 子弹属性
+                "damage": 15,  // 子弹伤害
+                "width": 3,  // 子弹宽度
+                "height": 5,  // 子弹高度
+                "speed": 6,  // 子弹速度
+                "lifetime": 28,  // 子弹的存活时间
+                "reloadTime": 5, 
+                 // 子弹的重新装填时间
+                "status": "小雨减速", 
+                 // 子弹附带的状态效果（如“融化”）
+                 "statusDuration": 180,  
+                 // 状态效果的持续时间6秒
+            },
+        },
+  ],
+  }

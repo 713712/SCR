@@ -1,0 +1,37 @@
+{
+    "name":"强化电力钻头组",
+    "type": "Drill",
+    "description":"挖掘钍",
+    "size": 4,
+    "health": 860,
+    "tier": 6,//挖掘等级
+    "drillTime": 110,//挖掘间隔
+    "liquidBoostIntensity":1.5,//加速倍率
+    "warmupSpeed": 0.02,
+	"drillEffect": "blastExplosion",
+    "updateEffect": "blastExplosion",
+    "rotateSpeed": 1,
+    "drawMineItem": true,
+    "consumes": {
+    	"power": 3,
+        "liquid": {
+            "liquid": "water",
+            "amount": 0.3,
+            "booster": true,
+            "optional": true
+        }
+    },
+    "itemCapacity": 80,//物品容量
+    "liquidCapacity": 40,//液体容量
+    "requirements": [	
+   { "item": "铁锈", "amount":65},
+    { "item": "劣质硅", "amount":65},
+       { "item": "初级芯片", "amount":30},
+    { "item": "青铜矿石", "amount":100},
+    { "item": "脆钛", "amount":50},
+   ],
+    "category": "production",
+    "research": "天意所归"
+            "researchCostMultiplier": 0.6,  // 研究成本乘数：0.45（研究该设施的成本为正常成本的45%）
+            "canOverdrive": false,
+}

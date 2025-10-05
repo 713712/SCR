@@ -6,16 +6,16 @@
   "alwaysUnlocked":false,//科技树默认解锁 
   "squareSprite": false,  // 不使用方形精灵
   "size":4,//尺寸
-  "health":5900,//血量
-  "itemCapacity":10000,//物品容量
-  "unitCapModifier":32,//该核心所增加的单位上限
+  "health":5000,//血量
+  "itemCapacity":9000,//物品容量
+  "unitCapModifier":30,//该核心所增加的单位上限
   "requirements": [
-		"青铜矿石/2000",
-		"劣质硅/1000",
-		"铁锈/500",
-			"初级芯片/200",
+		"青铜矿石/4000",
+		"劣质硅/2000",
+		"铁锈/100",
+			"初级芯片/500",
 	    ],
-  "unitType":"准卫",//单位
+  "unitType":"战争",//单位
   "category":"effect",//建造栏分类
-  "research":"小型实验基地"
+  "research":"准卫核心"
 }

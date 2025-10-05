@@ -1,0 +1,15 @@
+{
+"localizedName": "连绵群岛",
+	"description": "检测到超级单位",
+    "planet":"赛普拉"//母星名字。
+    "sector":51//区块坐标
+    "captureWave":30//胜利波次
+    "difficulty":3//难度1一5
+    "research": {
+		"parent": "小型实验基地",
+		"objectives": [
+            {
+				"type": "SectorComplete",
+				"preset": "小型实验基地"
+			}]}
+}

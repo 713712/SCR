@@ -47,4 +47,5 @@
         }
     ],
     "research": "陨石带"  // 需要解锁“利刃工厂”才能使用该单位
+        "researchCostMultiplier": 0.4,  // 研究
 }

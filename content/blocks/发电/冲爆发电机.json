@@ -1,0 +1,51 @@
+{
+  "type": "ConsumeGenerator",  // 设备类型：消耗型生成器（通过消耗资源生成能量/产物）
+  "name": "冲爆发电机",  // 设备名称：1号热核反应堆
+"drawer": {
+    "type": "DrawMulti",  // 渲染类型：多重绘制（同时渲染多个图层）
+    "drawers": [  // 绘制图层列表
+        {
+            "type": "DrawRegion",  // 图层1：区域绘制
+            "suffix": "-bottom"   // 资源后缀：-bottom（对应底部区域的外观素材）
+        },
+        {
+            "type": "DrawPlasma",  // 图层2：金色特效绘制
+            "plasma1": "F2E878CF",  // 金色颜色1（浅青绿色十六进制色值）
+            "plasma2": "F2E878CF"   // 金色颜色2（深青绿色十六进制色值）
+        },
+        "DrawDefault",  // 图层3：默认基础模型绘制（设备主体外观）
+        {
+            "type": "DrawLiquidRegion",  // 图层4：液体区域绘制
+            "drawLiquid": "water"    // 绘制液体类型：低温流体（cryofluid）
+        },
+    ],
+},
+  "health": 900,  // 设备生命值：1000点（生命值归0时设备损坏）
+  "size": 4,  // 设备体积：占用6个游戏格子（用于布局摆放）
+  "hasPower": true,  // 能量功能：具备（此处为“产生能量”功能）
+  "hasLiquids": true,  // 液体功能：具备（可存储/处理液体）
+  "liquidCapacity": 300,  // 液体存储容量：300单位（游戏内液体计量）
+  "powerProduction": 15,  // 能量产出：每秒约1133.33单位能量
+  "consumes": {  // 资源消耗配置
+      "items": [
+      "混合物/2"
+    ],
+    "liquids": [  // 液体消耗列表（各液体每秒消耗0.1单位）
+      "water/0.2",  // 红色液体（Red Water），消耗速率0.1
+    ]
+  },
+  "requirements": [  // 建造所需资源
+    "青铜矿石/200",  // 低碳钢板块（Low-carbon Plate），需2000个
+    "劣质硅/100",  // 钛板块（Titanium Plate），需1000个
+    "精致石墨/50"    // 生物材料（Biological Material），需300个
+    "初级芯片/10",  // 钛板块（Titanium Plate），需1000个
+    "铁锈/60"    // 生物材料（Biological Material），需300个
+  ],
+  "category": "power",  // 设备分类：能源类（power），用于游戏内功能归类
+  "research": "天意所归",  // 解锁条件：需完成“cr”标识的研究（如“可控核反应”科技）
+  "loopSound": "pulse",  // 循环音效：脉冲声（pulse，设备运行时持续播放）
+  "loopSoundVolume": 2,  // 循环音效音量：等级2
+  "ambientSound": "hum",  // 环境音效：嗡嗡声（hum，增强场景沉浸感）
+  "ambientSoundVolume": 2  // 环境音效音量：等级2
+    "consumeEffect": "steam",
+}

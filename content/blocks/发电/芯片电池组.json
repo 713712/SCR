@@ -1,0 +1,18 @@
+{
+	"type": "Battery",
+	"size": 3,
+	    "name": "芯片电池组",  // 设备名称（游戏内显示的具体名称）
+    "description": "可储存2000点电力",  // 设备描述（说明核心作用：消耗可燃物/烟煤发电）
+	"consumes": {
+		"powerBuffered": 8000
+	},
+	"requirements": [
+		"青铜矿石/50",
+		"劣质硅/30",
+		"铁锈/20",
+		"初级芯片/10",
+	],
+	"research": "小型实验基地",
+	"category": "power"
+	    "researchCostMultiplier": 0.4,  // 研究
+}

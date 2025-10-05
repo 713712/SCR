@@ -1,0 +1,20 @@
+{
+	"type":"RainWeather"
+	"name":"小雨"
+	"yspeed": 5,//雨水垂直下落速度
+	"xspeed": 1.5,//雨水水平移动速度
+	"padding": 16,//雨水绘制区域与屏幕边缘的间距(px)
+	"density": 1200,//控制单位面积内雨水数量，无固定计量单位，数值越高雨水越密集
+	"stroke": 0.75,//雨水线条粗细(px)
+	"sizeMin": 8,//单滴雨水最小尺寸(px)
+	"sizeMax": 40,//单滴雨水最大尺寸(px),在sizeMin和此数值之间随机
+	"splashTimeScale": 22,//控制水花动画播放速度，数值越大动画播放越慢、持续越久
+	"liquid": "water",//雨水落下后的物理效果（默认水的效果）
+	"color": "7a95eaff",//设置雨水与水花的颜色
+	"attrs":{//该天气所影响的attributes
+	"water":-0.1,
+	},
+	"status": "小雨减速",//该天气给予单位效果
+	"sound": "rain",//该天气下播放声音
+	"soundVol": 0.25,//未知
+}

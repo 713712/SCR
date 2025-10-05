@@ -72,11 +72,11 @@
     },
 
     "orbitRadius": 36,        // 星球的轨道半径（距离恒星的距离）
-    "orbitTime": 1050,        // 星球绕恒星公转一周的时间
-    "rotateTime": 750,        // 星球自转一周的时间
+    "orbitTime": 800,        // 星球绕恒星公转一周的时间
+    "rotateTime": 500,        // 星球自转一周的时间
     "atmosphereRadIn": 0.05,  // 大气层内部半径
     "atmosphereRadOut": 0.5,  // 大气层外部半径
-    "radius": 1,            // 星球的实际半径
+    "radius": 0.9,            // 星球的实际半径
     "sectorSize": 1,          // 星球上的区域大小
     "minZoom": 0.1,             // 星球的最小缩放级别
     "drawOrbit": true,        // 是否绘制轨道
@@ -91,7 +91,7 @@
     "visible": true,          // 是否在地图上可见
     "hasAtmosphere": true,             // 是否有大气层
     "atmosphereColor": "78E8FFFF",     // 大气层颜色
-    "iconColor": "66FFE37478E8FFFF",  // 星球图标的颜色
+    "iconColor": "78E8FFFF",  // 星球图标的颜色
     "startSector": 227,         // 玩家初始进入的区域编号
     "allowWaveSimulation": true, // 是否允许模拟敌对波次
     "allowLaunchLoadout": true, // 是否允许玩家自定义发射配置

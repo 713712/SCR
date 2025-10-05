@@ -1,0 +1,270 @@
+{
+// === 单位基础属性 ===
+"type": "flying", // 单位类型为飞行单位
+"name": "“末”", // 单位名称
+"description": "[red]无法访问\n从外观上看应该是一架T4", // 单位描述
+"outlineColor": "2E2F34FF", // 轮廓颜色（RGBA格式   
+"rotateSpeed": 0.8,  // 单位的旋转速度
+"template": "ErekirUnitType", // 模板类型
+"ammoCapacity": 80, // 弹药容量
+"ammoResupplyAmount": 15, // 弹药补给量
+"speed": 0.7, // 移动速度
+"flying": true, // 是飞行单位
+"accel":0.08,        //加速度
+"drag": 0.025,    
+"lowAltitude": true, // 低空飞行
+"turnCursor": false, // 不随光标转向
+"engineOffset": 0, // 推进器位置偏移量（初始值，后续被覆盖）
+"engineSize": 0, // 推进器视觉效果大小（初始值，后续被覆盖）
+"hitSize": 25, // 碰撞体积大小
+"engineOffset": 29, // 推进器位置偏移量（相对中心）
+"engineSize": 10, // 推进器视觉效果大小
+"targetAir": true, // 可攻击空中目标
+"targetGround": true, // 可攻击地面目标
+"health": 4500, // 生命值
+"armor": 95, // 护甲值
+"itemCapacity": 150, // 物品容量
+"commandLimit": 16, // 指挥上限
+"rotateShooting": true, // 射击时旋转
+"hitBuildings": true, // 可攻击建筑
+"hitUnits": true, // 可攻击单位
+"abilities": [
+    {
+        "type": "ShieldArcAbility", // 能力类型：弧形护盾能力
+        "radius": 90, // 护盾半径，范围80
+        "width": 15, // 护盾宽度，20
+        "max": 160, // 护盾最大层数/容量，20
+        "regen": 2, // 护盾回复速度，0.5/单位时间
+        "cooldown": 100, // 技能冷却时间，300单位时间
+        "angle": 90 // 弧形护盾覆盖的角度，140度
+    },
+    {
+            "type":"RegenAbility",//自我修复
+            "amount":1,//每秒修复数值
+            "percentAmount": 0.01//每秒修复百分比
+        },
+    {
+    "type": "ForceFieldAbility",  // 能力类型：力场护盾能力
+    "sides": 3,                   // 力场的几何边数
+    "radius": 150,                 // 力场的保护半径
+    "max": 230,                   // 力场的最大能量值
+    "regen": 1,                // 能量恢复速率
+    "cooldown": 120              // 力场被击破后的冷却时间
+},
+    {
+    "type": "ForceFieldAbility",  // 能力类型：力场护盾能力
+    "sides": 3,                   // 力场的几何边数
+    "radius": 150,                 // 力场的保护半径
+    "max": 230,                   // 力场的最大能量值
+    "regen": 1,                // 能量恢复速率
+    rotation: 180
+    "cooldown": 120              // 力场被击破后的冷却时间
+},
+    {
+        "type": "ShieldArcAbility", // 能力类型：弧形护盾能力
+        "radius": 90, // 护盾半径，范围80
+        "width": 15, // 护盾宽度，20
+        "max": 160, // 护盾最大层数/容量，20
+        "regen": 2, // 护盾回复速度，0.5/单位时间
+        "cooldown": 100, // 技能冷却时间，300单位时间
+        "angle": 90 // 弧形护盾覆盖的角度，140度
+    }
+        {
+        "type": "ShieldArcAbility", // 能力类型：弧形护盾能力
+        "radius": 120, // 护盾半径，范围80
+        "width": 25, // 护盾宽度，20
+        "max": 300, // 护盾最大层数/容量，20
+        "regen": 1, // 护盾回复速度，0.5/单位时间
+        "cooldown": 200, // 技能冷却时间，300单位时间
+        "angle": 270 // 弧形护盾覆盖的角度，140度
+    }
+          {
+        "type": "EnergyFieldAbility", // 技能类型为"能量场技能"（通常是范围增益/减益技能）
+        "radius": 40.0, // 能量场的作用半径（单位同hitSize），决定技能影响的范围大小
+        "unknownParam1": 65.0, // 推测为能量场的视觉范围/判定范围扩展值（原代码未明确命名，基于常见配置推测）
+        "unknownParam2": 180.0, // 推测为能量场的持续时间/冷却时间（原代码未明确命名，基于常见配置推测）
+        "statusDuration": 360.0, // 技能附加状态的持续时间（60f*6f=360f，单位通常为帧/秒）
+        "maxTargets": 30, // 能量场最多可影响的目标数量（友方/敌方），超过则不生效
+        "healPercent": 1.5, // 能量场的治疗百分比（若为增益技能），1.5表示每次治疗目标最大生命值的1.5%
+        "sameTypeHealMult": 0.5 // 对同类单位（与释放者同类型）的治疗倍率，0.5表示对同类单位治疗效果减半
+      }
+],
+
+"weapons": [ // 武器数组：存储所有武器配置，可包含多个武器对象
+       {//点防御
+      "name":"none",/*贴图的名字 */
+      "top":false
+	  "x":0,"y":0,/*位置 x为上下y为左右 */
+	  "mirror":。false,/*镜像，是否对称 */
+	  "reload":1,/*重新装弹速度 */
+	  "rotate":true,/*是否旋转 */
+	  "rotateSpeed":100,/*旋转速度 */
+	  "shootSound": "拦截",
+	  "shootEffect":"shootBig",/*射击效果 */
+	  "trailLength": 5,//拖尾长度
+      "trailWidth": 5,//拖位宽度
+      "trailColor": "F09130FF",//拖尾
+      "inaccuracy":0,
+      "shootCone":1,//射击角度
+      "type":"PointDefenseWeapon",
+      "hasPower":false,
+      "range": 350, // 射程范围
+      "retargetTime":1, // 重新瞄准时间
+      "shootLength":10, // 发射的弹药长度
+      "inaccuracy": 0, // 发射的弹药精度
+      "bulletDamage":1000, //伤害
+      "color": "E1E8FFFF", // 颜色
+      "speed":100000 // 速度
+      "shoot":{
+                "shots":1,
+                "shotDelay":1
+              },
+              },
+              {
+                    "name":"none",/*贴图的名字 */
+      "top":false
+	  "x":0,"y":0,/*位置 x为上下y为左右 */
+	  "mirror":。false,/*镜像，是否对称 */
+	  "reload":1,/*重新装弹速度 */
+	  "rotate":true,/*是否旋转 */
+	  "rotateSpeed":100,/*旋转速度 */
+	  "shootSound": "拦截",
+	  "shootEffect":"shootBig",/*射击效果 */
+	  "trailLength": 5,//拖尾长度
+      "trailWidth": 5,//拖位宽度
+      "trailColor": "F09130FF",//拖尾
+      "inaccuracy":0,
+      "shootCone":1,//射击角度
+      "type":"PointDefenseWeapon",
+      "hasPower":false,
+      "range": 350, // 射程范围
+      "retargetTime":1, // 重新瞄准时间
+      "shootLength":10, // 发射的弹药长度
+      "inaccuracy": 0, // 发射的弹药精度
+      "bulletDamage":1000, //伤害
+      "color": "E1E8FFFF", // 颜色
+      "speed":100000 // 速度
+      "shoot":{
+                "shots":1,
+                "shotDelay":1
+              },
+              },
+              {
+                    "name":"none",/*贴图的名字 */
+      "top":false
+	  "x":0,"y":0,/*位置 x为上下y为左右 */
+	  "mirror":。false,/*镜像，是否对称 */
+	  "reload":1,/*重新装弹速度 */
+	  "rotate":true,/*是否旋转 */
+	  "rotateSpeed":100,/*旋转速度 */
+	  "shootSound": "拦截",
+	  "shootEffect":"shootBig",/*射击效果 */
+	  "trailLength": 5,//拖尾长度
+      "trailWidth": 5,//拖位宽度
+      "trailColor": "F09130FF",//拖尾
+      "inaccuracy":0,
+      "shootCone":1,//射击角度
+      "type":"PointDefenseWeapon",
+      "hasPower":false,
+      "range": 350, // 射程范围
+      "retargetTime":1, // 重新瞄准时间
+      "shootLength":10, // 发射的弹药长度
+      "inaccuracy": 0, // 发射的弹药精度
+      "bulletDamage":1000, //伤害
+      "color": "E1E8FFFF", // 颜色
+      "speed":100000 // 速度
+      "shoot":{
+                "shots":1,
+                "shotDelay":1
+              },
+              },
+{
+  "x": 0, // 坐标x值，设为0
+  "y": 20, // 坐标y值，设为20
+  "mirror": false, // 是否镜像，设为false
+  "rotate": false, // 是否旋转，设为false
+  "reload": 320, // 装填时间，320单位时间
+  "firingMoveFract": 0.8, // 开火时移动系数，0.5
+  "shootSound": "laserbig", // 射击音效，"laserbig"
+  "loopSound": "beam", // 循环音效，"beam"
+  "loopSoundVolume": 2, // 循环音效音量，2
+  "shootEffect": "shootBigSmoke2", // 射击特效，"shootBigSmoke2"
+  "continuous": true, // 是否持续射击，设为true
+  "bullet": {
+    "type": "ContinuousLaserBulletType", // 子弹类型：持续激光子弹类型
+    "length": 250, // 激光长度，200
+    "damage": 80, // 伤害值，78
+    "lifetime": 200, // 存在时间，230单位时间
+    "drawSize": 180, // 绘制尺寸，420
+    "hitEffect": "hitMeltdown", // 命中特效，"hitMeltdown"
+    "hitColor": "meltdownHit", // 命中颜色，"meltdownHit"
+    "status": "melting", // 附加状态，"melting"（融化）
+    "incendChance": 0.1, // 引燃概率，0.4
+    "incendSpread": 1, // 引燃范围，5
+    "incendAmount": 1 // 引燃层数/数量，1
+    // 注意：原JSON中"incendAmount": 1, 后面的逗号在标准JSON语法中是不允许的，建议移除该逗号以避免解析错误
+  },
+}
+      {
+        "type": "PointDefenseWeapon", // 武器类型为"点防御武器"（通常用于拦截敌方投射物/小型单位）
+        "name": "point-defense-mount", // 武器挂载点名称，用于关联单位模型上的武器位置
+        "x": 12.5, // 武器在挂载点X轴的偏移量，调整武器相对于单位模型的水平位置
+        "y": -18.0, // 第一个武器在挂载点Y轴的偏移量（下方挂载）
+        "reload": 4.0, // 武器装填时间（单位同statusDuration），数值越大射速越慢
+        "targetInterval": 8.0, // 武器锁定目标的间隔时间，数值越大锁定新目标的频率越低
+        "targetSwitchInterval": 8.0, // 武器切换目标的间隔时间，数值越大切换目标越慢（避免频繁换目标）
+        "bullet": { // 武器发射的子弹配置
+          "type": "BulletType", // 子弹类型（基础子弹模板）
+          "shootEffect": "lancerLaserCharge", // 子弹发射时的视觉特效（引用特效库Fx中的"火花发射"效果）
+          "hitEffect": "lancerLaserCharge", // 子弹命中目标时的视觉特效（引用特效库Fx中的"点命中"效果）
+        "lifetime": 1, // 子弹生命周期
+          "maxRange": 180.0, // 子弹的最大飞行距离（射程），超过则子弹消失/失效
+          "damage": 30.0 // 子弹命中目标时造成的基础伤害值
+        }
+      },
+      {
+        "type": "PointDefenseWeapon", // 与上一个武器类型相同（点防御武器）
+        "name": "point-defense-mount", // 共用同一个武器挂载点名称
+        "x": 12.5, // 与上一个武器X轴偏移量相同（水平位置一致）
+        "y": 14.0, // 第二个武器在挂载点Y轴的偏移量（上方挂载），与第一个武器形成上下双武器布局
+        "reload": 4.0, // 装填时间与上一个武器一致（射速相同）
+        "targetInterval": 8.0, // 锁定目标间隔与上一个武器一致
+        "targetSwitchInterval": 8.0, // 切换目标间隔与上一个武器一致
+        "bullet": { // 子弹配置与上一个武器完全相同（伤害、射程、特效一致）
+          "type": "BulletType",
+          "shootEffect": "lancerLaserCharge",
+          "lifetime": 1, // 子弹生命周期
+          "hitEffect": "lancerLaserCharge",
+          "maxRange": 200.0,
+          "damage": 30.0
+        }
+      }
+              {
+               "name": "point-dent", // 共用同一个武器挂载点名称
+            "rotate": false,  // 是否可以旋转
+            "mirror": true,  // 是否镜像
+            "top": false,// 是否位于单位顶部
+            "x": 15,  // 武器在机甲上的X坐标
+            "y": -8,  // 武器在机甲上的Y坐标
+            "reload": 80,  // 重新装填时间
+            "recoil": 1,  // 后坐力
+                    "lifetime": 1, // 子弹生命周期
+            "bullet": {
+        "type":"FlakBulletType",  // 弹药基础类型：高射炮子弹类型（具备 fragmentation 碎片分裂特性）
+        "speed": 1,  // 子弹飞行速度（数值越高，飞行越快）
+        "lifetime": 1, // 子弹生命周期
+        "damage": 0,  // 子弹直接命中目标时造成的基础伤害
+        "splashDamageRadius": 1,  // 子弹爆炸/命中后的溅射伤害范围（半径单位，范围内目标会受溅射伤害）
+        "splashDamage": 1,  // 溅射范围内造成的伤害值（通常低于直接命中伤害）
+        "collides":true,  // 子弹是否与其他实体（如敌方单位、友方单位）发生碰撞
+        "collidesGround":true,  // 子弹是否与地面发生碰撞（碰撞后可能触发爆炸/停止飞行）
+        "hitSize":1,  // 子弹的碰撞判定尺寸
+        "spawnUnit": "导弹1" // 生成单位：射击时生成"qdevastator-missile"单位（推测为该炮塔发射的导弹实体）
+    },
+    "shoot": {  // 射击参数
+        "shots": 3,  // 每次射击
+        "shotDelay": 30 // 每发间隔3帧
+    },
+    }，
+],
+}

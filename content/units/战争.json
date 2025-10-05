@@ -1,0 +1,154 @@
+{
+  "type": "flying", // 实体类型：飞行单位（定义该单位核心类别为可飞行）
+  "flying": true, // 飞行状态：启用（确认该单位具备飞行能力）
+  "name":"战争"
+  "description": "悬浮飞行器保护战争核心", // 单位描述
+  "buildSpeed": 3, // 建造速度，数值越大建造建筑或单位的速度越快
+  "mineTier": 6,    // 采矿等级，等级越高采矿效率或可采集的矿物等级越高
+  "mineSpeed": 8    // 采矿速度，数值越大采矿效率越高
+  "research":"小型实验基地",//技术位置
+  "lowAltitude": true, // 低空飞行：启用
+  "health": 1100, // 生命值：1421点（单位承受伤害的上限）
+  "armor": 10, // 护甲值：4点（减免受到的伤害，数值越高减免越多）
+  "accel": 0.1, // 加速度：0.1（单位从静止到最大速度的提速快慢，数值越小提速越慢）
+  "speed": 3.5, // 最大速度：4.2（单位飞行时的最高移动速率）
+  "drag": 0.03, // 空气阻力：0.03（单位停止加速后，速度衰减的快慢，数值越小滑行越远）
+  "strafePenalty": 0.2, // 侧向移动惩罚：20%（单位左右横向移动时，速度会降低20%）
+  "rotateSpeed": 3, // 转向速度：6（单位调整朝向的快慢，数值越高转向越灵活）
+  "crashDamageMultiplier": 1, // 碰撞伤害倍率：24倍（单位撞击物体时，自身受到的伤害会乘以2）
+  "hitSize": 25 // 碰撞体积：16（判定单位是否被击中的物理范围大小）
+  "engineSize": 0, // 引擎尺寸：0（无实际引擎模型或效果）
+  "engineOffset": 0, // 引擎偏移量：0（引擎位置与单位中心无偏移）
+  "loopSound": "roHelico", // 循环音效：直升机音效（单位飞行时持续播放名为“roHelico”的音效）
+  "loopSoundVolume": 0.04, // 循环音效音量：0.04（音效播放的音量大小，数值范围0-1）
+  "itemCapacity": 70, // 物品容量：60（单位可携带物品的最大数量）
+  "parts": [
+    {
+      "type": "HoverPart",
+      "mirror": true,
+      //是否镜像
+      "x": 8,
+      "y": 8,  //坐标位置1:4
+      "radius": 11, //半径
+      "phase": 90,
+      "stroke": 2,
+      "layerOffset": -1,
+      "color": "66FFE3C4"
+    },
+    {
+      "type": "HoverPart",
+      "mirror": true,
+      //是否镜像
+      "x": 8,
+      "y": -8,  //坐标位置1:4
+      "radius": 13, //半径
+      "phase": 90,
+      "stroke": 2,
+      "layerOffset": -1,
+      "color": "66FFE3C4"
+    },
+  ],
+  "weapons": [ // 武器列表（定义单位搭载的武器系统）
+  //具体参考火力昼阑的两侧飞弹
+            {
+			"name": "none",
+			"reload": 130,//装弹时间
+			"x": 6,// X轴偏移
+			"y": 0,// Y轴偏移
+			"rotate": false,//是否旋转
+			"recoil": 0,//后坐力
+			"inaccuracy": 13,//不准确性，表示射击的散布范围
+			"alternate": true,//是否交替射击
+			"shootSound": "先行",//射击音效
+			"baseRotation": -45,//武器旋转起始角度
+			"shake": 1,//射击震动强度
+			"autoTarget": true,//是否自动瞄准目标            
+			"mirror": true,  // 镜像对称：关闭（仅单侧部署）
+			"xRand": 5,// X轴偏移量
+			"shootCone": 360,//射击锐角
+			"shoot": {//射击炮管自定义
+						"shots": 6,//射击的子弹数
+						"shotDelay": 4//每次射击间隔
+			},
+			"bullet": {//子弹数据
+				"type": "MissileBulletType",//导弹类型
+				"trailEffect":{
+					"type": "ParticleEffect",//粒子特效
+					"particles": 3,//数量
+					"length": 10,//长
+					"baseLength": 0,//开始长度
+					"lifetime": 60,//存在时间
+					"randLength": false,//这表示粒子的长度是否随机
+					"sizeFrom":3,//开始大小
+					"sizeTo":0,//结束大小
+					"sizeInterp":"pow3In",//粒子大小增加值（从快到慢）
+					"interp":"pow5Out",//离子速度增加值（从快到慢）
+					"colorFrom": "BFFFDB",//开始颜色
+					"colorTo": "25C9AB"//结束颜色
+				},//轨迹特效
+				"width": 6,//宽度
+				"height": 10,//长度
+				"sprite": "阿塞普斯-导弹2",//子弹贴图
+				"speed": 3,//速度
+				"lifetime": 50,//生命周期
+				"drag": -0.02,//阻力
+				"homingDelay": 14,//锁定目标延迟
+				"homingPower": 0.8,//锁定力
+				"homingRange": 300,//锁定范围
+				"ammoMultiplier": 10,//一次子弹数
+				"trailLength": 13,//子弹尾迹长
+				"trailWidth": 3,//子弹尾迹宽
+				"trailColor": "BFFFDB"//子弹尾迹颜色
+				"shrinkY": 0,// Y轴缩小率
+				"shrinkX": 0,// X轴缩小率
+				"backColor": "BFFFDB",//子弹背景色
+				"frontColor": "BFFFDB",//子弹前景色
+				"hitEffect": {
+					"type": "ExplosionEffect",//爆炸效果
+					"lifetime": 18,//爆炸持续时间
+					"waveStroke": 1,//爆炸波纹宽度
+					"waveLife": 16,//波纹持续时间
+					"waveRadBase": 0,//波纹开始半径
+					"waveColor": "BFFFDB",//波纹颜色
+					"waveRad": 45,//波纹结束半经
+					"smokes": 20,//产生烟雾粒子数
+					"smokeColor": "BFFFDBA8",//烟雾粒子颜色
+					"sparkColor": "BFFFDB",//火花颜色
+					"sparks": 28,//火花数量
+					"sparkRad": 68,//火花最大移动半径
+					"sparkStroke": 2,//宽度
+					"sparkLen": 18//长度
+				},//命中效果
+				"hitSound": "plasmaboom",//命中声音。
+				"hitShake": 5,//命中时屏幕晃动幅度
+				"despawnEffect": "none",//消失效果
+				"shootEffect": "none",//射击效果
+				"smokeEffect": {
+					"type": "ParticleEffect",//烟雾特效
+					"particles": 3,//粒子数
+					"sizeFrom": 6,//开始大小
+					"sizeTo": 0,//结束大小
+					"sizeInterp": "pow5In",//开始大小增加值（从快到慢）
+					"interp": "pow10Out",//开始移速增加值（从快到慢）
+					"length": 66,//粒子长
+					"baseLength": 0,//开始粒子长度
+					"lifetime": 25,//存在时间
+					"colorFrom": "FFFFFF",//开始颜色
+					"colorTo": "BFFFDB",//结束颜色
+					"cone": 30//粒子发射角度
+				},//烟雾效果（发射时效果）
+				"damage": 15,//子弹伤害
+				"pierceArmor": true,//是否穿透装甲(就是是否无视护甲值)
+				"status": "小雨减速",//命中施加效果
+				"statusDuration": 90,//效果持续时间
+				"splashDamageRadius": 55,//爆炸范围
+				"splashDamage": 10,//爆炸伤害
+				"lightningDamage": 8,//闪电伤害
+				"lightning": 5,//闪电数
+				"lightningLength": 10,//闪电长度
+				"lightningLengthRand": 16,//闪电长度随机变化
+				"lightningColor": "66FFE3C4"//闪电颜色
+			}
+		},
+  ],
+  }

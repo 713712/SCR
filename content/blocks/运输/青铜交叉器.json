@@ -12,7 +12,7 @@
     ],
     "category":"distribution"
     	"research": {
-		"parent": "寒风哨站",
+		"parent": "供给器",
     "requirements":[
         "青铜矿石/100",
         ]

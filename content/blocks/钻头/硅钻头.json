@@ -27,7 +27,7 @@
     { "item": "劣质硅", "amount":15},
    ],
     "category": "production",
-    "research": "陨石带"
+    "research": "冰封盆地"
             "researchCostMultiplier": 0.1,  // 研究成本乘数：0.45（研究该设施的成本为正常成本的45%）
             "canOverdrive": false,
 }

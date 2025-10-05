@@ -76,7 +76,7 @@
     "rotateTime": 750,        // 星球自转一周的时间
     "atmosphereRadIn": 2,  // 大气层内部半径
     "atmosphereRadOut": 2,  // 大气层外部半径
-    "radius": 1.5,            // 星球的实际半径
+    "radius": 1.3,            // 星球的实际半径
     "sectorSize": 3,          // 星球上的区域大小
     "minZoom": 0.01,             // 星球的最小缩放级别
     "drawOrbit": true,        // 是否绘制轨道

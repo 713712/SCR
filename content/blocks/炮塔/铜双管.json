@@ -1,0 +1,182 @@
+{
+    "type": "ItemTurret",  // 类型为物品炮塔
+    "consumes": {
+        "coolant": {  // 冷却剂消耗
+            "amount": 0.1,  // 每次消耗量
+            "optional": true  // 可选消耗
+        }
+    },
+    "coolantMultiplier": 10,  // 冷却剂效果倍率
+    "name": "铜双管",  // 名称
+    "description": "爬爬的代码太好用了你们知道吗",  // 描述
+    "range": 160,  // 射程
+    "squareSprite": false,
+    // 不使用方形精灵  我也不知道 翻译是这样的
+    "health": 300,  // 生命值
+    "size": 1,  // 尺寸
+    "reload": 24,  // 装弹时间
+    "shake": 0.3,  // 射击震动强度
+    "rotateSpeed": 3,  // 旋转速度
+    "recoil": 0.7,  // 后坐力
+    "shootCone": 30,  // 射击锥形角度
+    "recoils": 2,  // 后坐部件数量
+    // 绘制配置
+    "drawer": {
+        "type": "DrawTurret",  // 绘制类型
+        "parts": [  // 部件列表
+            {
+                "type": "RegionPart",  // 区域部件类型
+                "mirror": false,  // 不镜像
+                "recoilIndex": 0,  // 后坐索引
+                "suffix": "-2",  // 后缀
+                "layer": 49,  // 图层
+                "moveX": 0,  // x移动
+                "moveY": 0,  // y移动
+                "x": 0,  // x坐标
+                "y": 0,  // y坐标
+                "under": true,  // 在基础下方
+                "progress": "recoil",  // 进度关联后坐
+                "moves": [  // 移动动画
+                    {
+                        "progress": "recoil",  // 关联后坐进度
+                        "y": -1.2  // y轴移动距离
+                    }
+                ]
+            },
+            // 第二个部件配置（类似第一个）
+            {
+                "type": "RegionPart",
+                "mirror": false,
+                "recoilIndex": 1,
+                "suffix": "-1",
+                "layer": 49,
+                "moveX": 0,
+                "moveY": 0,
+                "x": 0,
+                "y": 0,
+                "under": true,
+                "progress": "recoil",
+                "moves": [
+                    {
+                        "progress": "recoil",
+                        "y": -1.2
+                    }
+                ]
+            }
+        ]
+    },
+    
+    // 射击配置
+    "shoot": {
+        "type": "ShootAlternate",  // 交替射击类型
+        "barrels": 2,  // 炮管数量
+    },
+    
+    // 弹药类型
+    "ammoTypes": {
+        "青铜矿石": {  // 铍弹药
+               "pierceCap": 2,  // 穿透上限
+            "height": 8,  // 高度
+            "width": 8,  // 宽度
+            "damage": 16,  // 伤害值
+            "speed": 4.5,  // 速度
+            "lifetime": 36,  // 生命周期
+            "ammoMultiplier": 2,  // 弹药倍率
+            "frontColor": "92DD7EFF",  // 前端颜色
+            "backColor": "FFFFFFFFF",  // 后端颜色
+            "hitColor": "92DD7EFF",  // 命中效果颜色
+            "trailColor": "92DD7EFF",  // 蓝色轨迹
+            "trailWidth": 2.5,
+            "trailLength": 4,   //长
+            "shootEffect":"overdriven",//射击特效
+      "smokeEffect":"steam",//冒烟特效
+            "hitEffect": "none",  // 无命中效果
+            "despawnEffect": "heal"
+            "despawnEffect": {
+            "colorFrom": "FFFFFFFF",  // 起始颜色
+                "colorTo": "92DD7EFF",  // 结束颜色
+            }
+        }
+                "精致石墨": {  // 钨弹药
+                			"rangeChange": 38,
+                     "pierceCap": 3,  // 穿透上限
+            "height": 8,  // 高度
+            "width": 8,  // 宽度
+            "damage": 20,  // 伤害值
+            "speed": 4.7,  // 速度
+            "lifetime": 45.4,  // 生命周期
+            "ammoMultiplier": 2,  // 弹药倍率
+            "frontColor": "A0B0C8FF",  // 前端颜色
+            "backColor": "FFFFFFFFF",  // 后端颜色
+            "hitColor": "A0B0C8FF",  // 命中效果颜色
+            "trailColor": "A0B0C8FF",  // 蓝色轨迹
+            "trailWidth": 2.5,
+            "trailLength": 4,   //长
+            "shootEffect":"overdriven",//射击特效
+      "smokeEffect":"steam",//冒烟特效
+            "hitEffect": "none",  // 无命中效果
+            "despawnEffect": "heal"
+            "despawnEffect": {
+            "colorFrom": "FFFFFFFF",  // 起始颜色
+                "colorTo": "A0B0C8FF",  // 结束颜色
+            }
+        }
+        "脆钛": {  // 碳化物
+        			"rangeChange": 60,
+                     "pierceCap": 6,  // 穿透上限
+            "height": 8,  // 高度
+            "width": 8,  // 宽度
+            "damage": 25,  // 伤害值
+            "speed": 4.7,  // 速度
+            "lifetime": 47,  // 生命周期
+            "ammoMultiplier": 2,  // 弹药倍率
+            "frontColor": "8AA3F4CF",  // 前端颜色
+            "backColor": "8AA3F4CF",  // 后端颜色
+            "hitColor": "8AA3F4CF",  // 命中效果颜色
+            "trailColor": "89769AFF",  // 蓝色轨迹
+            "trailWidth": 2.5,
+            "trailLength": 6,   //长
+            "shootEffect":"overdriven",//射击特效
+      "smokeEffect":"steam",//冒烟特效
+            "hitEffect": "mine",  // 命中效果
+            "despawnEffect": "heal"
+                        "despawnEffect": {
+            "colorFrom": "8AA3F4CF",  // 起始颜色
+                "colorTo": "8AA3F4CF",  // 结束颜色
+            }
+                "shoot": {
+        "type": "ShootSpread",
+        "spread": 5,
+        "shots": 3
+      },
+      "fragBullets": 3,          // 分裂5颗子弹
+      "fragRandomSpread": 45,
+    "fragBullet": {
+          "pierceCap": 6,  // 穿透上限
+            "height": 8,  // 高度
+            "width": 8,  // 宽度
+           "damage": 10,
+             "speed": 4.7,
+           "lifetime": 18
+           "frontColor": "C9A5C8FF",  // 前端颜色
+            "backColor": "FFFFFFFFF",  // 后端颜色
+            "hitColor": "C9A5C8FF",  // 命中效果颜色
+            "trailColor": "89769AFF",  // 蓝色轨迹
+            "trailWidth": 2.5,
+            "trailLength": 6,   //长
+            "hitEffect": "mine",  // 命中效果
+                 "despawnEffect": {  // 消失效果
+              "colorFrom": "8AA3F4CF",  // 起始颜色
+                "colorTo": "8AA3F4CF",  // 结束颜色
+                }
+            }
+        }
+    }
+    
+    // 建造需求
+    "requirements": [
+        {"item": "青铜矿石","amount": 30}
+    ],
+    "category": "turret",  // 类别为炮塔
+    "research": "零号峡谷"  // 前置研究  撕裂
+}

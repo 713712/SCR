@@ -5,8 +5,8 @@
     "size": 4,
     "health": 760,
     "tier": 5,//挖掘等级
-    "drillTime": 150,//挖掘间隔
-    "liquidBoostIntensity":2,//加速倍率
+    "drillTime": 155,//挖掘间隔
+    "liquidBoostIntensity":1.7,//加速倍率
     "warmupSpeed": 0.02,
 	"drillEffect": "blastExplosion",
     "updateEffect": "blastExplosion",

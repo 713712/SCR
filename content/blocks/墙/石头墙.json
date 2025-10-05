@@ -1,0 +1,14 @@
+{    
+    "type": "Wall",
+    "name": "石头墙",
+    "description": "似乎并不比铜强多少",
+    "buildCostMultiplier": 0.45,
+    "health": 500,
+    "size": 1,
+    "requirements": [
+        "石头/7",
+    ],
+    "category": "defense",
+    "research": "古老遗址"
+        "researchCostMultiplier": 0.32,  // 研究成本乘数：0.45（研究该设施的成本为正常成本的45%）
+}

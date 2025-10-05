@@ -30,14 +30,14 @@
 "weapons": [ // 武器数组：存储所有武器配置，可包含多个武器对象
 {
 "name": "浮尘-蜂群炮", // 武器名称
-"reload": 80, // 装填时间
+"reload": 85, // 装填时间
 "x": 6, "y": 0, // 武器位置（相对于单位中心的坐标）
 "rotate": true, // 武器可旋转
 "mirror": true, // 武器可镜像翻转
 "rotateSpeed": 28, // 旋转速度（初始值）
 "inaccuracy": 15, // 射击偏差角度
 "shoot": { // 射击参数
-"shots": 6, // 单次发射子弹数
+"shots": 5, // 单次发射子弹数
 "shotDelay": 9, // 子弹发射间隔
 "barrels": 2, // 炮管数量
 "spread": 2 // 弹幕扩散角度
@@ -48,11 +48,11 @@
 "ejectEffect": "casing1", // 弹壳特效
 "bullet": { // 子弹参数
 "sprite": "missile", // 子弹外观资源
-"splashDamageRadius": 15, // 溅射伤害范围
-"splashDamage": 100, // 溅射伤害值
-"damage": 50, // 基础伤害
+"splashDamageRadius": 12, // 溅射伤害范围
+"splashDamage": 80, // 溅射伤害值
+"damage": 35, // 基础伤害
 "speed": 2.8, // 子弹速度
-"weaveMag": 4, // 弹道摆动幅度
+"weaveMag": 2, // 弹道摆动幅度
 "weaveScale": 2, // 弹道摆动频率
 "homingRange": 250, // 追踪范围
 "homingDelay": 5, // 追踪延迟
@@ -62,17 +62,17 @@
 "status": "melting", // 子弹附加状态（融化）
 "statusDuration": 240, // 状态持续时间
 "makeFire": true, // 命中后生成火焰
-"fragBullets": 8, // 碎片弹数量
-"fragRandomSpread": 12, // 碎片弹扩散角度
+"fragBullets": 6, // 碎片弹数量
+"fragRandomSpread": 20, // 碎片弹扩散角度
 "fragBullet": { // 碎片弹参数
 "type": "LiquidBulletType", // 碎片弹类型（液体子弹）
 "liquid": "slag", // 液体类型（矿渣）
-"speed": 2.34, // 碎片弹速度
-"lifetime": 6, // 碎片弹生命周期
-"knockback": 0.3, // 碎片弹击退
-"statusDuration": 120, // 碎片弹状态持续时间
+"speed": 2.2, // 碎片弹速度
+"lifetime": 10, // 碎片弹生命周期
+"knockback": 0.1, // 碎片弹击退
+"statusDuration": 10, // 碎片弹状态持续时间
 "status": "melting", // 碎片弹附加状态（融化）
-"damage": 7.5, // 碎片弹伤害
+"damage": 7, // 碎片弹伤害
 "makeFire": true // 碎片弹命中后生成火焰
 }
 }
@@ -117,19 +117,19 @@
 "shootSound": "浮尘主炮", // 射击音效
 "beryllium": { // 额外子弹配置（可根据需求调整或删除）
 "type":"BasicBulletType", // 子弹类型
-"pierceCap": 8, // 穿透上限
+"pierceCap": 6, // 穿透上限
 "height": 22, // 碰撞高度
 "width": 15, // 碰撞宽度
-"damage": 60, // 基础伤害
+"damage": 55, // 基础伤害
 "speed": 3, // 子弹速度
-"lifetime": 125, // 生命周期
+"lifetime": 120, // 生命周期
 "ammoMultiplier": 2, // 弹药倍率
 "frontColor": "92DD7EFF", // 弹头颜色
 "backColor": "FFFFFFFFF", // 弹尾颜色
 "hitColor": "92DD7EFF", // 命中颜色
 "trailColor": "92DD7EFF", // 尾迹颜色
-"trailWidth": 4, // 尾迹宽度
-"trailLength": 10, // 尾迹长度
+"trailWidth": 3, // 尾迹宽度
+"trailLength": 8, // 尾迹长度
 "smokeEffect":"steam", // 烟雾特效
 "hitEffect": "plasticburn", // 命中特效
 "despawnEffect":{ // 消失特效
@@ -139,18 +139,18 @@
 "length": 12.2,
 "colorFrom": "92DD7EFF"
 },
-"intervalBullets": 4, // 散射子弹数量
-"intervalAngle": 270, // 散射角度
-"intervalSpread": 300, // 散布范围
-"intervalRandomSpread": 10, // 随机散布
-"bulletInterval": 6, // 发射间隔
+"intervalBullets": 6, // 散射子弹数量
+"intervalAngle": 360, // 散射角度
+"intervalSpread": 400, // 散布范围
+"intervalRandomSpread": 20, // 随机散布
+"bulletInterval": 3, // 发射间隔
 "intervalBullet": { // 散射子弹配置
 "type":"BasicBulletType",
 "pierceCap": 12,
 "height": 16,
 "width": 12,
-"damage": 22,
-"speed": 3,
+"damage": 11,
+"speed": 2,
 "lifetime": 15,
 "ammoMultiplier": 2,
 "frontColor": "92DD7EFF",
@@ -178,16 +178,16 @@
 "pierceCap": 18, // 穿透上限
 "height": 20, // 碰撞高度
 "width": 10, // 碰撞宽度
-"damage": 42, // 基础伤害
-"speed": 5.5, // 子弹速度
-"lifetime": 105, // 生命周期
+"damage": 38, // 基础伤害
+"speed": 5, // 子弹速度
+"lifetime": 100, // 生命周期
 "ammoMultiplier": 2, // 弹药倍率
 "frontColor": "A0B0C8FF", // 弹头颜色
 "backColor": "FFFFFFFFF", // 弹尾颜色
 "hitColor": "A0B0C8FF", // 命中颜色
 "trailColor": "A0B0C8FF", // 尾迹颜色
-"trailWidth": 6.5, // 尾迹宽度
-"trailLength": 18, // 尾迹长度
+"trailWidth": 4, // 尾迹宽度
+"trailLength": 10, // 尾迹长度
 "smokeEffect":"steam", // 烟雾特效
 "hitEffect": "plasticburn", // 命中特效
 "despawnEffect":{ // 消失特效
@@ -201,8 +201,8 @@
 "intervalBullets": 3,
 "intervalBullet": {
 "instantDisappear": true, // 命中后立即消失
-"fragBullets": 3, // 分裂子弹数量
-"intervalRandomSpread": 60, // 散布角度
+"fragBullets": 4, // 分裂子弹数量
+"intervalRandomSpread": 180, // 散布角度
 "despawnEffect":{ // 消失特效
 "type": "overdriven",
 "sizeFrom": 3.5,
@@ -215,7 +215,7 @@
 "pierceCap": 18,
 "height": 18,
 "width": 12,
-"damage": 22,
+"damage": 10,
 "speed": 3.8,
 "lifetime": 17.8,
 "frontColor": "A0B0C8FF",

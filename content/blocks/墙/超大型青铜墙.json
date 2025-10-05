@@ -9,6 +9,6 @@
         "青铜矿石/72",
     ],
     "category": "defense",
-    "research": "寒风哨站"
+    "research": "大型青铜墙"
         "researchCostMultiplier": 0.1,  // 研究成本乘数：0.45（研究该设施的成本为正常成本的45%）
 }

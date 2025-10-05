@@ -1,0 +1,14 @@
+{    
+    "type": "Wall",
+    "name": "大型石头墙",
+    "description": "似乎并不比铜强多少",
+    "buildCostMultiplier": 0.45,
+    "health": 3400,
+    "size": 3,
+    "requirements": [
+        "石头/48",
+    ],
+    "category": "defense",
+    "research": "大型石头墙"
+        "researchCostMultiplier": 0.32,  // 研究成本乘数：0.45（研究该设施的成本为正常成本的45%）
+}

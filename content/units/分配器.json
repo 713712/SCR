@@ -4,7 +4,7 @@
     "name": "分配器",   
     "alwaysUnlocked":false,
     "description": "路由器邪教2.0！",
-    "research":"路由器",//技术位置
+    "research":"初级单位重构厂",//技术位置
     // ===== 【目标类型】 ===== //
     "targetAir": true,             // 能攻击空中单位
     "targetGround": true,          // 能攻击地面单位
