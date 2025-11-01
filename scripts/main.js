@@ -11,3 +11,4 @@ MapResizeDialog.maxSize = 800000000,//最大地图大小
 
 require('开屏菜单');
 require('tank');
+require("起源");

@@ -30,7 +30,7 @@ Events.on(EventType.ClientLoadEvent, () => {
         buttonTable.button("[red]更新日志", () => {
             const dialog2 = new BaseDialog("[red]更新日志");
             const scrollContent = new Table(cons(st => {
-                st.add("[white]新增建-筑劣质硅火烧炉新阵营-阿塞斯重工弹雨贴图修改");
+                st.add("[white]\n生物质合成区重置");
             }));
 
             dialog2.cont.add(new ScrollPane(scrollContent)).size(500, 600).row();
